@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Environments
+.venv/
+venv/
+.env
+
+# Local agent/runtime state
+.omx/
+.agents/
+tmp/
+
+# Local papers and notebook runtime files
+literature/papers-local/*.pdf
+literature/papers-local/*.djvu
+.ipynb_checkpoints/
+
+# Generated experiment artifacts
+experiments/**/generated/
+
+# TeX build output
+paper/*.aux
+paper/*.bbl
+paper/*.bcf
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.run.xml
+paper/*.synctex.gz
+paper/main.pdf
