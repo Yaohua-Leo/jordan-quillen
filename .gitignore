@@ -21,7 +21,14 @@ venv/
 tmp/
 
 # Personal notes
-note/
+note/*.aux
+note/*.fdb_latexmk
+note/*.fls
+note/*.log
+note/*.out
+note/*.synctex.gz
+note/*.toc
+note/*.xdv
 
 # Personal editor state
 .obsidian/

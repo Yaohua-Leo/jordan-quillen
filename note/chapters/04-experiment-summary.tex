@@ -1,0 +1,32 @@
+\chapter{Experiment Summary}
+
+\section{What The Current Runs Support}
+
+The current executed experiments support the usefulness of exact arithmetic
+small examples. Experiment 001 checks square-zero extension behavior in tiny
+families, Experiment 005 validates a one-generator toy rule, and Experiment 006
+shows why presentation issues cannot be ignored. Experiment 007 then repairs
+the fixed \(J_3\) Presentation B diagnostic through degree \(1\) by adding one
+explicit degree \(2\) generator.
+
+\section{What The Current Runs Do Not Prove}
+
+The successful toy runs do not prove the full Jordan Quillen homology theory.
+They do not establish a general cofibrant replacement construction, a
+presentation-invariance theorem, or an equivalence between intrinsic Jordan
+Quillen homology and TKK Lie homology.
+
+\section{Most Important Boundary}
+
+The most important current warning is the pair of Experiments 006 and 007.
+Experiment 006 shows that a naive one-step relation complex for Presentation B
+has an extra false \(H_1\) class. Experiment 007 shows that this particular
+false class can be killed by a hand-coded degree \(2\) generator, but the
+repair is still example-specific and low-degree.
+
+\section{Personal Takeaway}
+
+The experiments are best used as guardrails for definitions. They are useful
+when they expose impossible claims, missing hypotheses, or misleading
+computational shortcuts. The 007 run is especially useful as a template for
+what later automatic low-degree cell attachment would need to reproduce.

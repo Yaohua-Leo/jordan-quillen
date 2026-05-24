@@ -1,0 +1,31 @@
+\chapter{Notation And Literature}
+
+\section{Notation Anchor}
+
+The canonical notation table is \path{theory/latex_notation.md}. This private
+note should follow that file instead of inventing competing notation.
+
+\section{Basic Notation}
+
+The most important current notations are: ground field \(k\), Jordan algebra
+\(J\), module \(M\), product span \(J^2\), indecomposables \(Q(J)=J/J^2\),
+cotangent complex \(L^{\mathrm{Jord}}_{B/A}\), homology
+\(D_n^{\mathrm{Jord}}(B/A,M)\), and cohomology
+\(D^n_{\mathrm{Jord}}(B/A,M)\).
+
+\section{Literature Notes}
+
+The curated literature notes live in \path{literature/notes/}. They are the
+Codex-facing layer for references; local PDFs remain under
+\path{literature/papers-local/} and should be checked by the human reader when
+precise formulas or citations matter.
+
+\section{Verification Reminders}
+
+For Python changes, the default checks are:
+\begin{itemize}
+  \item \path{python -m pytest}
+  \item \path{python -m ruff check .}
+  \item \path{python scripts/check_claims.py}
+\end{itemize}
+For this private note, the relevant check is that the LaTeX file compiles.
