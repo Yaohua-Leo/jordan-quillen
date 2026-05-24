@@ -20,6 +20,12 @@ venv/
 .agents/
 tmp/
 
+# Personal notes
+note/
+
+# Personal editor state
+.obsidian/
+
 # Local papers and notebook runtime files
 literature/papers-local/*.pdf
 literature/papers-local/*.djvu
