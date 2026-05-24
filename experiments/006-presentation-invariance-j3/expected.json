@@ -1,0 +1,19 @@
+{
+  "status": "expected_by_theory_and_naive_toy_model",
+  "presentation_A": {
+    "name": "F(x)/(x^3)",
+    "expected_homology_dimensions": {
+      "H0": 1,
+      "H1": 1
+    }
+  },
+  "presentation_B": {
+    "name": "F(x,y)/(y-x^2, xy, y^2)",
+    "expected_note": "Should agree with Presentation A after a genuine cofibrant replacement; naive one-step relation complexes may fail.",
+    "naive_one_step_expected_homology_dimensions": {
+      "H0": 1,
+      "H1": 2
+    },
+    "cofibrant_replacement_status": "not implemented"
+  }
+}

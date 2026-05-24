@@ -1,0 +1,66 @@
+{
+  "status": "expected_by_toy_model",
+  "model": "one-generator derived indecomposables toy model",
+  "convention": "After applying Q, only the linear coefficient of r(x) survives.",
+  "examples": [
+    {
+      "name": "free_one_generator",
+      "presentation": "F(x)",
+      "relation": null,
+      "linear_part_coefficient": null,
+      "expected_homology_dimensions": {
+        "H0": 1,
+        "H1": 0
+      }
+    },
+    {
+      "name": "one_dimensional_idempotent",
+      "presentation": "F(x)/(x^2 - x)",
+      "relation": {
+        "2": "1",
+        "1": "-1"
+      },
+      "linear_part_coefficient": "-1",
+      "expected_homology_dimensions": {
+        "H0": 0,
+        "H1": 0
+      }
+    },
+    {
+      "name": "one_dimensional_square_zero",
+      "presentation": "F(x)/(x^2)",
+      "relation": {
+        "2": "1"
+      },
+      "linear_part_coefficient": "0",
+      "expected_homology_dimensions": {
+        "H0": 1,
+        "H1": 1
+      }
+    },
+    {
+      "name": "truncated_x3",
+      "presentation": "F(x)/(x^3)",
+      "relation": {
+        "3": "1"
+      },
+      "linear_part_coefficient": "0",
+      "expected_homology_dimensions": {
+        "H0": 1,
+        "H1": 1
+      }
+    },
+    {
+      "name": "truncated_x4",
+      "presentation": "F(x)/(x^4)",
+      "relation": {
+        "4": "1"
+      },
+      "linear_part_coefficient": "0",
+      "expected_homology_dimensions": {
+        "H0": 1,
+        "H1": 1
+      }
+    }
+  ]
+}

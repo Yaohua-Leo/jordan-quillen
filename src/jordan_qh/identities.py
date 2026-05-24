@@ -8,7 +8,7 @@ Product = Callable[[T, T], T]
 
 
 def jordan_identity_holds(elements: Iterable[T], product: Product[T]) -> bool:
-    """Check `(x^2 y) x = x^2 (y x)` on a finite set of elements."""
+    """Check `(x^2 y) x = x^2 (y x)` on the supplied finite set."""
     items = tuple(elements)
     for x in items:
         x_squared = product(x, x)
