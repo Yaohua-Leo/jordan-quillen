@@ -1,0 +1,66 @@
+{
+  "examples": [
+    {
+      "computed_homology_dimensions": {
+        "H0": 1,
+        "H1": 0
+      },
+      "expected_homology_dimensions": {
+        "H0": 1,
+        "H1": 0
+      },
+      "name": "free_one_generator",
+      "passed": true
+    },
+    {
+      "computed_homology_dimensions": {
+        "H0": 0,
+        "H1": 0
+      },
+      "expected_homology_dimensions": {
+        "H0": 0,
+        "H1": 0
+      },
+      "name": "one_dimensional_idempotent",
+      "passed": true
+    },
+    {
+      "computed_homology_dimensions": {
+        "H0": 1,
+        "H1": 1
+      },
+      "expected_homology_dimensions": {
+        "H0": 1,
+        "H1": 1
+      },
+      "name": "one_dimensional_square_zero",
+      "passed": true
+    },
+    {
+      "computed_homology_dimensions": {
+        "H0": 1,
+        "H1": 1
+      },
+      "expected_homology_dimensions": {
+        "H0": 1,
+        "H1": 1
+      },
+      "name": "truncated_x3",
+      "passed": true
+    },
+    {
+      "computed_homology_dimensions": {
+        "H0": 1,
+        "H1": 1
+      },
+      "expected_homology_dimensions": {
+        "H0": 1,
+        "H1": 1
+      },
+      "name": "truncated_x4",
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "status": "run"
+}

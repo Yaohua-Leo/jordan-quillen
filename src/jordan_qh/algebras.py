@@ -66,7 +66,7 @@ class FiniteDimensionalAlgebra:
         return identities.is_commutative(self.basis_vectors(), self.product)
 
     def satisfies_jordan_identity_on_basis(self) -> bool:
-        """Check the Jordan identity on basis vectors."""
+        """Run a basis-vector Jordan identity smoke test."""
         return identities.jordan_identity_holds(self.basis_vectors(), self.product)
 
 

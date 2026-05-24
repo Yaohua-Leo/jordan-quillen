@@ -1,0 +1,33 @@
+{
+  "completed_scope": "Presentation A and the naive one-step Presentation B diagnostic were run; genuine cofibrant replacement is not implemented.",
+  "passed": true,
+  "presentation_A": {
+    "computed_homology_dimensions": {
+      "H0": 1,
+      "H1": 1
+    },
+    "expected_homology_dimensions": {
+      "H0": 1,
+      "H1": 1
+    },
+    "name": "F(x)/(x^3)",
+    "passed": true
+  },
+  "presentation_B": {
+    "cofibrant_replacement_status": "not implemented",
+    "computed_naive_one_step_homology_dimensions": {
+      "H0": 1,
+      "H1": 2
+    },
+    "expected_naive_one_step_homology_dimensions": {
+      "H0": 1,
+      "H1": 2
+    },
+    "name": "F(x,y)/(y-x^2, xy, y^2)",
+    "note": "Should agree with Presentation A after a genuine cofibrant replacement; naive one-step relation complexes may fail.",
+    "passed": true,
+    "status": "naive one-step diagnostic run"
+  },
+  "presentation_invariance_verified": false,
+  "status": "run"
+}

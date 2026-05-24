@@ -1,4 +1,50 @@
 {
-  "status": "not run yet",
-  "notes": "No computation has been run for this experiment."
+  "experiment": "001-square-zero",
+  "status": "run",
+  "command": "python experiments/001-square-zero/run.py",
+  "checker": {
+    "type": "finite_grid_jordan_identity",
+    "grid_coefficients": [
+      "-1",
+      "0",
+      "1"
+    ],
+    "grid_size": 9,
+    "basis_only_warning": "Basis-vector checks are smoke tests only and can miss bad scalar actions.",
+    "basis_only_false_positive_example": {
+      "base_square": "1",
+      "lambda": "2",
+      "basis_only_passes": true,
+      "finite_grid_passes": false
+    }
+  },
+  "tested_lambdas": [
+    "-2",
+    "-1",
+    "-1/2",
+    "0",
+    "1/2",
+    "1",
+    "2"
+  ],
+  "unital_base_e2_equals_e": {
+    "base_square": "1",
+    "jordan_lambdas": [
+      "0",
+      "1/2",
+      "1"
+    ],
+    "unital_extension_lambdas": [
+      "1"
+    ],
+    "interpretation": "In the nonunital Jordan algebra category, the tested scalar actions that pass are lambda = 0, 1/2, 1. Requiring (e, 0) to remain a unit selects lambda = 1."
+  },
+  "zero_base_e2_equals_0": {
+    "base_square": "0",
+    "jordan_lambdas": [
+      "0"
+    ],
+    "interpretation": "For the one-dimensional zero-multiplication base, the tested scalar action is forced to lambda = 0."
+  },
+  "claim_boundary": "These toy checks support the split square-zero workflow for CLAIM-0003, but they do not prove the Beck module equivalence."
 }

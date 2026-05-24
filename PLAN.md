@@ -80,9 +80,14 @@ Existing project surfaces:
   tensors, identities, derivations, modules, omega, low-degree expectations,
   and TKK comparison placeholders.
 - `tests/` already contains smoke tests for the Python scaffold.
-- `experiments/` currently contains exact-computation placeholders and
-  experiment notes, but the experiment result files are still marked
-  `not run yet`.
+- `experiments/` currently contains numbered experiment directories. The
+  numbers are stable workspace identifiers, not a logical dependency order:
+  later-numbered experiments may be run or reviewed before earlier ones.
+- `experiments/005-quillen-derived-indecomposables/` has a pure-Python toy
+  benchmark result for one-generator derived indecomposables.
+- `experiments/006-presentation-invariance-j3/` has a first-pass result for
+  Presentation A of `J_3=(t)/(t^3)` and explicitly records that Presentation B
+  is not implemented in the toy model.
 - `paper/` already contains a LaTeX skeleton with section files.
 - `formal/lean/` contains a Lean scaffold, but formalization is not part of the
   default verification path.
@@ -549,7 +554,10 @@ Investigate whether `D^2` controls obstructions to extensions or deformations.
 
 ## 11. Milestone 7: Computation Layer
 
-Status: Python scaffold exists; experiments are still marked `not run yet`.
+Status: Python scaffold exists. The current active computation focus is
+`experiments/005-quillen-derived-indecomposables/` and
+`experiments/006-presentation-invariance-j3/`, not the numeric first
+experiment directory.
 
 ### Goal
 
@@ -584,6 +592,9 @@ Implement or prototype:
 - `J^2` and `J/J^2`;
 - derivation spaces;
 - square-zero extension checks;
+- one-generator derived indecomposables toy checks;
+- presentation-invariance stress tests that do not overclaim full cofibrant
+  replacement;
 - candidate universal differential module;
 - small TKK Lie algebra construction where feasible.
 
@@ -605,12 +616,31 @@ Start with:
 - `src/jordan_qh/derivations.py`
 - `src/jordan_qh/modules.py`
 - `src/jordan_qh/omega.py`
+- `src/jordan_qh/indecomposables.py`
+- `src/jordan_qh/quillen_toy.py`
 - `src/jordan_qh/tkk.py`
 - `tests/`
 - `experiments/001-square-zero/`
 - `experiments/002-two-dimensional-jordan/`
 - `experiments/003-beck-module-identities/`
 - `experiments/004-tkk-comparison-small-examples/`
+- `experiments/005-quillen-derived-indecomposables/`
+- `experiments/006-presentation-invariance-j3/`
+
+### Experiment Numbering And Current Priority
+
+Experiment directory numbers are chronological or administrative labels, not a
+mathematical prerequisite graph. `001` remains a square-zero workflow surface,
+but it is not a blocker for reviewing or rerunning `005` and `006`.
+
+The immediate computation priority is:
+
+1. rerun and manually review `005`, the one-generator derived
+   indecomposables benchmark;
+2. rerun and manually review `006`, the `J_3=(t)/(t^3)` presentation-warning
+   stress test;
+3. keep the limitation visible that `006` does not verify presentation
+   invariance, because Presentation B is not implemented by the toy model.
 
 ### Success Criteria
 
@@ -901,24 +931,31 @@ proof-draft
 
 ## 18. Immediate Next Tasks
 
-1. Review `theory/00-conventions.md` against `theory/latex_notation.md` and
+1. Rerun and manually review `experiments/005-quillen-derived-indecomposables/`
+   and `experiments/006-presentation-invariance-j3/`. Treat their experiment
+   numbers as workspace labels, not as logical stage ordering.
+2. Record whether the `005` toy benchmark should remain only experimental
+   evidence or be promoted into a draft claim after manual proof review.
+3. Keep `006` explicitly limited: Presentation A is computed by the
+   one-generator toy model, while Presentation B remains a planned
+   cofibrant-replacement stress test.
+4. Review `theory/00-conventions.md` against `theory/latex_notation.md` and
    freeze the default working category for the next phase.
-2. Expand `theory/03-abelianization.md` around `Q(J) = J/J^2`, the adjunction,
+5. Expand `theory/03-abelianization.md` around `Q(J) = J/J^2`, the adjunction,
    the unital degeneration, and the augmented case.
-3. Move `CLAIM-0001` and `CLAIM-0002` from draft toward `proof-draft` or
+6. Move `CLAIM-0001` and `CLAIM-0002` from draft toward `proof-draft` or
    `checked`, but only after manual proof review.
-4. Expand `theory/04-beck-modules.md` and
+7. Expand `theory/04-beck-modules.md` and
    `experiments/003-beck-module-identities/` with explicit square-zero
    identity calculations.
-5. Decide whether the first exact linear algebra path is pure Python or Sage
-   for `J^2`, derivation spaces, and small examples.
-6. Run and record the first exact experiment result instead of leaving every
-   experiment as `not run yet`.
-7. Add a cotangent-complex claim file with the next available claim ID if the
+8. Treat pure Python exact arithmetic as the current path for `J^2` and the
+   toy derived-indecomposables checks; revisit Sage only if later examples
+   exceed the pure-Python scaffold.
+9. Add a cotangent-complex claim file with the next available claim ID if the
    definition in `theory/06-cotangent-complex.md` becomes mathematically
    substantive.
-8. Add base-change, free-vanishing, and low-degree interpretation claims using
+10. Add base-change, free-vanishing, and low-degree interpretation claims using
    next available IDs.
-9. Synchronize the paper skeleton with stable claim statuses before drafting
+11. Synchronize the paper skeleton with stable claim statuses before drafting
    theorem-like prose.
-10. Keep `PLAN.md` as the roadmap, not as proof evidence.
+12. Keep `PLAN.md` as the roadmap, not as proof evidence.

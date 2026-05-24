@@ -1,0 +1,50 @@
+{
+  "algebra": "J3 = (t)/(t^3)",
+  "base_field": "QQ",
+  "differential": {
+    "d(a1)": "y - x^2",
+    "d(a2)": "x*y",
+    "d(a3)": "y^2",
+    "d(b)": "a3 - x*a2 - (y + x^2)*a1 + x*(x*a1)",
+    "d(x)": "0",
+    "d(y)": "0"
+  },
+  "expected_homology_dimensions": {
+    "H0": 1,
+    "H1": 1,
+    "H2": 0
+  },
+  "expected_representatives": {
+    "H0": [
+      "x"
+    ],
+    "H1": [
+      "a2"
+    ],
+    "H2": []
+  },
+  "generators": {
+    "degree_0": [
+      "x",
+      "y"
+    ],
+    "degree_1": [
+      "a1",
+      "a2",
+      "a3"
+    ],
+    "degree_2": [
+      "b"
+    ]
+  },
+  "indecomposable_differential": {
+    "d_Q(a1)": "y",
+    "d_Q(a2)": "0",
+    "d_Q(a3)": "0",
+    "d_Q(b)": "a3"
+  },
+  "presentation": "F(x,y)/(y-x^2, x*y, y^2)",
+  "replacement_type": "two-step semi-free dg Jordan toy replacement",
+  "status": "expected_by_hand",
+  "warning": "This verifies a two-step low-degree replacement for J3 Presentation B, not a general cofibrant replacement algorithm."
+}
