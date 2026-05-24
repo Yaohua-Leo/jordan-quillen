@@ -1,0 +1,246 @@
+\chapter{Background}
+
+\section{Purpose}
+
+This chapter is a private learning layer for the mathematical background behind
+intrinsic Quillen homology and cohomology of Jordan algebras. It is not a claim
+registry and should not be treated as proof evidence.
+
+\begin{note}
+  Let \(k\) be a field of characteristic \(0\), and let
+  \(\operatorname{Jord}_k\) denote a suitable category of Jordan algebras over
+  \(k\), for example nonunital Jordan algebras, simplicial Jordan algebras, or
+  dg Jordan algebras over the Jordan operad.
+
+  The word \emph{intrinsic} means that the construction is carried out inside the
+  category of Jordan algebras itself. In particular, one does not first pass from
+  a Jordan algebra \(J\) to an associated Lie algebra, such as the Tits--Kantor--
+  Koecher Lie algebra, and then take Lie algebra homology.
+
+  In the nonunital absolute setting, the relevant abelianization functor is the
+  functor of indecomposables
+  \[
+      Q(J) = J/J^2,
+  \]
+  where
+  \[
+      J^2 := \operatorname{span}_k\{xy : x,y\in J\}.
+  \]
+  The quotient \(J/J^2\) has zero multiplication, and it is the universal
+  zero-multiplication Jordan algebra receiving a morphism from \(J\).
+
+  To define Quillen homology, one replaces \(J\) by a cofibrant replacement
+  \[
+      \widetilde{J} \xrightarrow{\sim} J
+  \]
+  in the chosen homotopical category of Jordan algebras, and then applies \(Q\).
+  Thus the derived indecomposables are
+  \[
+      \mathbb{L}Q(J) := Q(\widetilde{J})
+      = \widetilde{J}/(\widetilde{J})^2.
+  \]
+  The intrinsic Jordan Quillen homology of \(J\) is
+  \[
+      H^{\operatorname{Jord}}_n(J)
+      :=
+      H_n\bigl(\mathbb{L}Q(J)\bigr).
+  \]
+
+  More generally, for a morphism of Jordan algebras
+  \[
+      A \longrightarrow B,
+  \]
+  one expects a relative cotangent complex
+  \[
+      \mathbb{L}^{\operatorname{Jord}}_{B/A}.
+  \]
+  If \(M\) is an appropriate \(B\)-module, for example a Beck module or Jordan
+  module, then the intrinsic Jordan Quillen cohomology is defined by
+  \[
+      D^n_{\operatorname{Jord}}(B/A,M)
+      :=
+      H^n\operatorname{Hom}_B
+      \bigl(
+          \mathbb{L}^{\operatorname{Jord}}_{B/A},
+          M
+      \bigr).
+  \]
+  Dually, one may define homology with coefficients by
+  \[
+      D^{\operatorname{Jord}}_n(B/A,M)
+      :=
+      H_n\bigl(
+          \mathbb{L}^{\operatorname{Jord}}_{B/A}
+          \otimes_B M
+      \bigr),
+  \]
+  or, more carefully, by using the appropriate derived tensor product.
+
+  The low-degree interpretation should be analogous to the commutative and Lie
+  cases:
+  \[
+      D^0_{\operatorname{Jord}}(B/A,M)
+      \cong
+      \operatorname{Der}_A^{\operatorname{Jord}}(B,M),
+  \]
+  while
+  \[
+      D^1_{\operatorname{Jord}}(B/A,M)
+  \]
+  should classify square-zero extensions of \(B\) by \(M\), subject to the precise
+  choice of the coefficient category.
+\end{note}
+
+\section{Working Setting}
+
+The default ground field is a field \(k\) of characteristic \(0\). The current
+working category is usually nonunital Jordan algebras, with augmented unital
+algebras treated through their augmentation ideals when that convention is
+appropriate.
+
+\begin{definition}
+A Jordan algebra is a commutative algebra whose product satisfies the Jordan
+identity. In this project the product is written as \(xy\) in mathematical
+prose and sometimes as \(x * y\) in code-oriented notes.
+\end{definition}
+
+\section{Indecomposables}
+
+The guiding abelianization candidate is
+\[
+  Q(J) = J/J^2,
+\]
+where \(J^2\) denotes the linear span of products \(xy\). The slogan is useful
+only after the ambient category and the unital convention have been fixed.
+
+\begin{question}
+What is the cleanest first setting for \(Q(J)=J/J^2\): absolute nonunital
+Jordan algebras, augmented unital Jordan algebras, or a relative category?
+\end{question}
+
+\begin{note}
+  In the absolute nonunital category, the abelian objects are precisely the
+  Jordan algebras with zero multiplication. Indeed, a vector space \(V\) with
+  product
+  \[
+      uv = 0
+      \qquad
+      \text{for all }u,v\in V
+  \]
+  is automatically a Jordan algebra. Therefore the natural abelianization of a
+  nonunital Jordan algebra \(J\) is not a commutator quotient, but rather
+  \[
+      Q(J)=J/J^2.
+  \]
+  Here \(J^2\) is the linear span of all products. The quotient has zero
+  multiplication because every product in \(J/J^2\) is represented by an element
+  of \(J^2\).
+
+  Let \(A\) be a unital Jordan algebra over \(k\). An \emph{augmentation} of \(A\)
+is a unital Jordan algebra morphism
+\[
+    \varepsilon : A \longrightarrow k,
+\]
+where \(k\) is regarded as a unital Jordan algebra with its usual
+multiplication.
+
+The pair \((A,\varepsilon)\) is called an \emph{augmented unital Jordan
+algebra}. Its \emph{augmentation ideal} is
+\[
+    A_+ := \ker(\varepsilon).
+\]
+
+Since \(\varepsilon(1_A)=1\), the canonical inclusion
+\[
+    k \longrightarrow A,
+    \qquad
+    \lambda \longmapsto \lambda 1_A
+\]
+splits \(\varepsilon\) as a map of \(k\)-vector spaces. Hence there is a vector
+space decomposition
+\[
+    A \cong k\cdot 1_A \oplus A_+.
+\]
+
+Moreover, \(A_+\) is an ideal. Indeed, if \(a\in A_+\) and \(b\in A\), then
+\[
+    \varepsilon(ab)
+    =
+    \varepsilon(a)\varepsilon(b)
+    =
+    0,
+\]
+so \(ab\in A_+\). In particular, if \(a,b\in A_+\), then \(ab\in A_+\).
+Thus \(A_+\) is naturally a nonunital Jordan algebra.
+
+The augmentation ideal is important because, for a unital algebra \(A\), the
+naive quotient
+\[
+    A/A^2
+\]
+is usually useless: since \(1_A\in A\), one typically has
+\[
+    A^2=A.
+\]
+Therefore, in the augmented unital setting, the correct analogue of
+indecomposables is
+\[
+    Q(A)
+    :=
+    A_+/A_+^2,
+\]
+where
+\[
+    A_+ = \ker(\varepsilon).
+\]
+This is the same idea as in the nonunital setting, but applied to the
+augmentation ideal rather than to the whole unital algebra.
+
+Conversely, if \(J\) is a nonunital Jordan algebra, one may form its
+unitalization
+\[
+    J^{+} := k\oplus J.
+\]
+The product is defined by
+\[
+    (\lambda,x)(\mu,y)
+    :=
+    \bigl(
+        \lambda\mu,
+        \lambda y+\mu x+xy
+    \bigr),
+\]
+where \(\lambda,\mu\in k\) and \(x,y\in J\). The element
+\[
+    (1,0)
+\]
+is the unit. There is a natural augmentation
+\[
+    \varepsilon : J^{+}\longrightarrow k,
+    \qquad
+    \varepsilon(\lambda,x)=\lambda,
+\]
+and its kernel is
+\[
+    \ker(\varepsilon)=0\oplus J\cong J.
+\]
+Thus nonunital Jordan algebras may often be studied equivalently through
+augmented unital Jordan algebras by passing between
+\[
+    J
+    \qquad\text{and}\qquad
+    k\oplus J.
+\]
+\end{note}
+
+\section{Modules, Extensions, And Differentials}
+
+The coefficient objects should be understood through square-zero extensions
+\(J \ltimes M\), Beck modules over \(J\), and Jordan derivations. The main
+research question is whether the Beck-module convention exactly matches the
+classical Jordan-module convention used in the literature. (I need to ask my supervisor about this).
+
+The expected Jordan analogue of Kahler differentials is a universal object
+\(\Omega_{B/A}\) representing Jordan derivations. The corresponding cotangent
+complex \(L^{\mathrm{Jord}}_{B/A}\) is still provisional until the resolution
+framework is fixed.

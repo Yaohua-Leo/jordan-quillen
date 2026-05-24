@@ -1,0 +1,38 @@
+\chapter{Workspace Architecture}
+
+\section{Repository Map}
+
+The repository separates mathematical claims, computational evidence, source
+code, paper text, and private notes. This separation is part of the research
+method: a computation may suggest a claim, but it does not by itself prove it.
+
+\section{Theory And Claims}
+
+\path{theory/} stores the evolving mathematical development. The directory
+\path{theory/claims/} is the formal claim registry, and every theorem-like
+statement should eventually be represented there with status, assumptions,
+dependencies, proof sketch, references, and verification notes.
+
+The current claim statuses are deliberately conservative. \path{CLAIM-0001}
+and \path{CLAIM-0002} are draft claims, while \path{CLAIM-0003} through
+\path{CLAIM-0005} are conjectural.
+
+\section{Code, Tests, And Experiments}
+
+\path{src/jordan_qh/} contains exact Python scaffolding for small examples,
+linear algebra, identities, derivations, modules, omega candidates,
+indecomposables, and toy Quillen checks. The matching tests live in
+\path{tests/}.
+
+\path{experiments/} records planned or executed computations. The experiment
+numbers are stable workspace identifiers, not a logical dependency order.
+
+\section{Paper, Formalization, And Private Notes}
+
+\path{paper/} is the public-facing LaTeX skeleton and should only receive
+statements that are aligned with checked or clearly labelled claim statuses.
+\path{formal/} is a Lean scaffold, not part of the default verification path.
+
+\path{note/} is a private learning area. This file may contain bilingual
+explanations, partial understanding, and personal TODOs, but it should not
+silently promote experiments or conjectures into proved results.

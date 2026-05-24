@@ -1,0 +1,390 @@
+\documentclass[11pt]{report}
+
+\usepackage[a4paper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\title{Personal Notes on Jordan Quillen (Co)homology}
+\author{}
+\date{\today}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+\newtheorem{note}{Note}[chapter]
+\newtheorem{question}{Question}[chapter]
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\input{chapters/01-background}
+\input{chapters/02-workspace-architecture}
+\input{chapters/03-experiments}
+\input{chapters/04-experiment-summary}
+\input{chapters/05-theory-roadmap}
+
+\chapter{Current Repository Assessment}
+
+\section{Snapshot Boundary}
+
+This chapter records a working assessment of the repository state. It is a
+private planning note, not a claim file and not proof evidence. Any statement
+below that depends on generated results should be checked against the relevant
+\path{results.json}, \path{experiment.md}, commit record, and verification
+commands before it is quoted in public project documentation.
+
+\begin{note}
+The current project stage is best described as
+\[
+  \text{reproducible experimental scaffold}
+  \quad+\quad
+  \text{small exact computations}.
+\]
+It is not yet a completed theory of intrinsic Jordan Quillen homology. The
+useful achievement is narrower but important: the repository now has enough
+notation, claims, tests, and toy computations to expose false shortcuts and to
+shape the next definitions.
+\end{note}
+
+\section{Overall Diagnosis}
+
+The project goal is clear. The intended construction is intrinsic: use the
+Jordan algebra category itself, rather than first replacing a Jordan algebra by
+an associated Lie algebra such as the Tits--Kantor--Koecher algebra. The guiding
+objects are derived abelianization, Jordan cotangent complexes, low-degree
+Quillen cohomology, square-zero extensions, and comparisons with Glassman or
+TKK-style constructions.
+
+The repository discipline is also good. It asks for a strict distinction
+between proved claims, proof drafts, conjectures, and computations. It also
+requires exact arithmetic where possible and forbids fabricated experiment
+output. This is especially important here because small Jordan examples can
+look convincing even when a naive relation complex is not homotopically
+invariant.
+
+At the code level, the package is intentionally light: a Python package over
+Python \(3.11\) or later, with no runtime dependencies and development tools
+such as \path{pytest}, \path{ruff}, and \path{pre-commit}. The \path{Makefile}
+exposes entries such as \path{test}, \path{lint}, \path{claims}, and
+\path{experiments}. A current practical caveat is that \path{make experiments}
+does not mean that every experiment is rerun: the top-level
+\path{scripts/run_all_experiments.py} currently behaves as a conservative
+status/reporting surface and prints that experiments are not run by default.
+
+\section{Claim Status}
+
+The theory layer remains deliberately conservative.
+
+\begin{itemize}[leftmargin=*]
+  \item \path{CLAIM-0001} is draft-level: zero-multiplication Jordan algebras
+  are the expected abelian objects in the relevant nonunital setting.
+  \item \path{CLAIM-0002} is draft-level: the indecomposables functor
+  \(Q(J)=J/J^2\) is expected to be the abelianization or left adjoint in the
+  chosen absolute nonunital setting.
+  \item \path{CLAIM-0003} is conjectural: Beck modules over Jordan algebras
+  should match a precise Jordan module convention, but the identity extraction
+  still needs to be completed.
+  \item \path{CLAIM-0004} is conjectural: universal Jordan differentials
+  \(\Omega_{B/A}\) need a settled coefficient category and universal property.
+  \item \path{CLAIM-0005} is conjectural: the transitivity triangle for the
+  Jordan cotangent complex is not yet proved in the project.
+\end{itemize}
+
+\section{Experiment Status Matrix}
+
+The current experiment landscape is:
+
+\begin{description}[leftmargin=*,style=nextline]
+  \item[001 square-zero, run.]
+  A finite-grid sanity check for one-dimensional split extensions.
+  \item[002 two-dimensional, not run.]
+  Representative small examples still need to be computed.
+  \item[003 Beck modules, not run.]
+  Symbolic module identities are still a placeholder target.
+  \item[004 TKK comparison, not run.]
+  Comparison examples have not yet been computed.
+  \item[005 derived \(Q\), run.]
+  The one-generator toy benchmark matches the expected dimensions.
+  \item[006 \(J_3\) stress test, run.]
+  Naive Presentation B has an extra false \(H_1\) class.
+  \item[007 two-step repair, run.]
+  One hand-coded degree \(2\) generator kills that false class in the tested
+  low-degree complex.
+\end{description}
+
+The status should be read from each experiment's own files, especially
+\path{results.json} or \path{results.md}. The global runner is not yet a
+complete experiment execution engine.
+
+\section{Experiment 001: Split Square-Zero Extensions}
+
+Experiment 001 studies one-dimensional split square-zero extensions
+\[
+  E = J\ltimes M,
+  \qquad
+  M^2=0.
+\]
+It tests two one-dimensional bases:
+\[
+  e^2=e
+  \qquad\text{and}\qquad
+  e^2=0,
+\]
+with \(M=km\) and scalar action
+\[
+  L_e(m)=\lambda m.
+\]
+
+The important methodological point is that the experiment uses exact rational
+arithmetic and checks the Jordan identity on a finite grid of linear
+combinations, not only on basis vectors. This catches a real failure mode:
+\(\lambda=2\) can pass a basis-only smoke test but fail once general linear
+combinations are tested.
+
+For \(e^2=e\), the tested nonunital split extension passes for
+\[
+  \lambda\in\{0,\tfrac12,1\}.
+\]
+If \((e,0)\) is required to remain a unit in the extension, the surviving value
+is \(\lambda=1\). For \(e^2=0\), the tested action is forced to
+\[
+  \lambda=0.
+\]
+
+This experiment supports the square-zero workflow behind \path{CLAIM-0003},
+but it does not prove the Beck-module classification. Its main lesson is that
+future module-identity checks must use symbolic derivation or a strong
+polynomial identity check, not basis-vector testing alone.
+
+\section{Experiment 005: One-Generator Derived Indecomposables}
+
+Experiment 005 is the cleanest current Quillen-style toy computation. It
+studies one-generator presentations
+\[
+  F(x),\quad
+  F(x)/(x^2-x),\quad
+  F(x)/(x^2),\quad
+  F(x)/(x^3),\quad
+  F(x)/(x^4).
+\]
+
+The toy rule is that after applying indecomposables \(Q\), only the linear part
+of a relation enters the first relation complex. In other words, the current
+toy complex is the two-term complex
+\[
+  k^{\{\text{relations}\}}
+  \longrightarrow
+  k^{\{\text{generators}\}},
+\]
+where the differential records relation linear terms. Exact row-rank
+computations then give \(H_0\) and \(H_1\).
+
+The current benchmark conclusions are:
+\[
+\begin{array}{c|c}
+\text{presentation} & (H_0,H_1) \\
+\hline
+F(x) & (1,0) \\
+F(x)/(x^2-x) & (0,0) \\
+F(x)/(x^2) & (1,1) \\
+F(x)/(x^3) & (1,1) \\
+F(x)/(x^4) & (1,1).
+\end{array}
+\]
+
+This gives a useful low-degree intuition for \(Q(J)=J/J^2\): a relation with a
+linear term can kill \(H_0\), while a pure higher-order relation appears as a
+naive \(H_1\) class in this one-step model. The boundary remains essential:
+this is not a general cofibrant replacement engine and it does not establish
+presentation invariance.
+
+\section{\texorpdfstring{Experiment 006: Presentation Stress Test For \(J_3\)}{Experiment 006: Presentation Stress Test For J3}}
+
+Experiment 006 compares two presentations of
+\[
+  J_3=(t)/(t^3).
+\]
+The first presentation is
+\[
+  \text{A: } F(x)/(x^3),
+\]
+and the second is
+\[
+  \text{B: } F(x,y)/(y-x^2,\;xy,\;y^2).
+\]
+
+Presentation A agrees with the one-generator toy computation and gives
+\[
+  H_0=1,\qquad H_1=1.
+\]
+The naive one-step diagnostic for Presentation B gives
+\[
+  H_0=1,\qquad H_1=2.
+\]
+The result is therefore not a failure of the project. It is a useful negative
+test: the naive relation complex sees an extra false \(H_1\) class for
+Presentation B. Without higher syzygy data or a genuine cofibrant replacement,
+Presentation B cannot be used as evidence for presentation invariance.
+
+\begin{note}
+The practical target created by Experiment 006 is precise: identify the extra
+class in the naive \(H_1\), then attach a higher cell or syzygy generator that
+kills it without changing the intended algebra.
+\end{note}
+
+\section{\texorpdfstring{Experiment 007: Two-Step Toy Repair For \(J_3\)}{Experiment 007: Two-Step Toy Repair For J3}}
+
+Experiment 007 performs exactly that fixed repair. It starts from Presentation
+B and adds one degree \(2\) generator \(b\), designed to kill the redundant
+class represented after applying \(Q\) by \(a_3\), the relation corresponding
+to \(y^2=0\).
+
+The low-degree indecomposable complex has the form
+\[
+  Q_2=\langle b\rangle
+  \longrightarrow
+  Q_1=\langle a_1,a_2,a_3\rangle
+  \longrightarrow
+  Q_0=\langle x,y\rangle,
+\]
+with
+\[
+  d_Q(a_1)=y,\qquad
+  d_Q(a_2)=0,\qquad
+  d_Q(a_3)=0,\qquad
+  d_Q(b)=a_3.
+\]
+Hence \(b\) kills exactly the extra class that was visible in the naive
+Presentation B computation.
+
+The computed dimensions become
+\[
+  H_0=1,\qquad H_1=1,\qquad H_2=0.
+\]
+Thus the naive \(H_1\)-dimension \(2\) from Experiment 006 drops to \(1\), in
+agreement with Presentation A through the tested degree.
+
+This is the most important current mathematical evidence in the repository:
+the project has moved from detecting a presentation artifact to hand-coding a
+low-degree semi-free repair that removes it. The result must still be quoted
+carefully. It is a fixed \(J_3\) computation, not an automatic syzygy search,
+not a general cofibrant replacement algorithm, and not a proof of full
+presentation invariance.
+
+\section{Current Strengths}
+
+The main strengths of the current repository are:
+
+\begin{itemize}[leftmargin=*]
+  \item The research boundary is explicit: computation is evidence, not proof.
+  \item The claim files are conservative and do not overstate the theory.
+  \item The package already has exact linear algebra utilities for small
+  examples.
+  \item The indecomposables code computes the rank of \(J^2\) and therefore
+  \(\dim Q(J)=\dim J-\dim J^2\) in finite examples.
+  \item The tests cover basic cases such as zero multiplication, a
+  one-dimensional idempotent algebra, and a one-dimensional square-zero
+  algebra.
+  \item Experiments 006 and 007 give a concrete warning and repair pattern for
+  presentation-sensitive toy computations.
+\end{itemize}
+
+\section{Current Risks}
+
+The main risks are:
+
+\begin{enumerate}[leftmargin=*]
+  \item The coefficient theory is not yet settled. The files for modules,
+  universal differentials, and TKK comparison remain draft or placeholder
+  surfaces rather than completed theory.
+  \item Experiment 007 is hand-coded. It should inspire the next algorithm, but
+  it is not itself an automatic cell-attachment or syzygy-discovery procedure.
+  \item Experiments 002, 003, and 004 are still the missing bridge between the
+  one-generator toy computations and the broader Jordan algebra theory.
+  \item The global experiment runner does not yet summarize the whole
+  experiment state in a machine-checkable matrix.
+\end{enumerate}
+
+\section{Next Experimental Priorities}
+
+\subsection*{Priority 1: Experiment 008}
+
+The next best experiment is an automatic syzygy-discovery version of
+Experiment 007. The goal is to input the three first-stage relations
+\[
+  a_1,\quad a_2,\quad a_3
+\]
+from Presentation B and automatically find the degree \(2\) attachment whose
+image under \(Q\) kills \(a_3\). The expected output should reproduce
+\[
+  H_0=1,\qquad H_1=1,\qquad H_2=0,
+\]
+while explicitly saying that this is only a degree \(1/2\) toy replacement, not
+a full cofibrant replacement.
+
+\subsection*{Priority 2: Experiment 003}
+
+The Beck-module identity experiment should be restored and made symbolic. The
+starting point should be the Jordan identity
+\[
+  ((a^2b)a)=a^2(ba)
+\]
+inside a square-zero extension \(J\ltimes M\) with \(M^2=0\). The experiment
+should extract the \(M\)-linear terms and compare the resulting operator
+identities for \(L_x\) with the classical Jordan module axioms. This is central
+for \path{CLAIM-0003}.
+
+\subsection*{Priority 3: Experiment 002}
+
+The two-dimensional example table should be completed in a modest,
+representative way before attempting classification. Good first examples are:
+the two-dimensional zero product algebra, \(ke\oplus km\) with \(e^2=e\), a
+one-dimensional idempotent plus a zero ideal, and a small two-dimensional
+nilpotent example. For each example, record \(\dim J^2\), \(\dim Q(J)\),
+derivation dimensions, and candidate relations for \(\Omega\).
+
+\subsection*{Priority 4: Experiment 004}
+
+The TKK comparison should begin with two or three minimal examples and should
+allow disagreement as a valid outcome. The repository rule is correct: one
+should not identify intrinsic Jordan Quillen homology with TKK Lie homology
+without either a proof or a counterexample.
+
+\subsection*{Priority 5: Experiment Status Aggregator}
+
+The script \path{scripts/run_all_experiments.py} should become a true
+read-only status aggregator before it becomes an execution driver. A useful
+first version would read each \path{experiment.md} and \path{results.json} or
+\path{results.md}, then produce a matrix recording status, pass/fail data, and
+the presentation-invariance flags that already appear in the JSON outputs. By
+default it should avoid rewriting results.
+
+\section{Working Conclusion}
+
+The most important current mathematical progression is
+\[
+  \text{Experiment 006}
+  \quad\longrightarrow\quad
+  \text{Experiment 007}.
+\]
+Experiment 006 shows that a naive Presentation B relation complex for \(J_3\)
+contains an extra false \(H_1\) class. Experiment 007 shows that a specific
+two-step semi-free toy replacement kills that class and restores the expected
+low-degree dimensions through degree \(1\).
+
+The next phase should therefore not jump directly to paper-level theorems. It
+should first turn the hand-coded success of Experiment 007 into a repeatable
+low-degree method, while also completing the coefficient-theory and small
+example experiments that make the theory meaningful.
+
+\appendix
+\input{chapters/appendix-notation-and-literature}
+
+\end{document}
