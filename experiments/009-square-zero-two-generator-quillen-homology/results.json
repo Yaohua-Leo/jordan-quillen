@@ -1,0 +1,166 @@
+{
+  "checks": {
+    "H0_dimension_is_2": true,
+    "H5_uses_im_partial_6": true,
+    "all_attached_cell_d_squared_zero": true,
+    "constructs_through_resolution_degree_6": true,
+    "d_squared_zero": true,
+    "partial_1_is_zero": true,
+    "partial_1_through_partial_6_recorded": true,
+    "stable_across_weight_bounds": false
+  },
+  "computed_homology_dimensions": {
+    "H0": 2,
+    "H1": 3,
+    "H2": 8,
+    "H3": 307,
+    "H4": 8,
+    "H5": 18
+  },
+  "experiment": "EXP-009-square-zero-two-generator-quillen-homology",
+  "notes": "The runner constructed the fixed example-specific bounded ordinary Jordan replacement through degree 6 for W = 6, 7, 8. The selected W = 8 output is truncated evidence because the weight-bound comparison is not stable.",
+  "passed": true,
+  "paths": {
+    "chain_complex_json": "experiments\\009-square-zero-two-generator-quillen-homology\\data\\chain_complex.json",
+    "tex_report": "experiments\\009-square-zero-two-generator-quillen-homology\\tex\\exp009_square_zero_two_gen_quillen.tex"
+  },
+  "result_is_stable": false,
+  "result_is_truncated_evidence_only": true,
+  "selected_weight_bound": 8,
+  "status": "run",
+  "tex_report_generated": true,
+  "weight_bound_stability": {
+    "dimension_comparison": {
+      "6": {
+        "H0": 2,
+        "H1": 3,
+        "H2": 8,
+        "H3": 41,
+        "H4": 0,
+        "H5": 0
+      },
+      "7": {
+        "H0": 2,
+        "H1": 3,
+        "H2": 8,
+        "H3": 78,
+        "H4": 2,
+        "H5": 18
+      },
+      "8": {
+        "H0": 2,
+        "H1": 3,
+        "H2": 8,
+        "H3": 307,
+        "H4": 8,
+        "H5": 18
+      }
+    },
+    "interpretation": "truncated evidence only; selected weight bounds disagree",
+    "representatives_agree": false,
+    "stable": false,
+    "weight_bounds": [
+      6,
+      7,
+      8
+    ]
+  },
+  "weight_bound_summaries": [
+    {
+      "basis_sizes": {
+        "C0": 2,
+        "C1": 3,
+        "C2": 8,
+        "C3": 47,
+        "C4": 18,
+        "C5": 12,
+        "C6": 0
+      },
+      "checks": {
+        "H0_dimension_is_2": true,
+        "H5_uses_im_partial_6": true,
+        "all_attached_cell_d_squared_zero": true,
+        "constructs_through_resolution_degree_6": true,
+        "d_squared_zero": true,
+        "partial_1_is_zero": true,
+        "partial_1_through_partial_6_recorded": true,
+        "stable_across_weight_bounds": null
+      },
+      "homology_dimensions": {
+        "H0": 2,
+        "H1": 3,
+        "H2": 8,
+        "H3": 41,
+        "H4": 0,
+        "H5": 0
+      },
+      "passed": true,
+      "status": "run",
+      "weight_bound": 6
+    },
+    {
+      "basis_sizes": {
+        "C0": 2,
+        "C1": 3,
+        "C2": 14,
+        "C3": 108,
+        "C4": 62,
+        "C5": 78,
+        "C6": 24
+      },
+      "checks": {
+        "H0_dimension_is_2": true,
+        "H5_uses_im_partial_6": true,
+        "all_attached_cell_d_squared_zero": true,
+        "constructs_through_resolution_degree_6": true,
+        "d_squared_zero": true,
+        "partial_1_is_zero": true,
+        "partial_1_through_partial_6_recorded": true,
+        "stable_across_weight_bounds": null
+      },
+      "homology_dimensions": {
+        "H0": 2,
+        "H1": 3,
+        "H2": 8,
+        "H3": 78,
+        "H4": 2,
+        "H5": 18
+      },
+      "passed": true,
+      "status": "run",
+      "weight_bound": 7
+    },
+    {
+      "basis_sizes": {
+        "C0": 2,
+        "C1": 3,
+        "C2": 16,
+        "C3": 357,
+        "C4": 122,
+        "C5": 246,
+        "C6": 204
+      },
+      "checks": {
+        "H0_dimension_is_2": true,
+        "H5_uses_im_partial_6": true,
+        "all_attached_cell_d_squared_zero": true,
+        "constructs_through_resolution_degree_6": true,
+        "d_squared_zero": true,
+        "partial_1_is_zero": true,
+        "partial_1_through_partial_6_recorded": true,
+        "stable_across_weight_bounds": false
+      },
+      "homology_dimensions": {
+        "H0": 2,
+        "H1": 3,
+        "H2": 8,
+        "H3": 307,
+        "H4": 8,
+        "H5": 18
+      },
+      "passed": true,
+      "status": "run",
+      "weight_bound": 8
+    }
+  ]
+}
