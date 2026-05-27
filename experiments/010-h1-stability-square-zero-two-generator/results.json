@@ -1,0 +1,1712 @@
+{
+  "base_field": "QQ",
+  "canonical_relation_basis": [
+    "x^2",
+    "xy",
+    "y^2"
+  ],
+  "cases": [
+    {
+      "C0_basis": [
+        "x",
+        "y"
+      ],
+      "C1_basis": [
+        "r_xx",
+        "r_xy",
+        "r_yy"
+      ],
+      "C2_basis": [],
+      "H1_representative_formulas": [
+        "r_xx",
+        "r_xy",
+        "r_yy"
+      ],
+      "H1_representatives_source_rows": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "basis_alignment_certificate": {
+        "image_partial_2_basis": [],
+        "image_partial_2_equals_kernel_rho": true,
+        "kernel_rho_basis": []
+      },
+      "basis_alignment_passed": true,
+      "case_group": "A_minimal_presentation_baseline",
+      "case_id": "A_minimal_presentation",
+      "d_squared_zero": true,
+      "dim_C0": 2,
+      "dim_C1": 3,
+      "dim_C2": 0,
+      "dim_H0": 2,
+      "dim_H1": 3,
+      "is_expected_fail_control": false,
+      "outcome": "pass_strong",
+      "partial_1_Q_source_rows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "partial_2_Q_source_rows": [],
+      "rank_partial_1_Q": 0,
+      "rank_partial_2_Q": 0,
+      "relation_coefficient_map_source_rows": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "C0_basis": [
+        "x",
+        "y"
+      ],
+      "C1_basis": [
+        "r_xx",
+        "r_xy",
+        "r_yy",
+        "r_q"
+      ],
+      "C2_basis": [],
+      "H1_representative_formulas": [
+        "r_xx",
+        "r_xy",
+        "r_yy",
+        "r_q"
+      ],
+      "H1_representatives_source_rows": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "basis_alignment_certificate": {
+        "image_partial_2_basis": [],
+        "image_partial_2_equals_kernel_rho": false,
+        "kernel_rho_basis": [
+          [
+            -1,
+            -2,
+            -1,
+            1
+          ]
+        ]
+      },
+      "basis_alignment_passed": false,
+      "case_group": "C_naive_redundant_relation_control",
+      "case_id": "C_redundant_relation_without_syzygy",
+      "d_squared_zero": true,
+      "dim_C0": 2,
+      "dim_C1": 4,
+      "dim_C2": 0,
+      "dim_H0": 2,
+      "dim_H1": 4,
+      "is_expected_fail_control": true,
+      "outcome": "expected_fail_observed",
+      "partial_1_Q_source_rows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "partial_2_Q_source_rows": [],
+      "rank_partial_1_Q": 0,
+      "rank_partial_2_Q": 0,
+      "relation_coefficient_map_source_rows": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "C0_basis": [
+        "x",
+        "y"
+      ],
+      "C1_basis": [
+        "r_xx",
+        "r_xy",
+        "r_yy",
+        "r_q"
+      ],
+      "C2_basis": [
+        "s_q"
+      ],
+      "H1_representative_formulas": [
+        "r_xx",
+        "r_xy",
+        "r_yy"
+      ],
+      "H1_representatives_source_rows": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "basis_alignment_certificate": {
+        "image_partial_2_basis": [
+          [
+            1,
+            2,
+            1,
+            -1
+          ]
+        ],
+        "image_partial_2_equals_kernel_rho": true,
+        "kernel_rho_basis": [
+          [
+            -1,
+            -2,
+            -1,
+            1
+          ]
+        ]
+      },
+      "basis_alignment_passed": true,
+      "case_group": "D_repaired_redundant_relation",
+      "case_id": "D_redundant_relation_with_syzygy",
+      "d_squared_zero": true,
+      "dim_C0": 2,
+      "dim_C1": 4,
+      "dim_C2": 1,
+      "dim_H0": 2,
+      "dim_H1": 3,
+      "is_expected_fail_control": false,
+      "outcome": "pass_strong",
+      "partial_1_Q_source_rows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "partial_2_Q_source_rows": [
+        [
+          -1,
+          -2,
+          -1,
+          1
+        ]
+      ],
+      "rank_partial_1_Q": 0,
+      "rank_partial_2_Q": 1,
+      "relation_coefficient_map_source_rows": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "C0_basis": [
+        "x",
+        "y"
+      ],
+      "C1_basis": [
+        "r_xx",
+        "r_xy",
+        "r_yy",
+        "r_q"
+      ],
+      "C2_basis": [
+        "s_q"
+      ],
+      "H1_representative_formulas": [
+        "r_xx",
+        "r_xy",
+        "r_yy"
+      ],
+      "H1_representatives_source_rows": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "basis_alignment_certificate": {
+        "image_partial_2_basis": [
+          [
+            1,
+            2,
+            1,
+            -1
+          ]
+        ],
+        "image_partial_2_equals_kernel_rho": true,
+        "kernel_rho_basis": [
+          [
+            -1,
+            -2,
+            -1,
+            1
+          ]
+        ]
+      },
+      "basis_alignment_passed": true,
+      "case_group": "F_truncation_depth_diagnostic",
+      "case_id": "F_truncation_depth_diagnostic",
+      "d_squared_zero": true,
+      "dim_C0": 2,
+      "dim_C1": 4,
+      "dim_C2": 1,
+      "dim_H0": 2,
+      "dim_H1": 3,
+      "expected_h1_by_depth": {
+        "minimal_presentation": {
+          "N=1": 3,
+          "N=2": 3,
+          "N=3": 3
+        },
+        "redundant_with_syzygy": {
+          "N=1": 4,
+          "N=2": 3,
+          "N=3": 3
+        },
+        "redundant_without_syzygy": {
+          "N=1": 4,
+          "N=2": 4,
+          "N=3": 4
+        }
+      },
+      "h1_by_depth": {
+        "minimal_presentation": {
+          "N=1": 3,
+          "N=2": 3,
+          "N=3": 3
+        },
+        "redundant_with_syzygy": {
+          "N=1": 4,
+          "N=2": 3,
+          "N=3": 3
+        },
+        "redundant_without_syzygy": {
+          "N=1": 4,
+          "N=2": 4,
+          "N=3": 4
+        }
+      },
+      "is_expected_fail_control": false,
+      "outcome": "pass_strong",
+      "partial_1_Q_source_rows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "partial_2_Q_source_rows": [
+        [
+          -1,
+          -2,
+          -1,
+          1
+        ]
+      ],
+      "rank_partial_1_Q": 0,
+      "rank_partial_2_Q": 1,
+      "relation_coefficient_map_source_rows": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "truncation_depth_pattern_passed": true
+    },
+    {
+      "C0_basis": [
+        "x",
+        "y"
+      ],
+      "C1_basis": [
+        "r_g1_u2",
+        "r_g1_uv",
+        "r_g1_v2"
+      ],
+      "C2_basis": [],
+      "H1_representative_formulas": [
+        "r_g1_u2",
+        "r_g1_uv",
+        "r_g1_v2"
+      ],
+      "H1_representatives_source_rows": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "basis_alignment_certificate": {
+        "image_partial_2_basis": [],
+        "image_partial_2_equals_kernel_rho": true,
+        "kernel_rho_basis": []
+      },
+      "basis_alignment_passed": true,
+      "case_group": "B_linear_change_of_generators",
+      "case_id": "B_linear_change_g1",
+      "d_squared_zero": true,
+      "dim_C0": 2,
+      "dim_C1": 3,
+      "dim_C2": 0,
+      "dim_H0": 2,
+      "dim_H1": 3,
+      "is_expected_fail_control": false,
+      "outcome": "pass_strong",
+      "partial_1_Q_source_rows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "partial_2_Q_source_rows": [],
+      "rank_partial_1_Q": 0,
+      "rank_partial_2_Q": 0,
+      "relation_coefficient_map_source_rows": [
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          1,
+          -2,
+          1
+        ]
+      ],
+      "sym2_check": {
+        "expected_sym2_matrix_source_rows": [
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            -1
+          ],
+          [
+            1,
+            -2,
+            1
+          ]
+        ],
+        "generator_change_matrix": [
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            -1
+          ]
+        ],
+        "observed_h1_basis_matrix_source_rows": [
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            -1
+          ],
+          [
+            1,
+            -2,
+            1
+          ]
+        ],
+        "passed": true
+      }
+    },
+    {
+      "C0_basis": [
+        "x",
+        "y"
+      ],
+      "C1_basis": [
+        "r_g2_u2",
+        "r_g2_uv",
+        "r_g2_v2"
+      ],
+      "C2_basis": [],
+      "H1_representative_formulas": [
+        "r_g2_u2",
+        "r_g2_uv",
+        "r_g2_v2"
+      ],
+      "H1_representatives_source_rows": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "basis_alignment_certificate": {
+        "image_partial_2_basis": [],
+        "image_partial_2_equals_kernel_rho": true,
+        "kernel_rho_basis": []
+      },
+      "basis_alignment_passed": true,
+      "case_group": "B_linear_change_of_generators",
+      "case_id": "B_linear_change_g2",
+      "d_squared_zero": true,
+      "dim_C0": 2,
+      "dim_C1": 3,
+      "dim_C2": 0,
+      "dim_H0": 2,
+      "dim_H1": 3,
+      "is_expected_fail_control": false,
+      "outcome": "pass_strong",
+      "partial_1_Q_source_rows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "partial_2_Q_source_rows": [],
+      "rank_partial_1_Q": 0,
+      "rank_partial_2_Q": 0,
+      "relation_coefficient_map_source_rows": [
+        [
+          1,
+          4,
+          4
+        ],
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "sym2_check": {
+        "expected_sym2_matrix_source_rows": [
+          [
+            1,
+            4,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "generator_change_matrix": [
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "observed_h1_basis_matrix_source_rows": [
+          [
+            1,
+            4,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ],
+        "passed": true
+      }
+    },
+    {
+      "C0_basis": [
+        "x",
+        "y"
+      ],
+      "C1_basis": [
+        "r_g3_u2",
+        "r_g3_uv",
+        "r_g3_v2"
+      ],
+      "C2_basis": [],
+      "H1_representative_formulas": [
+        "r_g3_u2",
+        "r_g3_uv",
+        "r_g3_v2"
+      ],
+      "H1_representatives_source_rows": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "basis_alignment_certificate": {
+        "image_partial_2_basis": [],
+        "image_partial_2_equals_kernel_rho": true,
+        "kernel_rho_basis": []
+      },
+      "basis_alignment_passed": true,
+      "case_group": "B_linear_change_of_generators",
+      "case_id": "B_linear_change_g3",
+      "d_squared_zero": true,
+      "dim_C0": 2,
+      "dim_C1": 3,
+      "dim_C2": 0,
+      "dim_H0": 2,
+      "dim_H1": 3,
+      "is_expected_fail_control": false,
+      "outcome": "pass_strong",
+      "partial_1_Q_source_rows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "partial_2_Q_source_rows": [],
+      "rank_partial_1_Q": 0,
+      "rank_partial_2_Q": 0,
+      "relation_coefficient_map_source_rows": [
+        [
+          4,
+          4,
+          1
+        ],
+        [
+          2,
+          3,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ],
+      "sym2_check": {
+        "expected_sym2_matrix_source_rows": [
+          [
+            4,
+            4,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ]
+        ],
+        "generator_change_matrix": [
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "observed_h1_basis_matrix_source_rows": [
+          [
+            4,
+            4,
+            1
+          ],
+          [
+            2,
+            3,
+            1
+          ],
+          [
+            1,
+            2,
+            1
+          ]
+        ],
+        "passed": true
+      }
+    },
+    {
+      "C0_basis": [
+        "x",
+        "y"
+      ],
+      "C1_basis": [
+        "r_xx",
+        "r_xy",
+        "r_yy",
+        "r_q_1"
+      ],
+      "C2_basis": [
+        "s_q_1"
+      ],
+      "H1_representative_formulas": [
+        "r_xx",
+        "r_xy",
+        "r_yy"
+      ],
+      "H1_representatives_source_rows": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "basis_alignment_certificate": {
+        "image_partial_2_basis": [
+          [
+            1,
+            2,
+            1,
+            -1
+          ]
+        ],
+        "image_partial_2_equals_kernel_rho": true,
+        "kernel_rho_basis": [
+          [
+            -1,
+            -2,
+            -1,
+            1
+          ]
+        ]
+      },
+      "basis_alignment_passed": true,
+      "case_group": "E_multiple_redundant_relations",
+      "case_id": "E_multiple_redundant_relations_m1",
+      "d_squared_zero": true,
+      "dim_C0": 2,
+      "dim_C1": 4,
+      "dim_C2": 1,
+      "dim_H0": 2,
+      "dim_H1": 3,
+      "is_expected_fail_control": false,
+      "outcome": "pass_strong",
+      "partial_1_Q_source_rows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "partial_2_Q_source_rows": [
+        [
+          -1,
+          -2,
+          -1,
+          1
+        ]
+      ],
+      "rank_partial_1_Q": 0,
+      "rank_partial_2_Q": 1,
+      "relation_coefficient_map_source_rows": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ]
+      ]
+    },
+    {
+      "C0_basis": [
+        "x",
+        "y"
+      ],
+      "C1_basis": [
+        "r_xx",
+        "r_xy",
+        "r_yy",
+        "r_q_1",
+        "r_q_2"
+      ],
+      "C2_basis": [
+        "s_q_1",
+        "s_q_2"
+      ],
+      "H1_representative_formulas": [
+        "r_xx",
+        "r_xy",
+        "r_yy"
+      ],
+      "H1_representatives_source_rows": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "basis_alignment_certificate": {
+        "image_partial_2_basis": [
+          [
+            1,
+            0,
+            -1,
+            0,
+            -1
+          ],
+          [
+            0,
+            1,
+            1,
+            "-1/2",
+            "1/2"
+          ]
+        ],
+        "image_partial_2_equals_kernel_rho": true,
+        "kernel_rho_basis": [
+          [
+            -1,
+            -2,
+            -1,
+            1,
+            0
+          ],
+          [
+            -1,
+            0,
+            1,
+            0,
+            1
+          ]
+        ]
+      },
+      "basis_alignment_passed": true,
+      "case_group": "E_multiple_redundant_relations",
+      "case_id": "E_multiple_redundant_relations_m2",
+      "d_squared_zero": true,
+      "dim_C0": 2,
+      "dim_C1": 5,
+      "dim_C2": 2,
+      "dim_H0": 2,
+      "dim_H1": 3,
+      "is_expected_fail_control": false,
+      "outcome": "pass_strong",
+      "partial_1_Q_source_rows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "partial_2_Q_source_rows": [
+        [
+          -1,
+          -2,
+          -1,
+          1,
+          0
+        ],
+        [
+          -1,
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "rank_partial_1_Q": 0,
+      "rank_partial_2_Q": 2,
+      "relation_coefficient_map_source_rows": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          -1
+        ]
+      ]
+    },
+    {
+      "C0_basis": [
+        "x",
+        "y"
+      ],
+      "C1_basis": [
+        "r_xx",
+        "r_xy",
+        "r_yy",
+        "r_q_1",
+        "r_q_2",
+        "r_q_3"
+      ],
+      "C2_basis": [
+        "s_q_1",
+        "s_q_2",
+        "s_q_3"
+      ],
+      "H1_representative_formulas": [
+        "r_xx",
+        "r_xy",
+        "r_yy"
+      ],
+      "H1_representatives_source_rows": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "basis_alignment_certificate": {
+        "image_partial_2_basis": [
+          [
+            1,
+            0,
+            0,
+            "1/2",
+            "1/2",
+            -1
+          ],
+          [
+            0,
+            1,
+            0,
+            -1,
+            -1,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            "1/2",
+            "3/2",
+            -1
+          ]
+        ],
+        "image_partial_2_equals_kernel_rho": true,
+        "kernel_rho_basis": [
+          [
+            -1,
+            -2,
+            -1,
+            1,
+            0,
+            0
+          ],
+          [
+            -1,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            -2,
+            -1,
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "basis_alignment_passed": true,
+      "case_group": "E_multiple_redundant_relations",
+      "case_id": "E_multiple_redundant_relations_m3",
+      "d_squared_zero": true,
+      "dim_C0": 2,
+      "dim_C1": 6,
+      "dim_C2": 3,
+      "dim_H0": 2,
+      "dim_H1": 3,
+      "is_expected_fail_control": false,
+      "outcome": "pass_strong",
+      "partial_1_Q_source_rows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "partial_2_Q_source_rows": [
+        [
+          -1,
+          -2,
+          -1,
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          -2,
+          -1,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "rank_partial_1_Q": 0,
+      "rank_partial_2_Q": 3,
+      "relation_coefficient_map_source_rows": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ]
+    },
+    {
+      "C0_basis": [
+        "x",
+        "y"
+      ],
+      "C1_basis": [
+        "r_xx",
+        "r_xy",
+        "r_yy",
+        "r_q_1",
+        "r_q_2",
+        "r_q_3",
+        "r_q_4",
+        "r_q_5"
+      ],
+      "C2_basis": [
+        "s_q_1",
+        "s_q_2",
+        "s_q_3",
+        "s_q_4",
+        "s_q_5"
+      ],
+      "H1_representative_formulas": [
+        "r_xx",
+        "r_xy",
+        "r_yy"
+      ],
+      "H1_representatives_source_rows": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "basis_alignment_certificate": {
+        "image_partial_2_basis": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            "-2/7",
+            "-1/7",
+            "3/7"
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            "-3/7",
+            "2/7",
+            "-6/7"
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            "1/7",
+            "-3/7",
+            "2/7"
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1,
+            0,
+            -1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            "-3/7",
+            "2/7",
+            "1/7"
+          ]
+        ],
+        "image_partial_2_equals_kernel_rho": true,
+        "kernel_rho_basis": [
+          [
+            -1,
+            -2,
+            -1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            -1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            -2,
+            -1,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            -1,
+            -3,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            -1,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "basis_alignment_passed": true,
+      "case_group": "E_multiple_redundant_relations",
+      "case_id": "E_multiple_redundant_relations_m5",
+      "d_squared_zero": true,
+      "dim_C0": 2,
+      "dim_C1": 8,
+      "dim_C2": 5,
+      "dim_H0": 2,
+      "dim_H1": 3,
+      "is_expected_fail_control": false,
+      "outcome": "pass_strong",
+      "partial_1_Q_source_rows": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "partial_2_Q_source_rows": [
+        [
+          -1,
+          -2,
+          -1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          -1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          -2,
+          -1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          -1,
+          -3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          -1,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "rank_partial_1_Q": 0,
+      "rank_partial_2_Q": 5,
+      "relation_coefficient_map_source_rows": [
+        [
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          0,
+          -1
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          -1,
+          1,
+          1
+        ]
+      ]
+    }
+  ],
+  "category": "nonunital Jordan algebras",
+  "expected_stable_dim_H1": 3,
+  "experiment": "EXP-010-h1-stability-square-zero-two-generator",
+  "focus": "low-degree H1 presentation-stress diagnostic",
+  "latex_report_generated": true,
+  "limitations": "This is a bounded low-degree diagnostic for one square-zero example. It supports H1 stability under the listed presentation stresses but does not prove presentation invariance.",
+  "matrix_convention": "source_rows_target_coordinates",
+  "minimal_relation_cell_basis": [
+    "r_xx",
+    "r_xy",
+    "r_yy"
+  ],
+  "outcome_statuses": [
+    "pass_strong",
+    "pass_weak_dimension_only",
+    "expected_fail_observed",
+    "unexpected_fail",
+    "unexpected_pass"
+  ],
+  "passed": true,
+  "paths": {
+    "report_latex": "experiments\\010-h1-stability-square-zero-two-generator\\exp010_h1_presentation_stress_report.tex",
+    "report_markdown": "experiments\\010-h1-stability-square-zero-two-generator\\report.md",
+    "results_json": "experiments\\010-h1-stability-square-zero-two-generator\\results.json"
+  },
+  "plan": "researchplan/subplan010.md",
+  "report_generated": true,
+  "status": "run",
+  "summary": {
+    "claim_files_modified": false,
+    "evidence_only": true,
+    "extended_case_ids": [
+      "B_linear_change_g1",
+      "B_linear_change_g2",
+      "B_linear_change_g3",
+      "E_multiple_redundant_relations_m1",
+      "E_multiple_redundant_relations_m2",
+      "E_multiple_redundant_relations_m3",
+      "E_multiple_redundant_relations_m5"
+    ],
+    "full_stress_test_passed": true,
+    "interpretation": "Experiment 010 supports the stability of the computed H1 for the two-generator square-zero Jordan algebra under deterministic linear generator changes and controlled redundant-relation refinements. The expected-fail control reproduces the false extra H1 class that appears when a redundant relation is added without the corresponding syzygy. This supports, but does not prove, the identification of the stable H1 with Sym^2(k^2) in this bounded example.",
+    "minimum_case_ids": [
+      "A_minimal_presentation",
+      "C_redundant_relation_without_syzygy",
+      "D_redundant_relation_with_syzygy",
+      "F_truncation_depth_diagnostic"
+    ],
+    "minimum_passed": true
+  },
+  "target_algebra": "k{x,y}/(x^2, xy, y^2)"
+}

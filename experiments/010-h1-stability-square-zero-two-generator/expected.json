@@ -1,0 +1,30 @@
+{
+  "status": "expected_setup",
+  "experiment": "EXP-010-h1-stability-square-zero-two-generator",
+  "plan": "researchplan/subplan010.md",
+  "base_field": "QQ",
+  "category": "nonunital Jordan algebras",
+  "target_algebra": "k{x,y}/(x^2, xy, y^2)",
+  "focus": "low-degree H1 presentation-stress diagnostic",
+  "canonical_relation_basis": [
+    "x^2",
+    "xy",
+    "y^2"
+  ],
+  "minimal_relation_cell_basis": [
+    "r_xx",
+    "r_xy",
+    "r_yy"
+  ],
+  "matrix_convention": "source_rows_target_coordinates",
+  "expected_stable_dim_H1": 3,
+  "expected_fail_controls": [
+    "redundant_relation_without_syzygy"
+  ],
+  "do_not_prefill": [
+    "computed_case_results",
+    "matrices",
+    "basis_alignment_certificates",
+    "outcomes"
+  ]
+}
