@@ -1,0 +1,123 @@
+{
+  "adaptive_feasible_upper_bound": 8,
+  "applies_Q": false,
+  "arithmetic": "exact_rational",
+  "backend": {
+    "convention": "ordinary commutative nonassociative Jordan algebra modulo the linearized Jordan identity, with a signed derivation differential",
+    "convention_audit": "The output is relative to this backend convention.  A separate theory check is needed before identifying it exactly with a fully graded operadic dg Jordan convention.",
+    "does_not_apply_Q": true,
+    "does_not_attach_s_cells": true,
+    "does_not_construct_V3_plus": true,
+    "name": "low_weight_jordan ordinary backend"
+  },
+  "by_weight_file": "data/by_weight_W20.json",
+  "checks": {
+    "all_completed_weights_passed": true,
+    "all_reported_classes_independent_mod_B_old": true,
+    "all_reported_z_are_cycles": true,
+    "all_reported_z_have_nonzero_B_old_remainder": true,
+    "applies_Q_is_false": true,
+    "constructs_higher_cells_V3_plus_is_false": true,
+    "d_squared_zero_on_formal_s_cells": true,
+    "exact_rational_arithmetic": true,
+    "report_language_has_no_forbidden_global_phrasing": true,
+    "sanity_exp009_low_weight_agreement": {
+      "agrees": true,
+      "exp009_degree_2_cell_count": 16,
+      "exp009_selected_weight_bound": 8,
+      "exp011_cumulative_v2_cell_count": 16,
+      "interpretation": "Compatibility check only; EXP011 does not use EXP009 as input or as mathematical authority.",
+      "status": "checked"
+    }
+  },
+  "completed_weights": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "constructs_higher_cells_V3_plus": false,
+  "experiment_directory": "experiments/011-v2-cells-no-Q/",
+  "experiment_id": "EXP-011-v2-cells-no-Q",
+  "failed_weights": [],
+  "field": "QQ",
+  "finite_truncation_warning": "All conclusions are only for completed weights.",
+  "global_claims_modified": false,
+  "matrix_convention": "source_rows_target_coordinates",
+  "max_weight_requested": 20,
+  "mode": "overnight",
+  "not_tested_weights_in_requested_range": [],
+  "passed": true,
+  "plan": "researchplan/subplan011.md",
+  "preflight_skip": {
+    "estimate": {
+      "max_raw_terms_per_space": 21426,
+      "raw_terms_by_degree": {
+        "degree_0": 8610,
+        "degree_1": 21426,
+        "degree_2": 19542
+      },
+      "total_raw_terms": 49578,
+      "weight": 9
+    },
+    "first_skipped_weight": 9,
+    "skip_reason": "estimated max raw terms per homogeneous space is 21426, exceeding max_raw_terms_per_space=10000",
+    "threshold_triggered": "max_raw_terms_per_space"
+  },
+  "primary_object": "H1_old in A^(1)",
+  "requested_weights": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "resume": true,
+  "run_finished_at": "2026-05-31T13:21:33",
+  "run_started_at": "2026-05-31T13:21:33",
+  "runtime_seconds": 0.012,
+  "skipped_weights": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "status": "run",
+  "target_algebra": "Jord<x,y>/(x^2,xy,y^2)",
+  "tex_report": "tex/exp011_v2_cells_no_Q.tex",
+  "thresholds": {
+    "max_matrix_nnz": 250000,
+    "max_memory_gb": null,
+    "max_quotient_dim": 3000,
+    "max_raw_terms_per_space": 10000,
+    "max_runtime_per_weight": null
+  },
+  "v2_cells_file": "data/v2_cells_W20.json"
+}

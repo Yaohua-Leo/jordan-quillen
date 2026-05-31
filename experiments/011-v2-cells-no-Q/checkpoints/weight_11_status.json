@@ -1,0 +1,17 @@
+{
+  "cells": [],
+  "checkpoint_schema_version": 1,
+  "experiment_id": "EXP-011-v2-cells-no-Q",
+  "record": {
+    "memory_notes": "Skipped before quotient-space construction.",
+    "partial_outputs_preserved": true,
+    "previous_completed_weight": 8,
+    "runtime_seconds": 0,
+    "skip_reason": "adaptive stop after feasible upper bound W=8; higher weights were not enumerated",
+    "status": "skipped",
+    "threshold_triggered": "adaptive_stop_after_preflight_skip",
+    "weight": 11
+  },
+  "status": "skipped",
+  "weight": 11
+}

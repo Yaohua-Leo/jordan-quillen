@@ -1,0 +1,20 @@
+start time: 2026-05-30T22:32:07
+mode: dry
+max weight requested: 8
+resume: True
+thresholds: {'max_raw_terms_per_space': 10000, 'max_quotient_dim': 3000, 'max_matrix_nnz': 250000, 'max_runtime_per_weight': None, 'max_memory_gb': None}
+preflight feasible upper bound: 8
+model build seconds for W=8: 14.227
+weight 1: completed from checkpoint
+weight 2: completed from checkpoint
+weight 3: completed from checkpoint
+weight 4: completed from checkpoint
+weight 5: completed from checkpoint
+weight 6: completed from checkpoint
+weight 7: completed from checkpoint
+weight 8: completed, dim_H1_old=2, new_s_cells=2, runtime_seconds=19.589
+end time: 2026-05-30T22:32:41
+runtime seconds: 34.008
+completed weights: [1, 2, 3, 4, 5, 6, 7, 8]
+skipped weights: []
+failed weights: []
