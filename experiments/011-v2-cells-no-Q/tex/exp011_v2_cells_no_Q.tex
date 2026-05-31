@@ -1,0 +1,203 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{verbatim}
+\title{Experiment 011: V2 Cells Before Q}
+\author{Jordan Quillen Homology Project}
+\date{}
+\begin{document}
+\maketitle
+\section*{Scope}
+Experiment ID: \texttt{EXP-011-v2-cells-no-Q}.
+
+Target algebra: \texttt{Jord<x,y>/(x^2,xy,y^2)}.
+
+The computation uses $A^{(1)}=\mathrm{Jord}\langle x,y,r_{xx},r_{xy},r_{yy}\rangle$ with $|x|=|y|=0$, $|r_{xx}|=|r_{xy}|=|r_{yy}|=1$, and $d(r_{xx})=x^2$, $d(r_{xy})=xy$, $d(r_{yy})=y^2$.
+
+The functor $Q$ is not applied in this experiment.
+
+The layers $V_3,V_4,\ldots$ are not constructed.
+
+Backend convention: this run follows the existing ordinary commutative nonassociative low-weight Jordan backend with a signed derivation differential.  It is backend-relative bounded evidence, not a fully graded operadic convention audit.
+\section*{Finite-Weight Boundary}
+All conclusions in this report are restricted to weights with status completed. Weights not tested, skipped, or failed are not used to infer any global statement. This computation does not prove stabilization, termination, or absence of further degree 2 attaching generators in untested weights.
+\section*{Weight Summary}
+\begin{longtable}{rrrrrrrrl}
+\toprule
+w & $\dim C_0$ & $\dim C_1$ & $\dim C_2^{old}$ & $\operatorname{rank} d_1$ & $\operatorname{rank} d_2$ & $\dim Z_1$ & $\dim H_1^{old}$ & status \\
+\midrule
+1 & 2 & 0 & 0 & 0 & 0 & 0 & 0 & completed \\
+2 & 3 & 3 & 0 & 3 & 0 & 0 & 0 & completed \\
+3 & 6 & 6 & 0 & 6 & 0 & 0 & 0 & completed \\
+4 & 10 & 21 & 6 & 10 & 3 & 11 & 8 & completed \\
+5 & 24 & 48 & 30 & 24 & 24 & 24 & 0 & completed \\
+6 & 72 & 159 & 111 & 72 & 87 & 87 & 0 & completed \\
+7 & 220 & 552 & 444 & 220 & 326 & 332 & 6 & completed \\
+8 & 762 & 2064 & 1926 & 762 & 1300 & 1302 & 2 & completed \\
+9 & -- & -- & -- & -- & -- & -- & -- & skipped \\
+10 & -- & -- & -- & -- & -- & -- & -- & skipped \\
+11 & -- & -- & -- & -- & -- & -- & -- & skipped \\
+12 & -- & -- & -- & -- & -- & -- & -- & skipped \\
+13 & -- & -- & -- & -- & -- & -- & -- & skipped \\
+14 & -- & -- & -- & -- & -- & -- & -- & skipped \\
+15 & -- & -- & -- & -- & -- & -- & -- & skipped \\
+16 & -- & -- & -- & -- & -- & -- & -- & skipped \\
+17 & -- & -- & -- & -- & -- & -- & -- & skipped \\
+18 & -- & -- & -- & -- & -- & -- & -- & skipped \\
+19 & -- & -- & -- & -- & -- & -- & -- & skipped \\
+20 & -- & -- & -- & -- & -- & -- & -- & skipped \\
+\bottomrule
+\end{longtable}
+\section*{Skipped, Failed, And Not Tested Weights}
+\begin{verbatim}
+skipped_weights = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+failed_weights = []
+not_tested_weights_in_requested_range = []
+\end{verbatim}
+\section*{Formal Degree 2 Cell Candidates}
+Each listed record is a formal candidate only: the cell is not attached during this experiment.
+\paragraph{\texttt{s2\_00001\_w4}}
+\begin{verbatim}
+degree = 2
+weight = 4
+d(s2_00001_w4) = 1/2*((r_xx*x)*y) - 3/2*((r_xx*y)*x) + ((r_xy*x)*x)
+boundary_remainder_mod_B_old = 1/2*((r_xx*x)*y) - 3/2*((r_xx*y)*x) + ((r_xy*x)*x)
+selection_remainder_mod_B_old_plus_accepted_reps = 1/2*((r_xx*x)*y) - 3/2*((r_xx*y)*x) + ((r_xy*x)*x)
+\end{verbatim}
+\paragraph{\texttt{s2\_00002\_w4}}
+\begin{verbatim}
+degree = 2
+weight = 4
+d(s2_00002_w4) = -((r_xx*y)*y) + 2*((r_xy*x)*y) - 2*((r_xy*y)*x) + ((r_yy*x)*x)
+boundary_remainder_mod_B_old = -((r_xx*y)*y) + 2*((r_xy*x)*y) - 2*((r_xy*y)*x) + ((r_yy*x)*x)
+selection_remainder_mod_B_old_plus_accepted_reps = -((r_xx*y)*y) + 2*((r_xy*x)*y) - 2*((r_xy*y)*x) + ((r_yy*x)*x)
+\end{verbatim}
+\paragraph{\texttt{s2\_00003\_w4}}
+\begin{verbatim}
+degree = 2
+weight = 4
+d(s2_00003_w4) = 2*((r_xy*y)*y) - 3*((r_yy*x)*y) + ((r_yy*y)*x)
+boundary_remainder_mod_B_old = 2*((r_xy*y)*y) - 3*((r_yy*x)*y) + ((r_yy*y)*x)
+selection_remainder_mod_B_old_plus_accepted_reps = 2*((r_xy*y)*y) - 3*((r_yy*x)*y) + ((r_yy*y)*x)
+\end{verbatim}
+\paragraph{\texttt{s2\_00004\_w4}}
+\begin{verbatim}
+degree = 2
+weight = 4
+d(s2_00004_w4) = -((r_xx*x)*x) + ((x*x)*r_xx)
+boundary_remainder_mod_B_old = -((r_xx*x)*x) + ((x*x)*r_xx)
+selection_remainder_mod_B_old_plus_accepted_reps = -((r_xx*x)*x) + ((x*x)*r_xx)
+\end{verbatim}
+\paragraph{\texttt{s2\_00005\_w4}}
+\begin{verbatim}
+degree = 2
+weight = 4
+d(s2_00005_w4) = -((r_xx*y)*x) + ((x*x)*r_xy)
+boundary_remainder_mod_B_old = -((r_xx*y)*x) + ((x*y)*r_xx)
+selection_remainder_mod_B_old_plus_accepted_reps = -((r_xx*y)*x) + ((x*y)*r_xx)
+\end{verbatim}
+\paragraph{\texttt{s2\_00006\_w4}}
+\begin{verbatim}
+degree = 2
+weight = 4
+d(s2_00006_w4) = -1/2*((r_xx*y)*y) - ((r_xy*y)*x) + 1/2*((x*x)*r_yy) + ((x*y)*r_xy)
+boundary_remainder_mod_B_old = -1/2*((r_xx*y)*y) - ((r_xy*y)*x) + ((x*y)*r_xy) + 1/2*((y*y)*r_xx)
+selection_remainder_mod_B_old_plus_accepted_reps = -((r_xy*x)*y) - 1/2*((r_yy*x)*x) + ((x*y)*r_xy) + 1/2*((y*y)*r_xx)
+\end{verbatim}
+\paragraph{\texttt{s2\_00007\_w4}}
+\begin{verbatim}
+degree = 2
+weight = 4
+d(s2_00007_w4) = -((r_yy*x)*y) + ((x*y)*r_yy)
+boundary_remainder_mod_B_old = -((r_yy*x)*y) + ((y*y)*r_xy)
+selection_remainder_mod_B_old_plus_accepted_reps = -((r_yy*x)*y) + ((y*y)*r_xy)
+\end{verbatim}
+\paragraph{\texttt{s2\_00008\_w4}}
+\begin{verbatim}
+degree = 2
+weight = 4
+d(s2_00008_w4) = -((r_yy*y)*y) + ((y*y)*r_yy)
+boundary_remainder_mod_B_old = -((r_yy*y)*y) + ((y*y)*r_yy)
+selection_remainder_mod_B_old_plus_accepted_reps = -((r_yy*y)*y) + ((y*y)*r_yy)
+\end{verbatim}
+\paragraph{\texttt{s2\_00009\_w7}}
+\begin{verbatim}
+degree = 2
+weight = 7
+d(s2_00009_w7) = -(((((x*x)*x)*x)*x)*r_xx) + ((((x*x)*x)*x)*(r_xx*x))
+boundary_remainder_mod_B_old = -1/2*(((r_xx*x)*(x*x))*(x*x)) + 1/2*(((x*x)*r_xx)*((x*x)*x))
+selection_remainder_mod_B_old_plus_accepted_reps = -1/2*(((r_xx*x)*(x*x))*(x*x)) + 1/2*(((x*x)*r_xx)*((x*x)*x))
+\end{verbatim}
+\paragraph{\texttt{s2\_00010\_w7}}
+\begin{verbatim}
+degree = 2
+weight = 7
+d(s2_00010_w7) = 4*(((((x*x)*x)*x)*x)*r_xy) + 2*(((((x*x)*x)*x)*y)*r_xx) + 2*(((((x*x)*x)*y)*r_xx)*x) + 4*(((((x*y)*x)*x)*x)*r_xx) - ((((x*x)*r_xx)*y)*(x*x)) + 2*((((x*x)*x)*r_xx)*(x*y)) - 2*((((x*x)*x)*r_xy)*(x*x)) - 2*((((x*x)*x)*x)*(r_xx*y)) - 8*((((x*x)*x)*x)*(r_xy*x)) - 2*((((x*x)*x)*y)*(r_xx*x)) + ((((x*x)*y)*(x*x))*r_xx)
+boundary_remainder_mod_B_old = 12*(((r_xx*x)*(x*y))*(x*x)) + 12*(((r_xx*x)*x)*((x*y)*x)) + 3*(((r_xx*y)*(x*x))*(x*x)) + 6*(((r_xy*x)*(x*x))*(x*x)) - 12*(((r_xy*x)*x)*((x*x)*x)) - 3*(((x*x)*r_xx)*((x*x)*y)) - 6*(((x*x)*r_xx)*((x*y)*x)) - 12*(((x*x)*x)*((x*y)*r_xx))
+selection_remainder_mod_B_old_plus_accepted_reps = 12*(((r_xx*x)*(x*y))*(x*x)) + 12*(((r_xx*x)*x)*((x*y)*x)) + 3*(((r_xx*y)*(x*x))*(x*x)) + 6*(((r_xy*x)*(x*x))*(x*x)) - 12*(((r_xy*x)*x)*((x*x)*x)) - 3*(((x*x)*r_xx)*((x*x)*y)) - 6*(((x*x)*r_xx)*((x*y)*x)) - 12*(((x*x)*x)*((x*y)*r_xx))
+\end{verbatim}
+\paragraph{\texttt{s2\_00011\_w7}}
+\begin{verbatim}
+degree = 2
+weight = 7
+d(s2_00011_w7) = (((((x*y)*x)*x)*x)*r_yy) + 2*(((((x*y)*x)*x)*y)*r_xy) + 4*(((((x*y)*x)*y)*r_xy)*x) - 2*(((((x*y)*x)*y)*x)*r_xy) - (((((x*y)*x)*y)*y)*r_xx) - ((((x*x)*r_xy)*y)*(x*y)) + 1/2*((((x*y)*x)*r_xx)*(y*y)) - 1/2*((((x*y)*x)*r_yy)*(x*x)) - 2*((((x*y)*x)*x)*(r_xy*y)) - ((((x*y)*x)*x)*(r_yy*x)) + ((((x*y)*x)*y)*(r_xx*y)) - 2*((((x*y)*x)*y)*(r_xy*x)) + ((((x*y)*y)*(x*x))*r_xy)
+boundary_remainder_mod_B_old = (((r_xx*x)*(y*y))*(x*y)) - (((r_xx*x)*y)*((x*y)*y)) + 1/4*(((r_xx*y)*(x*x))*(y*y)) + (((r_xx*y)*(x*y))*(x*y)) + 1/4*(((r_xx*y)*(y*y))*(x*x)) - (((r_xx*y)*x)*((x*y)*y)) - (((r_xx*y)*y)*((x*y)*x)) + 2*(((r_xy*x)*(x*y))*(x*y)) + (((r_xy*x)*(y*y))*(x*x)) + 2*(((r_xy*x)*x)*((y*y)*x)) + (((r_xy*x)*y)*((x*x)*y)) + 2*(((r_xy*y)*(x*x))*(x*y)) + (((r_xy*y)*x)*((x*x)*y)) + (((r_xy*y)*y)*((x*x)*x)) + 3/2*(((r_yy*x)*(x*x))*(x*y)) - 1/2*(((r_yy*x)*(x*y))*(x*x)) - 2*(((r_yy*x)*x)*((x*y)*x)) + 1/4*(((r_yy*y)*(x*x))*(x*x)) - 1/4*(((x*x)*r_xx)*((y*y)*y)) - 1/2*(((x*x)*y)*((y*y)*r_xx)) - (((x*y)*(x*y))*(r_xx*y)) - (((x*y)*(y*y))*(r_xx*x)) - 2*(((x*y)*r_xx)*((x*y)*y)) - (((x*y)*r_xx)*((y*y)*x)) - 2*(((x*y)*r_xy)*((x*y)*x)) - (((x*y)*x)*((y*y)*r_xx))
+selection_remainder_mod_B_old_plus_accepted_reps = (((r_xx*x)*(y*y))*(x*y)) - (((r_xx*x)*y)*((x*y)*y)) + 1/4*(((r_xx*y)*(x*x))*(y*y)) + (((r_xx*y)*(x*y))*(x*y)) + 1/4*(((r_xx*y)*(y*y))*(x*x)) - (((r_xx*y)*x)*((x*y)*y)) - (((r_xx*y)*y)*((x*y)*x)) + 2*(((r_xy*x)*(x*y))*(x*y)) + (((r_xy*x)*(y*y))*(x*x)) + 2*(((r_xy*x)*x)*((y*y)*x)) + (((r_xy*x)*y)*((x*x)*y)) + 2*(((r_xy*y)*(x*x))*(x*y)) + (((r_xy*y)*x)*((x*x)*y)) + (((r_xy*y)*y)*((x*x)*x)) + 3/2*(((r_yy*x)*(x*x))*(x*y)) - 1/2*(((r_yy*x)*(x*y))*(x*x)) - 2*(((r_yy*x)*x)*((x*y)*x)) + 1/4*(((r_yy*y)*(x*x))*(x*x)) - 1/4*(((x*x)*r_xx)*((y*y)*y)) - 1/2*(((x*x)*y)*((y*y)*r_xx)) - (((x*y)*(x*y))*(r_xx*y)) - (((x*y)*(y*y))*(r_xx*x)) - 2*(((x*y)*r_xx)*((x*y)*y)) - (((x*y)*r_xx)*((y*y)*x)) - 2*(((x*y)*r_xy)*((x*y)*x)) - (((x*y)*x)*((y*y)*r_xx))
+\end{verbatim}
+\paragraph{\texttt{s2\_00012\_w7}}
+\begin{verbatim}
+degree = 2
+weight = 7
+d(s2_00012_w7) = -1/2*(((((x*y)*y)*x)*x)*r_yy) - (((((x*y)*y)*x)*y)*r_xy) - 2*(((((x*y)*y)*y)*r_xy)*x) + (((((x*y)*y)*y)*x)*r_xy) + 1/2*(((((x*y)*y)*y)*y)*r_xx) - 1/4*((((x*x)*y)*(x*y))*r_yy) + 1/4*((((x*x)*y)*r_yy)*(x*y)) - 1/2*((((x*x)*y)*y)*(r_xy*y)) - ((((x*y)*r_xy)*y)*(x*y)) + ((((x*y)*y)*(x*y))*r_xy) + ((((x*y)*y)*x)*(r_xy*y)) + 1/2*((((x*y)*y)*x)*(r_yy*x)) + ((((x*y)*y)*y)*(r_xy*x))
+boundary_remainder_mod_B_old = 1/4*(((r_xx*x)*(y*y))*(y*y)) + (((r_xx*y)*(y*y))*(x*y)) - (((r_xx*y)*y)*((x*y)*y)) + 2*(((r_xy*x)*(y*y))*(x*y)) + (((r_xy*x)*x)*((y*y)*y)) + (((r_xy*x)*y)*((y*y)*x)) + 1/2*(((r_xy*y)*(x*x))*(y*y)) + 2*(((r_xy*y)*(x*y))*(x*y)) + 1/2*(((r_xy*y)*(y*y))*(x*x)) + (((r_xy*y)*x)*((y*y)*x)) + (((r_xy*y)*y)*((x*x)*y)) + 1/4*(((r_yy*x)*(x*x))*(y*y)) + (((r_yy*x)*(x*y))*(x*y)) + 1/4*(((r_yy*x)*(y*y))*(x*x)) - (((r_yy*x)*x)*((x*y)*y)) - (((r_yy*x)*y)*((x*y)*x)) + (((r_yy*y)*(x*x))*(x*y)) - (((r_yy*y)*x)*((x*y)*x)) - (((x*y)*(y*y))*(r_xx*y)) - (((x*y)*r_xx)*((y*y)*y)) - 2*(((x*y)*r_xy)*((x*y)*y)) - (((x*y)*r_xy)*((y*y)*x)) - 2*(((x*y)*x)*((y*y)*r_xy)) - (((x*y)*y)*((y*y)*r_xx)) - 1/4*(((y*y)*(y*y))*(r_xx*x)) - 1/2*(((y*y)*r_xx)*((y*y)*x))
+selection_remainder_mod_B_old_plus_accepted_reps = 1/4*(((r_xx*x)*(y*y))*(y*y)) + (((r_xx*y)*(y*y))*(x*y)) - (((r_xx*y)*y)*((x*y)*y)) + 2*(((r_xy*x)*(y*y))*(x*y)) + (((r_xy*x)*x)*((y*y)*y)) + (((r_xy*x)*y)*((y*y)*x)) + 1/2*(((r_xy*y)*(x*x))*(y*y)) + 2*(((r_xy*y)*(x*y))*(x*y)) + 1/2*(((r_xy*y)*(y*y))*(x*x)) + (((r_xy*y)*x)*((y*y)*x)) + (((r_xy*y)*y)*((x*x)*y)) + 1/4*(((r_yy*x)*(x*x))*(y*y)) + (((r_yy*x)*(x*y))*(x*y)) + 1/4*(((r_yy*x)*(y*y))*(x*x)) - (((r_yy*x)*x)*((x*y)*y)) - (((r_yy*x)*y)*((x*y)*x)) + (((r_yy*y)*(x*x))*(x*y)) - (((r_yy*y)*x)*((x*y)*x)) - (((x*y)*(y*y))*(r_xx*y)) - (((x*y)*r_xx)*((y*y)*y)) - 2*(((x*y)*r_xy)*((x*y)*y)) - (((x*y)*r_xy)*((y*y)*x)) - 2*(((x*y)*x)*((y*y)*r_xy)) - (((x*y)*y)*((y*y)*r_xx)) - 1/4*(((y*y)*(y*y))*(r_xx*x)) - 1/2*(((y*y)*r_xx)*((y*y)*x))
+\end{verbatim}
+\paragraph{\texttt{s2\_00013\_w7}}
+\begin{verbatim}
+degree = 2
+weight = 7
+d(s2_00013_w7) = -2*(((((x*y)*y)*y)*y)*r_yy) - (((((y*y)*x)*y)*y)*r_yy) + 2*(((((y*y)*y)*y)*r_yy)*x) - 2*(((((y*y)*y)*y)*x)*r_yy) - 4*(((((y*y)*y)*y)*y)*r_xy) + 6*((((x*y)*y)*y)*(r_yy*y)) + ((((y*y)*x)*y)*(r_yy*y)) - ((((y*y)*y)*(x*y))*r_yy) + ((((y*y)*y)*r_yy)*(x*y))
+boundary_remainder_mod_B_old = -(((r_xy*y)*(y*y))*(y*y)) - 1/2*(((r_yy*x)*(y*y))*(y*y)) - (((r_yy*y)*(x*y))*(y*y)) - (((r_yy*y)*(y*y))*(x*y)) + (((y*y)*(y*y))*(r_xy*y)) + 2*(((y*y)*r_xy)*((y*y)*y)) + 1/2*(((y*y)*r_yy)*((y*y)*x))
+selection_remainder_mod_B_old_plus_accepted_reps = -(((r_xy*y)*(y*y))*(y*y)) - 1/2*(((r_yy*x)*(y*y))*(y*y)) - (((r_yy*y)*(x*y))*(y*y)) - (((r_yy*y)*(y*y))*(x*y)) + (((y*y)*(y*y))*(r_xy*y)) + 2*(((y*y)*r_xy)*((y*y)*y)) + 1/2*(((y*y)*r_yy)*((y*y)*x))
+\end{verbatim}
+\paragraph{\texttt{s2\_00014\_w7}}
+\begin{verbatim}
+degree = 2
+weight = 7
+d(s2_00014_w7) = -(((((y*y)*y)*y)*y)*r_yy) + ((((y*y)*y)*y)*(r_yy*y))
+boundary_remainder_mod_B_old = -1/2*(((r_yy*y)*(y*y))*(y*y)) + 1/2*(((y*y)*r_yy)*((y*y)*y))
+selection_remainder_mod_B_old_plus_accepted_reps = -1/2*(((r_yy*y)*(y*y))*(y*y)) + 1/2*(((y*y)*r_yy)*((y*y)*y))
+\end{verbatim}
+\paragraph{\texttt{s2\_00015\_w8}}
+\begin{verbatim}
+degree = 2
+weight = 8
+d(s2_00015_w8) = -((((((x*x)*x)*x)*x)*x)*r_xx) + 1/2*(((((x*x)*(x*x))*x)*x)*r_xx) - 1/2*(((((x*x)*x)*x)*r_xx)*(x*x)) + (((((x*x)*x)*x)*x)*(r_xx*x))
+boundary_remainder_mod_B_old = 1/4*((((x*x)*x)*((x*x)*x))*r_xx) - 1/4*((((x*x)*x)*(r_xx*x))*(x*x))
+selection_remainder_mod_B_old_plus_accepted_reps = 1/4*((((x*x)*x)*((x*x)*x))*r_xx) - 1/4*((((x*x)*x)*(r_xx*x))*(x*x))
+\end{verbatim}
+\paragraph{\texttt{s2\_00016\_w8}}
+\begin{verbatim}
+degree = 2
+weight = 8
+d(s2_00016_w8) = -((((((y*y)*y)*y)*y)*y)*r_yy) + 1/2*(((((y*y)*(y*y))*y)*y)*r_yy) - 1/2*(((((y*y)*y)*y)*r_yy)*(y*y)) + (((((y*y)*y)*y)*y)*(r_yy*y))
+boundary_remainder_mod_B_old = 1/4*((((y*y)*y)*((y*y)*y))*r_yy) - 1/4*((((y*y)*y)*(r_yy*y))*(y*y))
+selection_remainder_mod_B_old_plus_accepted_reps = 1/4*((((y*y)*y)*((y*y)*y))*r_yy) - 1/4*((((y*y)*y)*(r_yy*y))*(y*y))
+\end{verbatim}
+\section*{Validation Summary}
+\begin{verbatim}
+all_completed_weights_passed: True
+all_reported_classes_independent_mod_B_old: True
+all_reported_z_are_cycles: True
+all_reported_z_have_nonzero_B_old_remainder: True
+applies_Q_is_false: True
+constructs_higher_cells_V3_plus_is_false: True
+d_squared_zero_on_formal_s_cells: True
+exact_rational_arithmetic: True
+report_language_has_no_forbidden_global_phrasing: True
+sanity_exp009_low_weight_agreement: {'status': 'checked', 'interpretation': 'Compatibility check only; EXP011 does not use EXP009 as input or as mathematical authority.', 'exp009_selected_weight_bound': 8, 'exp009_degree_2_cell_count': 16, 'exp011_cumulative_v2_cell_count': 16, 'agrees': True}
+\end{verbatim}
+\end{document}

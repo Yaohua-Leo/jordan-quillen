@@ -41,6 +41,14 @@ literature/papers-local/*.djvu
 # Generated experiment artifacts
 experiments/**/generated/
 
+# Experiment TeX build output
+experiments/**/tex/*.aux
+experiments/**/tex/*.fdb_latexmk
+experiments/**/tex/*.fls
+experiments/**/tex/*.log
+experiments/**/tex/*.out
+experiments/**/tex/*.synctex.gz
+
 # TeX build output
 paper/*.aux
 paper/*.bbl

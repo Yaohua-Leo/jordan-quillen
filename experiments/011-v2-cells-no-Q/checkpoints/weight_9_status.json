@@ -1,0 +1,17 @@
+{
+  "cells": [],
+  "checkpoint_schema_version": 1,
+  "experiment_id": "EXP-011-v2-cells-no-Q",
+  "record": {
+    "memory_notes": "Skipped before quotient-space construction.",
+    "partial_outputs_preserved": true,
+    "previous_completed_weight": 8,
+    "runtime_seconds": 0,
+    "skip_reason": "estimated max raw terms per homogeneous space is 21426, exceeding max_raw_terms_per_space=10000",
+    "status": "skipped",
+    "threshold_triggered": "max_raw_terms_per_space",
+    "weight": 9
+  },
+  "status": "skipped",
+  "weight": 9
+}

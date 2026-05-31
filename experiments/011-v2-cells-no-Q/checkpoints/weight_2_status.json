@@ -1,0 +1,68 @@
+{
+  "cells": [],
+  "checkpoint_schema_version": 1,
+  "experiment_id": "EXP-011-v2-cells-no-Q",
+  "record": {
+    "basis_data": {
+      "C0_basis": [
+        "(x*x)",
+        "(x*y)",
+        "(y*y)"
+      ],
+      "C1_basis": [
+        "r_xx",
+        "r_xy",
+        "r_yy"
+      ],
+      "C2_old_basis": []
+    },
+    "cache_paths": {
+      "B_old_rref_cache": "cache/B_old_rref_w2.json",
+      "H1_old_reps_cache": "cache/H1_old_reps_w2.json",
+      "Z1_basis_cache": "cache/Z1_basis_w2.json",
+      "d1_matrix_cache": "cache/d1_w2.json",
+      "d2_old_matrix_cache": "cache/d2_old_w2.json",
+      "quotient_space_cache": "cache/quotient_space_deg{p}_w2.json"
+    },
+    "checks": {
+      "all_cell_certificates_valid": true,
+      "all_cells_are_cycles": true,
+      "all_cells_have_nonzero_B_old_remainder": true,
+      "d2_old_matrix_times_d1_matrix_is_zero": true,
+      "dim_B_old_matches_rank_d2_old": true,
+      "dim_H1_old_matches_quotient_count": true,
+      "dim_Z1_matches_rank_nullity": true,
+      "formal_d_squared_zero_on_s_cells": true,
+      "representatives_independent_mod_B_old": true,
+      "runtime_within_threshold": true
+    },
+    "dim_B_old": 0,
+    "dim_C0": 3,
+    "dim_C1": 3,
+    "dim_C2_old": 0,
+    "dim_H1_old": 0,
+    "dim_Z1": 0,
+    "matrix_stats": {
+      "d1_cols": 3,
+      "d1_nnz": 3,
+      "d1_rows": 3,
+      "d2_old_cols": 3,
+      "d2_old_nnz": 0,
+      "d2_old_rows": 0
+    },
+    "memory_notes": "Memory was controlled indirectly by raw-term and matrix thresholds.",
+    "number_of_new_s_cells": 0,
+    "rank_d1": 3,
+    "rank_d2_old": 0,
+    "raw_term_counts": {
+      "C0_raw_terms": 3,
+      "C1_raw_terms": 3,
+      "C2_old_raw_terms": 0
+    },
+    "runtime_seconds": 0.0,
+    "status": "completed",
+    "weight": 2
+  },
+  "status": "completed",
+  "weight": 2
+}
