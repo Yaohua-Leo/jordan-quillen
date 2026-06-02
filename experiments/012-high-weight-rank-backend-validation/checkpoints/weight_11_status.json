@@ -1,0 +1,17 @@
+{
+  "cells": [],
+  "checkpoint_schema_version": 1,
+  "experiment_id": "EXP-011-v2-cells-no-Q",
+  "record": {
+    "memory_notes": "max_memory_gb was recorded as a requested threshold; this no-new-dependency runner controls memory indirectly by raw-term and matrix thresholds.",
+    "partial_outputs_preserved": true,
+    "previous_completed_weight": 10,
+    "runtime_seconds": 5404.864,
+    "skip_reason": "modular rank exceeded max_rank_seconds=3600.0",
+    "status": "skipped",
+    "threshold_triggered": "rank_timeout",
+    "weight": 11
+  },
+  "status": "skipped",
+  "weight": 11
+}

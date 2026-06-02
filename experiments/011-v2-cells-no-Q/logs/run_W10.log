@@ -1,0 +1,24 @@
+start time: 2026-06-01T06:14:47
+mode: validation
+max weight requested: 10
+resume: True
+force recompute weights: [10]
+thresholds: {'max_raw_terms_per_space': 120000, 'max_quotient_dim': 500000, 'max_matrix_nnz': 50000000, 'max_runtime_per_weight': None, 'max_memory_gb': 10.0, 'workers': 6, 'matrix_workers': 4}
+preflight feasible upper bound: 10
+model build seconds for W=10: 7.042
+model progress log: D:/learning/(co)homology_of_Jordan/experiments/011-v2-cells-no-Q/logs/model_W10_progress.log
+weight 1: completed from checkpoint
+weight 2: completed from checkpoint
+weight 3: completed from checkpoint
+weight 4: completed from checkpoint
+weight 5: completed from checkpoint
+weight 6: completed from checkpoint
+weight 7: completed from checkpoint
+weight 8: completed from checkpoint
+weight 9: completed from checkpoint
+weight 10: completed, dim_H1_old=0, new_s_cells=0, runtime_seconds=156.128
+end time: 2026-06-01T06:17:32
+runtime seconds: 164.482
+completed weights: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+skipped weights: []
+failed weights: []

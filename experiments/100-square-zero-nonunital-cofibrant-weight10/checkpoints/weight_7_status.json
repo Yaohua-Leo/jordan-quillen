@@ -1,0 +1,121 @@
+{
+  "experiment_id": "EXP-100-square-zero-nonunital-cofibrant-weight10",
+  "record": {
+    "basis_data": {
+      "C0_basis": [
+        "((((x*x)*x)*x)*((x*x)*x))",
+        "(((x*x)*(x*x))*((x*x)*x))"
+      ],
+      "C1_basis": [
+        "(((((x*x)*x)*x)*x)*r1_00001_w2)",
+        "((((x*x)*x)*r1_00001_w2)*(x*x))",
+        "((((x*x)*x)*x)*(r1_00001_w2*x))",
+        "(((r1_00001_w2*x)*(x*x))*(x*x))",
+        "(((r1_00001_w2*x)*x)*((x*x)*x))",
+        "(((x*x)*(x*x))*(r1_00001_w2*x))",
+        "(((x*x)*r1_00001_w2)*((x*x)*x))"
+      ],
+      "C2_old_basis": [
+        "((((r1_00001_w2*x)*x)*x)*r1_00001_w2)",
+        "((((x*x)*x)*r1_00001_w2)*r1_00001_w2)",
+        "(((r1_00001_w2*x)*(x*x))*r1_00001_w2)",
+        "(((r1_00001_w2*x)*r1_00001_w2)*(x*x))",
+        "(((r1_00001_w2*x)*x)*(r1_00001_w2*x))",
+        "(((x*x)*r1_00001_w2)*(r1_00001_w2*x))",
+        "(((x*x)*x)*(r1_00001_w2*r1_00001_w2))"
+      ]
+    },
+    "checks": {
+      "all_V2_certificates_valid": true,
+      "all_V2_differentials_are_cycles": true,
+      "all_V2_representatives_have_nonzero_B_old_remainder": true,
+      "all_V2_representatives_independent_mod_B_old": true,
+      "d2_old_matrix_times_d1_matrix_is_zero": true,
+      "dim_B_old_matches_rank_d2_old": true,
+      "dim_H1_old_matches_V2_count": true,
+      "dim_Z1_matches_rank_nullity": true
+    },
+    "computed_V1_cell_names": [],
+    "computed_V2_cell_names": [
+      "s2_00002_w7"
+    ],
+    "dim_B_old": 4,
+    "dim_C0": 2,
+    "dim_C1": 7,
+    "dim_C2_old": 7,
+    "dim_H1_old": 1,
+    "dim_Z1": 5,
+    "matrix_stats": {
+      "d1_cols": 2,
+      "d1_nnz": 7,
+      "d1_rows": 7,
+      "d2_old_cols": 7,
+      "d2_old_nnz": 16,
+      "d2_old_rows": 7
+    },
+    "memory_notes": "Memory controlled by bounded W=10 exact sparse computation.",
+    "rank_d1": 2,
+    "rank_d2_old": 4,
+    "runtime_seconds": 0.003,
+    "status": "completed",
+    "weight": 7
+  },
+  "status": "completed",
+  "v2_cells": [
+    {
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_certificate": {
+        "d1_z_normal_form": "0",
+        "is_cycle": true
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "differential_coordinates": [
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "differential_formula": "-(((((x*x)*x)*x)*x)*r1_00001_w2) + ((((x*x)*x)*x)*(r1_00001_w2*x))",
+      "differential_raw_lift": "-(((((x*x)*x)*x)*x)*r1_00001_w2) + ((((x*x)*x)*x)*(r1_00001_w2*x))",
+      "differential_sparse_coordinates": {
+        "0": -1,
+        "2": 1
+      },
+      "global_index": 2,
+      "independence_certificate": {
+        "independent_mod_B_old_plus_previous_reps": true,
+        "selection_remainder_mod_B_old_plus_accepted_reps": {
+          "formula": "-1/2*(((r1_00001_w2*x)*(x*x))*(x*x)) + 1/2*(((x*x)*r1_00001_w2)*((x*x)*x))",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "3": "-1/2",
+            "6": "1/2"
+          }
+        }
+      },
+      "layer": "V2",
+      "name": "s2_00002_w7",
+      "non_boundary_certificate": {
+        "boundary_remainder_mod_B_old": {
+          "formula": "-1/2*(((r1_00001_w2*x)*(x*x))*(x*x)) + 1/2*(((x*x)*r1_00001_w2)*((x*x)*x))",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "3": "-1/2",
+            "6": "1/2"
+          }
+        },
+        "boundary_remainder_nonzero": true,
+        "certificate_type": "rref_remainder",
+        "not_in_B_old": true
+      },
+      "not_in_B_old": true,
+      "weight": 7
+    }
+  ],
+  "weight": 7
+}

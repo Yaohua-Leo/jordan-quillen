@@ -1,0 +1,13 @@
+{
+  "basis": [
+    "(r1_00001_w2*r1_00001_w2)"
+  ],
+  "degree": 2,
+  "dimension": 1,
+  "free_columns": [
+    0
+  ],
+  "jordan_relation_rank": 0,
+  "raw_term_count": 1,
+  "weight": 4
+}

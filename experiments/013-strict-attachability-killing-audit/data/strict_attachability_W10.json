@@ -1,0 +1,556 @@
+{
+  "base_generator_d_squared_zero": [
+    {
+      "d_squared_raw": "0",
+      "d_squared_zero": true,
+      "degree": 0,
+      "name": "x",
+      "weight": 1
+    },
+    {
+      "d_squared_raw": "0",
+      "d_squared_zero": true,
+      "degree": 0,
+      "name": "y",
+      "weight": 1
+    },
+    {
+      "d_squared_raw": "0",
+      "d_squared_zero": true,
+      "degree": 1,
+      "name": "r_xx",
+      "weight": 2
+    },
+    {
+      "d_squared_raw": "0",
+      "d_squared_zero": true,
+      "degree": 1,
+      "name": "r_xy",
+      "weight": 2
+    },
+    {
+      "d_squared_raw": "0",
+      "d_squared_zero": true,
+      "degree": 1,
+      "name": "r_yy",
+      "weight": 2
+    }
+  ],
+  "cells": [
+    {
+      "boundary": "1/2*((r_xx*x)*y) - 3/2*((r_xx*y)*x) + ((r_xy*x)*x)",
+      "cell_name": "s2_00001_w4",
+      "cell_weight": 4,
+      "degree": 2,
+      "first_defect": {
+        "defect_nonzero": true,
+        "defect_normal_form": "-3/2*((((x*x)*y)*x)*x) + 3/2*(((x*y)*x)*(x*x))",
+        "defect_sparse_coordinates": {
+          "0": "-3/2",
+          "12": "3/2"
+        },
+        "multiplier": "x",
+        "raw_differential": "1/2*((((x*x)*x)*y)*x) - 3/2*((((x*x)*y)*x)*x) + ((((x*y)*x)*x)*x)",
+        "target_weight": 5
+      },
+      "strictly_attachable": false,
+      "strictly_attachable_through_weight": 4
+    },
+    {
+      "boundary": "-((r_xx*y)*y) + 2*((r_xy*x)*y) - 2*((r_xy*y)*x) + ((r_yy*x)*x)",
+      "cell_name": "s2_00002_w4",
+      "cell_weight": 4,
+      "degree": 2,
+      "first_defect": {
+        "defect_nonzero": true,
+        "defect_normal_form": "-((((x*x)*y)*y)*x) - 2*((((x*y)*y)*x)*x) + 2*(((x*y)*(x*y))*x) + (((y*y)*x)*(x*x))",
+        "defect_sparse_coordinates": {
+          "1": -1,
+          "10": 2,
+          "18": 1,
+          "2": -2
+        },
+        "multiplier": "x",
+        "raw_differential": "-((((x*x)*y)*y)*x) + 2*((((x*y)*x)*y)*x) - 2*((((x*y)*y)*x)*x) + ((((y*y)*x)*x)*x)",
+        "target_weight": 5
+      },
+      "strictly_attachable": false,
+      "strictly_attachable_through_weight": 4
+    },
+    {
+      "boundary": "2*((r_xy*y)*y) - 3*((r_yy*x)*y) + ((r_yy*y)*x)",
+      "cell_name": "s2_00003_w4",
+      "cell_weight": 4,
+      "degree": 2,
+      "first_defect": {
+        "defect_nonzero": true,
+        "defect_normal_form": "2*((((x*y)*y)*y)*x) + ((((y*y)*y)*x)*x) - 3*(((x*y)*(y*y))*x)",
+        "defect_sparse_coordinates": {
+          "11": -3,
+          "3": 2,
+          "4": 1
+        },
+        "multiplier": "x",
+        "raw_differential": "2*((((x*y)*y)*y)*x) - 3*((((y*y)*x)*y)*x) + ((((y*y)*y)*x)*x)",
+        "target_weight": 5
+      },
+      "strictly_attachable": false,
+      "strictly_attachable_through_weight": 4
+    },
+    {
+      "boundary": "-((r_xx*x)*x) + ((x*x)*r_xx)",
+      "cell_name": "s2_00004_w4",
+      "cell_weight": 4,
+      "degree": 2,
+      "first_defect": {
+        "defect_nonzero": true,
+        "defect_normal_form": "((((x*x)*y)*x)*x) - (((x*y)*x)*(x*x))",
+        "defect_sparse_coordinates": {
+          "0": 1,
+          "12": -1
+        },
+        "multiplier": "y",
+        "raw_differential": "-((((x*x)*x)*x)*y) + (((x*x)*(x*x))*y)",
+        "target_weight": 5
+      },
+      "strictly_attachable": false,
+      "strictly_attachable_through_weight": 4
+    },
+    {
+      "boundary": "-((r_xx*y)*x) + ((x*x)*r_xy)",
+      "cell_name": "s2_00005_w4",
+      "cell_weight": 4,
+      "degree": 2,
+      "first_defect": {
+        "defect_nonzero": true,
+        "defect_normal_form": "-((((x*x)*y)*x)*x) + (((x*y)*x)*(x*x))",
+        "defect_sparse_coordinates": {
+          "0": -1,
+          "12": 1
+        },
+        "multiplier": "x",
+        "raw_differential": "-((((x*x)*y)*x)*x) + (((x*x)*(x*y))*x)",
+        "target_weight": 5
+      },
+      "strictly_attachable": false,
+      "strictly_attachable_through_weight": 4
+    },
+    {
+      "boundary": "-1/2*((r_xx*y)*y) - ((r_xy*y)*x) + 1/2*((x*x)*r_yy) + ((x*y)*r_xy)",
+      "cell_name": "s2_00006_w4",
+      "cell_weight": 4,
+      "degree": 2,
+      "first_defect": {
+        "defect_nonzero": true,
+        "defect_normal_form": "-1/2*((((x*x)*y)*y)*x) - ((((x*y)*y)*x)*x) + (((x*y)*(x*y))*x) + 1/2*(((y*y)*x)*(x*x))",
+        "defect_sparse_coordinates": {
+          "1": "-1/2",
+          "10": 1,
+          "18": "1/2",
+          "2": -1
+        },
+        "multiplier": "x",
+        "raw_differential": "-1/2*((((x*x)*y)*y)*x) - ((((x*y)*y)*x)*x) + 1/2*(((x*x)*(y*y))*x) + (((x*y)*(x*y))*x)",
+        "target_weight": 5
+      },
+      "strictly_attachable": false,
+      "strictly_attachable_through_weight": 4
+    },
+    {
+      "boundary": "-((r_yy*x)*y) + ((x*y)*r_yy)",
+      "cell_name": "s2_00007_w4",
+      "cell_weight": 4,
+      "degree": 2,
+      "first_defect": {
+        "defect_nonzero": true,
+        "defect_normal_form": "((((y*y)*y)*y)*x) - (((y*y)*(y*y))*x)",
+        "defect_sparse_coordinates": {
+          "17": -1,
+          "5": 1
+        },
+        "multiplier": "y",
+        "raw_differential": "-((((y*y)*x)*y)*y) + (((x*y)*(y*y))*y)",
+        "target_weight": 5
+      },
+      "strictly_attachable": false,
+      "strictly_attachable_through_weight": 4
+    },
+    {
+      "boundary": "-((r_yy*y)*y) + ((y*y)*r_yy)",
+      "cell_name": "s2_00008_w4",
+      "cell_weight": 4,
+      "degree": 2,
+      "first_defect": {
+        "defect_nonzero": true,
+        "defect_normal_form": "-((((y*y)*y)*y)*x) + (((y*y)*(y*y))*x)",
+        "defect_sparse_coordinates": {
+          "17": 1,
+          "5": -1
+        },
+        "multiplier": "x",
+        "raw_differential": "-((((y*y)*y)*y)*x) + (((y*y)*(y*y))*x)",
+        "target_weight": 5
+      },
+      "strictly_attachable": false,
+      "strictly_attachable_through_weight": 4
+    },
+    {
+      "boundary": "-(((((x*x)*x)*x)*x)*r_xx) + ((((x*x)*x)*x)*(r_xx*x))",
+      "cell_name": "s2_00009_w7",
+      "cell_weight": 7,
+      "degree": 2,
+      "first_defect": {
+        "defect_nonzero": true,
+        "defect_normal_form": "1/2*((((x*x)*x)*((x*x)*x))*(x*x)) - 1/2*((((x*x)*x)*(x*x))*((x*x)*x))",
+        "defect_sparse_coordinates": {
+          "396": "1/2",
+          "408": "-1/2"
+        },
+        "multiplier": "x",
+        "raw_differential": "-((((((x*x)*x)*x)*x)*(x*x))*x) + (((((x*x)*x)*x)*((x*x)*x))*x)",
+        "target_weight": 8
+      },
+      "strictly_attachable": false,
+      "strictly_attachable_through_weight": 7
+    },
+    {
+      "boundary": "4*(((((x*x)*x)*x)*x)*r_xy) + 2*(((((x*x)*x)*x)*y)*r_xx) + 2*(((((x*x)*x)*y)*r_xx)*x) + 4*(((((x*y)*x)*x)*x)*r_xx) - ((((x*x)*r_xx)*y)*(x*x)) + 2*((((x*x)*x)*r_xx)*(x*y)) - 2*((((x*x)*x)*r_xy)*(x*x)) - 2*((((x*x)*x)*x)*(r_xx*y)) - 8*((((x*x)*x)*x)*(r_xy*x)) - 2*((((x*x)*x)*y)*(r_xx*x)) + ((((x*x)*y)*(x*x))*r_xx)",
+      "cell_name": "s2_00010_w7",
+      "cell_weight": 7,
+      "degree": 2,
+      "first_defect": {
+        "defect_nonzero": true,
+        "defect_normal_form": "2*((((((x*x)*x)*x)*y)*x)*(x*x)) - (((((x*x)*(x*x))*y)*x)*(x*x)) + 6*(((((x*x)*x)*x)*x)*((x*y)*x)) + 1/2*(((((x*x)*x)*y)*(x*x))*(x*x)) + 3/4*((((x*x)*(x*x))*y)*((x*x)*x)) - 2*((((x*x)*(x*y))*(x*x))*(x*x)) - ((((x*x)*x)*((x*x)*x))*(x*y)) + ((((x*x)*x)*((x*x)*y))*(x*x)) - 6*((((x*x)*x)*((x*y)*x))*(x*x)) - 1/2*((((x*x)*x)*(x*x))*((x*x)*y)) - 2*((((x*x)*x)*(x*x))*((x*y)*x)) - ((((x*x)*x)*(x*y))*((x*x)*x)) - 2*((((x*x)*x)*x)*(((x*x)*x)*y)) - 2*((((x*x)*x)*x)*(((x*x)*y)*x)) - 6*((((x*x)*x)*x)*(((x*y)*x)*x)) + 3/4*((((x*x)*x)*y)*((x*x)*(x*x))) + 1/2*((((x*x)*y)*(x*x))*((x*x)*x)) + 10*((((x*y)*x)*(x*x))*((x*x)*x)) + 2*(((x*x)*(x*x))*((x*x)*(x*y)))",
+        "defect_sparse_coordinates": {
+          "194": -1,
+          "214": 6,
+          "220": "1/2",
+          "378": "3/4",
+          "381": -2,
+          "397": -1,
+          "399": 1,
+          "402": -6,
+          "409": "-1/2",
+          "410": -2,
+          "414": -1,
+          "427": -2,
+          "428": -2,
+          "430": -6,
+          "455": "3/4",
+          "473": "1/2",
+          "553": 10,
+          "68": 2,
+          "742": 2
+        },
+        "multiplier": "x",
+        "raw_differential": "4*((((((x*x)*x)*x)*x)*(x*y))*x) + 2*((((((x*x)*x)*x)*y)*(x*x))*x) + 2*((((((x*x)*x)*y)*(x*x))*x)*x) + 4*((((((x*y)*x)*x)*x)*(x*x))*x) - (((((x*x)*(x*x))*y)*(x*x))*x) + 2*(((((x*x)*x)*(x*x))*(x*y))*x) - 2*(((((x*x)*x)*(x*y))*(x*x))*x) - 2*(((((x*x)*x)*x)*((x*x)*y))*x) - 8*(((((x*x)*x)*x)*((x*y)*x))*x) - 2*(((((x*x)*x)*y)*((x*x)*x))*x) + (((((x*x)*y)*(x*x))*(x*x))*x)",
+        "target_weight": 8
+      },
+      "strictly_attachable": false,
+      "strictly_attachable_through_weight": 7
+    },
+    {
+      "boundary": "(((((x*y)*x)*x)*x)*r_yy) + 2*(((((x*y)*x)*x)*y)*r_xy) + 4*(((((x*y)*x)*y)*r_xy)*x) - 2*(((((x*y)*x)*y)*x)*r_xy) - (((((x*y)*x)*y)*y)*r_xx) - ((((x*x)*r_xy)*y)*(x*y)) + 1/2*((((x*y)*x)*r_xx)*(y*y)) - 1/2*((((x*y)*x)*r_yy)*(x*x)) - 2*((((x*y)*x)*x)*(r_xy*y)) - ((((x*y)*x)*x)*(r_yy*x)) + ((((x*y)*x)*y)*(r_xx*y)) - 2*((((x*y)*x)*y)*(r_xy*x)) + ((((x*y)*y)*(x*x))*r_xy)",
+      "cell_name": "s2_00011_w7",
+      "cell_weight": 7,
+      "degree": 2,
+      "first_defect": {
+        "defect_nonzero": true,
+        "defect_normal_form": "2*((((((x*y)*x)*x)*y)*x)*(x*y)) + ((((((x*y)*x)*x)*y)*y)*(x*x)) + 2*((((((x*y)*x)*y)*x)*y)*(x*x)) + ((((((x*y)*x)*y)*y)*x)*(x*x)) - (((((x*x)*(x*y))*y)*x)*(x*y)) - 1/2*(((((x*x)*(x*y))*y)*y)*(x*x)) - 2*(((((x*y)*x)*x)*y)*((x*x)*y)) - (((((x*y)*x)*y)*(x*x))*(x*y)) - 2*(((((x*y)*x)*y)*x)*((x*x)*y)) - 2*(((((x*y)*x)*y)*y)*((x*x)*x)) + (((((x*y)*y)*x)*x)*((x*y)*x)) + 1/4*(((((x*y)*y)*y)*(x*x))*(x*x)) + 3/4*((((x*x)*(x*y))*y)*((x*x)*y)) + 1/2*((((x*x)*(x*y))*y)*((x*y)*x)) - 1/2*((((x*x)*(y*y))*(x*y))*(x*x)) - 3/4*((((x*x)*(y*y))*x)*((x*y)*x)) + 3/4*((((x*x)*x)*((y*y)*x))*(x*y)) - 3/4*((((x*x)*x)*(x*y))*((y*y)*x)) - 5/4*((((x*x)*x)*(y*y))*((x*y)*x)) - 3/4*((((x*x)*x)*x)*((x*y)*(y*y))) + 1/4*((((x*x)*x)*y)*((x*y)*(x*y))) + 1/4*((((x*x)*y)*((x*x)*y))*(x*y)) + ((((x*x)*y)*((x*y)*x))*(x*y)) + 1/2*((((x*x)*y)*((x*y)*y))*(x*x)) - 1/4*((((x*x)*y)*(x*y))*((x*x)*y)) - 1/2*((((x*x)*y)*(x*y))*((x*y)*x)) + ((((x*x)*y)*x)*(((x*y)*x)*y)) + 1/4*((((x*x)*y)*x)*((x*y)*(x*y))) + ((((x*x)*y)*y)*(((x*y)*x)*x)) - 1/4*((((x*x)*y)*y)*((x*x)*(x*y))) - 1/4*((((x*y)*(x*y))*x)*((x*x)*y)) - 1/2*((((x*y)*(x*y))*x)*((x*y)*x)) - 1/4*((((x*y)*(x*y))*y)*((x*x)*x)) - 3/8*((((x*y)*(y*y))*(x*x))*(x*x)) + 3/4*((((x*y)*(y*y))*x)*((x*x)*x)) - ((((x*y)*x)*((x*y)*x))*(x*y)) - 1/2*((((x*y)*x)*((x*y)*y))*(x*x)) - 3/4*((((x*y)*x)*((y*y)*x))*(x*x)) + 1/2*((((x*y)*x)*(x*x))*((x*y)*y)) + 3/4*((((x*y)*x)*(x*x))*((y*y)*x)) - 1/2*((((x*y)*x)*(x*y))*((x*x)*y)) + ((((x*y)*x)*(x*y))*((x*y)*x)) + 3/4*((((x*y)*x)*(y*y))*((x*x)*x)) - 4*((((x*y)*x)*x)*(((x*y)*x)*y)) - 3*((((x*y)*x)*x)*(((x*y)*y)*x)) + 3/4*((((x*y)*x)*x)*((x*x)*(y*y))) + 1/2*((((x*y)*x)*x)*((x*y)*(x*y))) + 9/2*((((x*y)*x)*y)*((x*x)*(x*y))) - 1/2*((((x*y)*y)*(x*x))*((x*x)*y)) + ((((x*y)*y)*(x*x))*((x*y)*x)) - 1/4*((((x*y)*y)*y)*((x*x)*(x*x))) + 1/2*((((y*y)*x)*(x*x))*((x*y)*x)) + 3/8*(((x*x)*(x*x))*((x*y)*(y*y))) + 1/2*(((x*x)*(x*y))*((x*x)*(y*y)))",
+        "defect_sparse_coordinates": {
+          "117": 2,
+          "119": 1,
+          "121": 2,
+          "123": 1,
+          "202": -1,
+          "204": "-1/2",
+          "278": -2,
+          "283": -1,
+          "289": -2,
+          "294": -2,
+          "300": 1,
+          "306": "1/4",
+          "384": "3/4",
+          "385": "1/2",
+          "388": "-1/2",
+          "390": "-3/4",
+          "405": "3/4",
+          "418": "-3/4",
+          "422": "-5/4",
+          "442": "-3/4",
+          "458": "1/4",
+          "462": "1/4",
+          "465": 1,
+          "467": "1/2",
+          "480": "-1/4",
+          "481": "-1/2",
+          "494": 1,
+          "504": "1/4",
+          "508": 1,
+          "517": "-1/4",
+          "524": "-1/4",
+          "525": "-1/2",
+          "527": "-1/4",
+          "531": "-3/8",
+          "534": "3/4",
+          "544": -1,
+          "546": "-1/2",
+          "549": "-3/4",
+          "556": "1/2",
+          "557": "3/4",
+          "560": "-1/2",
+          "561": 1,
+          "565": "3/4",
+          "572": -4,
+          "573": -3,
+          "581": "3/4",
+          "582": "1/2",
+          "593": "9/2",
+          "607": "-1/2",
+          "608": 1,
+          "641": "-1/4",
+          "670": "1/2",
+          "745": "3/8",
+          "748": "1/2"
+        },
+        "multiplier": "x",
+        "raw_differential": "((((((x*y)*x)*x)*x)*(y*y))*x) + 2*((((((x*y)*x)*x)*y)*(x*y))*x) + 4*((((((x*y)*x)*y)*(x*y))*x)*x) - 2*((((((x*y)*x)*y)*x)*(x*y))*x) - ((((((x*y)*x)*y)*y)*(x*x))*x) - (((((x*x)*(x*y))*y)*(x*y))*x) + 1/2*(((((x*y)*x)*(x*x))*(y*y))*x) - 1/2*(((((x*y)*x)*(y*y))*(x*x))*x) - 2*(((((x*y)*x)*x)*((x*y)*y))*x) - (((((x*y)*x)*x)*((y*y)*x))*x) + (((((x*y)*x)*y)*((x*x)*y))*x) - 2*(((((x*y)*x)*y)*((x*y)*x))*x) + (((((x*y)*y)*(x*x))*(x*y))*x)",
+        "target_weight": 8
+      },
+      "strictly_attachable": false,
+      "strictly_attachable_through_weight": 7
+    },
+    {
+      "boundary": "-1/2*(((((x*y)*y)*x)*x)*r_yy) - (((((x*y)*y)*x)*y)*r_xy) - 2*(((((x*y)*y)*y)*r_xy)*x) + (((((x*y)*y)*y)*x)*r_xy) + 1/2*(((((x*y)*y)*y)*y)*r_xx) - 1/4*((((x*x)*y)*(x*y))*r_yy) + 1/4*((((x*x)*y)*r_yy)*(x*y)) - 1/2*((((x*x)*y)*y)*(r_xy*y)) - ((((x*y)*r_xy)*y)*(x*y)) + ((((x*y)*y)*(x*y))*r_xy) + ((((x*y)*y)*x)*(r_xy*y)) + 1/2*((((x*y)*y)*x)*(r_yy*x)) + ((((x*y)*y)*y)*(r_xy*x))",
+      "cell_name": "s2_00012_w7",
+      "cell_weight": 7,
+      "degree": 2,
+      "first_defect": {
+        "defect_nonzero": true,
+        "defect_normal_form": "-((((((x*y)*y)*x)*y)*x)*(x*y)) - 1/2*((((((x*y)*y)*x)*y)*y)*(x*x)) - ((((((x*y)*y)*y)*x)*y)*(x*x)) - 1/2*((((((x*y)*y)*y)*y)*x)*(x*x)) + 1/2*(((((x*x)*y)*x)*y)*((x*y)*y)) - (((((x*y)*(x*y))*y)*x)*(x*y)) - 1/2*(((((x*y)*(x*y))*y)*y)*(x*x)) + 1/2*(((((x*y)*y)*x)*(y*y))*(x*x)) + 1/2*(((((x*y)*y)*y)*(x*x))*(x*y)) + (((((x*y)*y)*y)*(x*y))*(x*x)) + 1/2*(((((x*y)*y)*y)*x)*((x*x)*y)) + 1/2*(((((x*y)*y)*y)*y)*((x*x)*x)) - 1/4*((((x*x)*(y*y))*(x*y))*(x*y)) + 1/4*((((x*x)*(y*y))*y)*((x*y)*x)) - 1/2*((((x*x)*x)*((y*y)*y))*(x*y)) + 1/2*((((x*x)*x)*(x*y))*((y*y)*y)) + 1/2*((((x*x)*x)*(y*y))*((x*y)*y)) + 1/2*((((x*x)*x)*y)*(((x*y)*y)*y)) + 1/2*((((x*x)*x)*y)*((x*y)*(y*y))) - 1/4*((((x*x)*y)*((x*y)*x))*(y*y)) - 1/2*((((x*x)*y)*((y*y)*x))*(x*y)) + 1/2*((((x*x)*y)*(x*y))*((x*y)*y)) + 1/2*((((x*x)*y)*(x*y))*((y*y)*x)) + 1/2*((((x*x)*y)*(y*y))*((x*y)*x)) + 1/2*((((x*x)*y)*x)*((x*y)*(y*y))) + 1/4*((((x*x)*y)*y)*((x*y)*(x*y))) - 1/2*((((x*y)*(x*y))*x)*((y*y)*x)) + 1/4*((((x*y)*(x*y))*y)*((x*x)*y)) + 1/2*((((x*y)*(x*y))*y)*((x*y)*x)) - ((((x*y)*(y*y))*(x*y))*(x*x)) - 1/2*((((x*y)*(y*y))*x)*((x*x)*y)) - 5/2*((((x*y)*(y*y))*x)*((x*y)*x)) - 1/2*((((x*y)*(y*y))*y)*((x*x)*x)) - 5/2*((((x*y)*x)*((x*y)*x))*(y*y)) + 2*((((x*y)*x)*((x*y)*y))*(x*y)) - 7/2*((((x*y)*x)*((y*y)*x))*(x*y)) + 1/4*((((x*y)*x)*((y*y)*y))*(x*x)) - 1/4*((((x*y)*x)*(x*x))*((y*y)*y)) - ((((x*y)*x)*(x*y))*((x*y)*y)) + 5/2*((((x*y)*x)*(x*y))*((y*y)*x)) + 5/2*((((x*y)*x)*(y*y))*((x*y)*x)) + 2*((((x*y)*x)*x)*(((x*y)*y)*y)) + 5/2*((((x*y)*x)*x)*((x*y)*(y*y))) - 1/4*((((x*y)*x)*y)*((x*x)*(y*y))) - 1/2*((((x*y)*x)*y)*((x*y)*(x*y))) + ((((x*y)*y)*((x*y)*y))*(x*x)) + 1/4*((((x*y)*y)*((y*y)*x))*(x*x)) - ((((x*y)*y)*(x*x))*((x*y)*y)) - 1/2*((((x*y)*y)*(x*x))*((y*y)*x)) - 1/2*((((x*y)*y)*(x*y))*((x*x)*y)) - 1/2*((((x*y)*y)*(y*y))*((x*x)*x)) + ((((x*y)*y)*x)*(((x*y)*y)*x)) - 1/2*((((x*y)*y)*x)*((x*x)*(y*y))) - 7/2*((((x*y)*y)*y)*((x*x)*(x*y))) + 1/4*((((y*y)*x)*(x*x))*((x*y)*y)) - 1/4*((((y*y)*x)*(x*y))*((x*x)*y)) + ((((y*y)*x)*(x*y))*((x*y)*x)) + 1/2*((((y*y)*x)*x)*((x*y)*(x*y))) + (((x*x)*(x*y))*((x*y)*(y*y))) + 1/4*(((x*x)*(y*y))*((x*y)*(x*y)))",
+        "defect_sparse_coordinates": {
+          "137": -1,
+          "139": "-1/2",
+          "141": -1,
+          "143": "-1/2",
+          "242": "1/2",
+          "264": -1,
+          "266": "-1/2",
+          "299": "1/2",
+          "307": "1/2",
+          "308": 1,
+          "313": "1/2",
+          "318": "1/2",
+          "389": "-1/4",
+          "393": "1/4",
+          "407": "-1/2",
+          "419": "1/2",
+          "423": "1/2",
+          "450": "1/2",
+          "459": "1/2",
+          "466": "-1/4",
+          "469": "-1/2",
+          "482": "1/2",
+          "483": "1/2",
+          "487": "1/2",
+          "505": "1/2",
+          "519": "1/4",
+          "526": "-1/2",
+          "528": "1/4",
+          "529": "1/2",
+          "532": -1,
+          "535": "-1/2",
+          "536": "-5/2",
+          "538": "-1/2",
+          "545": "-5/2",
+          "547": 2,
+          "550": "-7/2",
+          "551": "1/4",
+          "558": "-1/4",
+          "562": -1,
+          "563": "5/2",
+          "567": "5/2",
+          "574": 2,
+          "583": "5/2",
+          "594": "-1/4",
+          "595": "-1/2",
+          "598": 1,
+          "601": "1/4",
+          "609": -1,
+          "610": "-1/2",
+          "613": "-1/2",
+          "618": "-1/2",
+          "624": 1,
+          "632": "-1/2",
+          "642": "-7/2",
+          "671": "1/4",
+          "675": "-1/4",
+          "676": 1,
+          "693": "1/2",
+          "750": 1,
+          "753": "1/4"
+        },
+        "multiplier": "x",
+        "raw_differential": "-1/2*((((((x*y)*y)*x)*x)*(y*y))*x) - ((((((x*y)*y)*x)*y)*(x*y))*x) - 2*((((((x*y)*y)*y)*(x*y))*x)*x) + ((((((x*y)*y)*y)*x)*(x*y))*x) + 1/2*((((((x*y)*y)*y)*y)*(x*x))*x) - 1/4*(((((x*x)*y)*(x*y))*(y*y))*x) + 1/4*(((((x*x)*y)*(y*y))*(x*y))*x) - 1/2*(((((x*x)*y)*y)*((x*y)*y))*x) - (((((x*y)*(x*y))*y)*(x*y))*x) + (((((x*y)*y)*(x*y))*(x*y))*x) + (((((x*y)*y)*x)*((x*y)*y))*x) + 1/2*(((((x*y)*y)*x)*((y*y)*x))*x) + (((((x*y)*y)*y)*((x*y)*x))*x)",
+        "target_weight": 8
+      },
+      "strictly_attachable": false,
+      "strictly_attachable_through_weight": 7
+    },
+    {
+      "boundary": "-2*(((((x*y)*y)*y)*y)*r_yy) - (((((y*y)*x)*y)*y)*r_yy) + 2*(((((y*y)*y)*y)*r_yy)*x) - 2*(((((y*y)*y)*y)*x)*r_yy) - 4*(((((y*y)*y)*y)*y)*r_xy) + 6*((((x*y)*y)*y)*(r_yy*y)) + ((((y*y)*x)*y)*(r_yy*y)) - ((((y*y)*y)*(x*y))*r_yy) + ((((y*y)*y)*r_yy)*(x*y))",
+      "cell_name": "s2_00013_w7",
+      "cell_weight": 7,
+      "degree": 2,
+      "first_defect": {
+        "defect_nonzero": true,
+        "defect_normal_form": "-2*((((((x*y)*y)*y)*y)*x)*(y*y)) - 4*((((((x*y)*y)*y)*y)*y)*(x*y)) - ((((((y*y)*x)*y)*y)*x)*(y*y)) - 2*((((((y*y)*x)*y)*y)*y)*(x*y)) + 4*((((((y*y)*y)*y)*x)*y)*(x*y)) + 2*(((((x*y)*y)*y)*(y*y))*(x*y)) + 6*(((((x*y)*y)*y)*x)*((y*y)*y)) + 12*(((((x*y)*y)*y)*y)*((x*y)*y)) + 6*(((((x*y)*y)*y)*y)*((y*y)*x)) + (((((y*y)*x)*y)*(y*y))*(x*y)) + (((((y*y)*x)*y)*x)*((y*y)*y)) + 2*(((((y*y)*x)*y)*y)*((x*y)*y)) + (((((y*y)*x)*y)*y)*((y*y)*x)) + 2*(((((y*y)*y)*x)*y)*((x*y)*y)) - 4*(((((y*y)*y)*y)*(x*y))*(x*y)) - 2*(((((y*y)*y)*y)*x)*((x*y)*y)) - 2*(((((y*y)*y)*y)*y)*((x*y)*x)) + ((((x*y)*x)*(y*y))*((y*y)*y)) - 2*((((x*y)*x)*y)*(((y*y)*y)*y)) - 1/2*((((x*y)*x)*y)*((y*y)*(y*y))) - 4*((((x*y)*y)*((x*y)*y))*(y*y)) - 2*((((x*y)*y)*((y*y)*x))*(y*y)) - 2*((((x*y)*y)*((y*y)*y))*(x*y)) + 2*((((x*y)*y)*(x*y))*((y*y)*y)) + 4*((((x*y)*y)*(y*y))*((x*y)*y)) - ((((x*y)*y)*(y*y))*((y*y)*x)) - 2*((((x*y)*y)*x)*(((y*y)*y)*y)) - 1/2*((((x*y)*y)*x)*((y*y)*(y*y))) - 8*((((x*y)*y)*y)*(((x*y)*y)*y)) - 6*((((x*y)*y)*y)*(((y*y)*x)*y)) - 2*((((x*y)*y)*y)*(((y*y)*y)*x)) - 2*((((x*y)*y)*y)*((x*y)*(y*y))) + 1/2*((((y*y)*(y*y))*x)*((x*y)*y)) + 1/2*((((y*y)*(y*y))*y)*((x*y)*x)) - 1/2*((((y*y)*x)*((y*y)*x))*(y*y)) - ((((y*y)*x)*(x*y))*((y*y)*y)) + 3*((((y*y)*x)*(y*y))*((x*y)*y)) + 1/2*((((y*y)*x)*(y*y))*((y*y)*x)) - 2*((((y*y)*x)*x)*(((y*y)*y)*y)) - ((((y*y)*x)*y)*(((y*y)*x)*y)) - ((((y*y)*x)*y)*((x*y)*(y*y))) + 2*((((y*y)*y)*y)*((x*x)*(y*y))) + 4*((((y*y)*y)*y)*((x*y)*(x*y)))",
+        "defect_sparse_coordinates": {
+          "145": -2,
+          "147": -4,
+          "169": -1,
+          "171": -2,
+          "186": 4,
+          "311": 2,
+          "317": 6,
+          "321": 12,
+          "322": 6,
+          "342": 1,
+          "348": 1,
+          "352": 2,
+          "353": 1,
+          "359": 2,
+          "364": -4,
+          "370": -2,
+          "375": -2,
+          "570": 1,
+          "591": -2,
+          "597": "-1/2",
+          "600": -4,
+          "603": -2,
+          "605": -2,
+          "617": 2,
+          "621": 4,
+          "622": -1,
+          "629": -2,
+          "635": "-1/2",
+          "636": -8,
+          "638": -6,
+          "639": -2,
+          "645": -2,
+          "654": "1/2",
+          "659": "1/2",
+          "664": "-1/2",
+          "679": -1,
+          "683": 3,
+          "684": "1/2",
+          "689": -2,
+          "696": -1,
+          "703": -1,
+          "737": 2,
+          "738": 4
+        },
+        "multiplier": "x",
+        "raw_differential": "-2*((((((x*y)*y)*y)*y)*(y*y))*x) - ((((((y*y)*x)*y)*y)*(y*y))*x) + 2*((((((y*y)*y)*y)*(y*y))*x)*x) - 2*((((((y*y)*y)*y)*x)*(y*y))*x) - 4*((((((y*y)*y)*y)*y)*(x*y))*x) + 6*(((((x*y)*y)*y)*((y*y)*y))*x) + (((((y*y)*x)*y)*((y*y)*y))*x) - (((((y*y)*y)*(x*y))*(y*y))*x) + (((((y*y)*y)*(y*y))*(x*y))*x)",
+        "target_weight": 8
+      },
+      "strictly_attachable": false,
+      "strictly_attachable_through_weight": 7
+    },
+    {
+      "boundary": "-(((((y*y)*y)*y)*y)*r_yy) + ((((y*y)*y)*y)*(r_yy*y))",
+      "cell_name": "s2_00014_w7",
+      "cell_weight": 7,
+      "degree": 2,
+      "first_defect": {
+        "defect_nonzero": true,
+        "defect_normal_form": "-((((((y*y)*y)*y)*y)*x)*(y*y)) - 2*((((((y*y)*y)*y)*y)*y)*(x*y)) + (((((y*y)*y)*y)*(y*y))*(x*y)) + (((((y*y)*y)*y)*x)*((y*y)*y)) + 2*(((((y*y)*y)*y)*y)*((x*y)*y)) + (((((y*y)*y)*y)*y)*((y*y)*x)) - 1/2*((((y*y)*x)*((y*y)*y))*(y*y)) + 1/2*((((y*y)*x)*(y*y))*((y*y)*y)) - ((((y*y)*x)*y)*(((y*y)*y)*y)) - ((((y*y)*y)*y)*((x*y)*(y*y)))",
+        "defect_sparse_coordinates": {
+          "189": -1,
+          "191": -2,
+          "366": 1,
+          "372": 1,
+          "376": 2,
+          "377": 1,
+          "667": "-1/2",
+          "685": "1/2",
+          "698": -1,
+          "739": -1
+        },
+        "multiplier": "x",
+        "raw_differential": "-((((((y*y)*y)*y)*y)*(y*y))*x) + (((((y*y)*y)*y)*((y*y)*y))*x)",
+        "target_weight": 8
+      },
+      "strictly_attachable": false,
+      "strictly_attachable_through_weight": 7
+    },
+    {
+      "boundary": "-((((((x*x)*x)*x)*x)*x)*r_xx) + 1/2*(((((x*x)*(x*x))*x)*x)*r_xx) - 1/2*(((((x*x)*x)*x)*r_xx)*(x*x)) + (((((x*x)*x)*x)*x)*(r_xx*x))",
+      "cell_name": "s2_00015_w8",
+      "cell_weight": 8,
+      "degree": 2,
+      "first_defect": {
+        "defect_nonzero": true,
+        "defect_normal_form": "1/4*(((((x*x)*x)*x)*x)*((x*x)*(x*x))) + 3/8*((((x*x)*(x*x))*(x*x))*((x*x)*x)) + 1/4*((((x*x)*(x*x))*x)*(((x*x)*x)*x)) - 1/2*((((x*x)*x)*(x*x))*(((x*x)*x)*x)) - 3/8*((((x*x)*x)*(x*x))*((x*x)*(x*x)))",
+        "defect_sparse_coordinates": {
+          "1121": "1/4",
+          "1896": "3/8",
+          "1904": "1/4",
+          "2093": "-1/2",
+          "2105": "-3/8"
+        },
+        "multiplier": "x",
+        "raw_differential": "-(((((((x*x)*x)*x)*x)*x)*(x*x))*x) + 1/2*((((((x*x)*(x*x))*x)*x)*(x*x))*x) - 1/2*((((((x*x)*x)*x)*(x*x))*(x*x))*x) + ((((((x*x)*x)*x)*x)*((x*x)*x))*x)",
+        "target_weight": 9
+      },
+      "strictly_attachable": false,
+      "strictly_attachable_through_weight": 8
+    },
+    {
+      "boundary": "-((((((y*y)*y)*y)*y)*y)*r_yy) + 1/2*(((((y*y)*(y*y))*y)*y)*r_yy) - 1/2*(((((y*y)*y)*y)*r_yy)*(y*y)) + (((((y*y)*y)*y)*y)*(r_yy*y))",
+      "cell_name": "s2_00016_w8",
+      "cell_weight": 8,
+      "degree": 2,
+      "first_defect": {
+        "defect_nonzero": true,
+        "defect_normal_form": "-(((((((y*y)*y)*y)*y)*y)*x)*(y*y)) - 2*(((((((y*y)*y)*y)*y)*y)*y)*(x*y)) + 1/2*((((((y*y)*(y*y))*y)*y)*x)*(y*y)) + ((((((y*y)*(y*y))*y)*y)*y)*(x*y)) - ((((((y*y)*y)*y)*y)*(y*y))*(x*y)) + ((((((y*y)*y)*y)*y)*x)*((y*y)*y)) + 4*((((((y*y)*y)*y)*y)*y)*((x*y)*y)) + ((((((y*y)*y)*y)*y)*y)*((y*y)*x)) - 1/2*(((((y*y)*(y*y))*y)*(y*y))*(x*y)) - 1/2*(((((y*y)*y)*y)*((y*y)*x))*(y*y)) + (((((y*y)*y)*y)*((y*y)*y))*(x*y)) - 1/2*(((((y*y)*y)*y)*(y*y))*((y*y)*x)) - 1/4*(((((y*y)*y)*y)*x)*((y*y)*(y*y))) - 2*(((((y*y)*y)*y)*y)*(((x*y)*y)*y)) - (((((y*y)*y)*y)*y)*(((y*y)*x)*y)) - (((((y*y)*y)*y)*y)*((x*y)*(y*y))) + 2*((((x*y)*(y*y))*y)*(((y*y)*y)*y)) + 1/4*((((x*y)*(y*y))*y)*((y*y)*(y*y))) + 1/4*((((x*y)*y)*(y*y))*((y*y)*(y*y))) - ((((x*y)*y)*y)*(((y*y)*(y*y))*y)) + 1/4*((((y*y)*(y*y))*((y*y)*y))*(x*y)) - 1/4*((((y*y)*(y*y))*(x*y))*((y*y)*y)) - 1/4*((((y*y)*(y*y))*(y*y))*((x*y)*y)) + 1/4*((((y*y)*(y*y))*x)*(((y*y)*y)*y)) + 1/4*((((y*y)*(y*y))*y)*((x*y)*(y*y))) + 1/2*((((y*y)*x)*(y*y))*(((y*y)*y)*y)) - ((((y*y)*y)*(x*y))*(((y*y)*y)*y))",
+        "defect_sparse_coordinates": {
+          "1020": -1,
+          "1026": 1,
+          "1030": 4,
+          "1031": 1,
+          "1612": "-1/2",
+          "1840": "-1/2",
+          "1842": 1,
+          "1859": "-1/2",
+          "1877": "-1/4",
+          "1885": -2,
+          "1887": -1,
+          "1894": -1,
+          "2399": 2,
+          "2405": "1/4",
+          "2551": "1/4",
+          "2561": -1,
+          "2571": "1/4",
+          "2583": "-1/4",
+          "2587": "-1/4",
+          "2593": "1/4",
+          "2608": "1/4",
+          "2645": "1/2",
+          "2673": -1,
+          "453": -1,
+          "455": -2,
+          "885": "1/2",
+          "887": 1
+        },
+        "multiplier": "x",
+        "raw_differential": "-(((((((y*y)*y)*y)*y)*y)*(y*y))*x) + 1/2*((((((y*y)*(y*y))*y)*y)*(y*y))*x) - 1/2*((((((y*y)*y)*y)*(y*y))*(y*y))*x) + ((((((y*y)*y)*y)*y)*((y*y)*y))*x)",
+        "target_weight": 9
+      },
+      "strictly_attachable": false,
+      "strictly_attachable_through_weight": 8
+    }
+  ],
+  "experiment_id": "EXP-013-strict-attachability-killing-audit",
+  "max_weight_requested": 10
+}

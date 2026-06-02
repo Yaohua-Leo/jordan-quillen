@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\begin{document}
+\section*{Experiment 013: Strict Attachability Killing Audit}
+This experiment tests whether EXP011 candidate degree-2 cells are strict dg attaching data through a bounded weight range. It does not apply $Q$ and does not construct $V_3,V_4,\ldots$.
+\paragraph{Boundary.}
+A failed strict attachability check means the chosen raw representative is not accepted as a dg attaching differential in this bounded backend. It does not rule out another lift.
+\paragraph{Summary.}
+Candidate cells: 16\\ Strictly attachable through W: 0\\ Homology killing claims: 0
+\section*{Strict Attachability}
+\begin{longtable}{rll}
+\toprule weight & cell & status \\
+\midrule
+4 & s2\_00001\_w4 & obstructed at W=5 \\
+4 & s2\_00002\_w4 & obstructed at W=5 \\
+4 & s2\_00003\_w4 & obstructed at W=5 \\
+4 & s2\_00004\_w4 & obstructed at W=5 \\
+4 & s2\_00005\_w4 & obstructed at W=5 \\
+4 & s2\_00006\_w4 & obstructed at W=5 \\
+4 & s2\_00007\_w4 & obstructed at W=5 \\
+4 & s2\_00008\_w4 & obstructed at W=5 \\
+7 & s2\_00009\_w7 & obstructed at W=8 \\
+7 & s2\_00010\_w7 & obstructed at W=8 \\
+7 & s2\_00011\_w7 & obstructed at W=8 \\
+7 & s2\_00012\_w7 & obstructed at W=8 \\
+7 & s2\_00013\_w7 & obstructed at W=8 \\
+7 & s2\_00014\_w7 & obstructed at W=8 \\
+8 & s2\_00015\_w8 & obstructed at W=9 \\
+8 & s2\_00016\_w8 & obstructed at W=9 \\
+\bottomrule
+\end{longtable}
+\section*{Killing Audit}
+\begin{longtable}{rlll}
+\toprule weight & cell & status & sources \\
+\midrule
+4 & s2\_00001\_w4 & not\_tested\_no\_strict\_low\_cells & [] \\
+4 & s2\_00002\_w4 & not\_tested\_no\_strict\_low\_cells & [] \\
+4 & s2\_00003\_w4 & not\_tested\_no\_strict\_low\_cells & [] \\
+4 & s2\_00004\_w4 & not\_tested\_no\_strict\_low\_cells & [] \\
+4 & s2\_00005\_w4 & not\_tested\_no\_strict\_low\_cells & [] \\
+4 & s2\_00006\_w4 & not\_tested\_no\_strict\_low\_cells & [] \\
+4 & s2\_00007\_w4 & not\_tested\_no\_strict\_low\_cells & [] \\
+4 & s2\_00008\_w4 & not\_tested\_no\_strict\_low\_cells & [] \\
+7 & s2\_00009\_w7 & not\_tested\_no\_strict\_low\_cells & [] \\
+7 & s2\_00010\_w7 & not\_tested\_no\_strict\_low\_cells & [] \\
+7 & s2\_00011\_w7 & not\_tested\_no\_strict\_low\_cells & [] \\
+7 & s2\_00012\_w7 & not\_tested\_no\_strict\_low\_cells & [] \\
+7 & s2\_00013\_w7 & not\_tested\_no\_strict\_low\_cells & [] \\
+7 & s2\_00014\_w7 & not\_tested\_no\_strict\_low\_cells & [] \\
+8 & s2\_00015\_w8 & not\_tested\_no\_strict\_low\_cells & [] \\
+8 & s2\_00016\_w8 & not\_tested\_no\_strict\_low\_cells & [] \\
+\bottomrule
+\end{longtable}
+\section*{Checks}
+\begin{verbatim}
+{
+  "all_non_strict_cells_excluded_as_sources": true,
+  "applies_Q_is_false": true,
+  "constructs_V3_plus_is_false": true,
+  "exact_rational_arithmetic": true,
+  "killing_claims_require_chain_condition": true,
+  "strict_prefix_rule_enforced": true
+}
+\end{verbatim}
+\end{document}

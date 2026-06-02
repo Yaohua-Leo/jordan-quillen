@@ -1,0 +1,40 @@
+{
+  "applies_Q": false,
+  "arithmetic": "exact_rational",
+  "backend_dg_quotient_evidence": "bounded failure: backend quotient is not stable in the audit",
+  "checks": {
+    "applies_Q_is_false": true,
+    "backend_relation_ideal_differential_stable": false,
+    "backend_relation_ideal_multiplication_stable": false,
+    "bounded_backend_audit_only": true,
+    "constructs_V3_plus_is_false": true,
+    "exact_rational_arithmetic": true,
+    "relation_rows_self_reduce": true
+  },
+  "constructs_V3_plus": false,
+  "differential_failures": 28104,
+  "experiment_directory": "experiments/014-backend-differential-ideal-audit/",
+  "experiment_id": "EXP-014-backend-differential-ideal-audit",
+  "field": "QQ",
+  "first_failures_file": "data/first_failures_W10.json",
+  "matrix_convention": "source_rows_target_coordinates",
+  "max_degree_requested": 2,
+  "max_memory_gb": 20.0,
+  "max_weight_requested": 10,
+  "mode": "validation",
+  "multiplication_failures": 39040,
+  "multiplier_degrees": [
+    0,
+    1,
+    2
+  ],
+  "passed": false,
+  "plan": "researchplan/subplan014.md",
+  "relation_reduction_failures": 0,
+  "relation_rows_checked": 176699,
+  "relation_stability_file": "data/relation_stability_W10.json",
+  "runtime_seconds": 1167.715,
+  "target_algebra": "Jord<x,y>/(x^2,xy,y^2)",
+  "tex_report": "tex/exp014_backend_differential_ideal_audit.tex",
+  "workers": 6
+}

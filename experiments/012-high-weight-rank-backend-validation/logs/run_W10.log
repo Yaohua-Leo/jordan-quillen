@@ -1,0 +1,28 @@
+EXP012 wrapper
+reference_exp011: experiments/011-v2-cells-no-Q/data/by_weight_W10.json
+matches_exp011_reference: True
+rank_backend: modular_sparse_v2
+start time: 2026-06-01T06:55:50
+mode: validation
+max weight requested: 10
+resume: False
+force recompute weights: []
+thresholds: {'max_raw_terms_per_space': 120000, 'max_quotient_dim': 500000, 'max_matrix_nnz': 50000000, 'max_runtime_per_weight': None, 'max_memory_gb': 20.0, 'workers': 6, 'matrix_workers': 4, 'rank_backend': 'modular_sparse_v2', 'rank_progress_interval': 10000, 'rank_progress_seconds': 15.0}
+preflight feasible upper bound: 10
+model build seconds for W=10: 7.922
+model progress log: D:/learning/(co)homology_of_Jordan/experiments/012-high-weight-rank-backend-validation/logs/model_W10_progress.log
+weight 1: completed, dim_H1_old=0, new_s_cells=0, runtime_seconds=0.003
+weight 2: completed, dim_H1_old=0, new_s_cells=0, runtime_seconds=5.946
+weight 3: completed, dim_H1_old=0, new_s_cells=0, runtime_seconds=9.103
+weight 4: completed, dim_H1_old=8, new_s_cells=8, runtime_seconds=20.84
+weight 5: completed, dim_H1_old=0, new_s_cells=0, runtime_seconds=21.389
+weight 6: completed, dim_H1_old=0, new_s_cells=0, runtime_seconds=22.003
+weight 7: completed, dim_H1_old=6, new_s_cells=6, runtime_seconds=21.407
+weight 8: completed, dim_H1_old=2, new_s_cells=2, runtime_seconds=25.634
+weight 9: completed, dim_H1_old=0, new_s_cells=0, runtime_seconds=23.291
+weight 10: completed, dim_H1_old=0, new_s_cells=0, runtime_seconds=163.361
+end time: 2026-06-01T07:01:12
+runtime seconds: 322.515
+completed weights: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+skipped weights: []
+failed weights: []

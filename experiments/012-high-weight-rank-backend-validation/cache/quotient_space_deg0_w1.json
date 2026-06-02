@@ -1,0 +1,15 @@
+{
+  "basis": [
+    "x",
+    "y"
+  ],
+  "degree": 0,
+  "dimension": 2,
+  "free_columns": [
+    0,
+    1
+  ],
+  "jordan_relation_rank": 0,
+  "raw_term_count": 2,
+  "weight": 1
+}

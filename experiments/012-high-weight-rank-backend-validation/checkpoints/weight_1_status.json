@@ -1,0 +1,81 @@
+{
+  "cells": [],
+  "checkpoint_schema_version": 1,
+  "experiment_id": "EXP-011-v2-cells-no-Q",
+  "record": {
+    "basis_data": {
+      "C0_basis": [
+        "x",
+        "y"
+      ],
+      "C1_basis": [],
+      "C2_old_basis": []
+    },
+    "cache_paths": {
+      "B_old_rref_cache": "cache/B_old_rref_w1.json",
+      "H1_old_reps_cache": "cache/H1_old_reps_w1.json",
+      "Z1_basis_cache": "cache/Z1_basis_w1.json",
+      "d1_matrix_cache": "cache/d1_w1.json",
+      "d2_old_matrix_cache": "cache/d2_old_w1.json",
+      "quotient_space_cache": "cache/quotient_space_deg{p}_w1.json"
+    },
+    "checks": {
+      "all_cell_certificates_valid": true,
+      "all_cells_are_cycles": true,
+      "all_cells_have_nonzero_B_old_remainder": true,
+      "d2_old_matrix_times_d1_matrix_is_zero": true,
+      "dim_B_old_matches_rank_d2_old": true,
+      "dim_H1_old_matches_quotient_count": true,
+      "dim_Z1_matches_rank_nullity": true,
+      "formal_d_squared_zero_on_s_cells": true,
+      "representatives_independent_mod_B_old": true,
+      "runtime_within_threshold": true
+    },
+    "dim_B_old": 0,
+    "dim_C0": 2,
+    "dim_C1": 0,
+    "dim_C2_old": 0,
+    "dim_H1_old": 0,
+    "dim_Z1": 0,
+    "matrix_stats": {
+      "chain_condition_seconds": 0.0,
+      "d1_build_seconds": 0.0,
+      "d1_cols": 2,
+      "d1_nnz": 0,
+      "d1_rank_seconds": 0.001,
+      "d1_rows": 0,
+      "d2_old_build_seconds": 0.0,
+      "d2_old_cols": 0,
+      "d2_old_nnz": 0,
+      "d2_old_rank_seconds": 0.0,
+      "d2_old_rows": 0,
+      "matrix_workers": 4
+    },
+    "memory_notes": "max_memory_gb was recorded as a requested threshold; this no-new-dependency runner controls memory indirectly by raw-term and matrix thresholds.",
+    "number_of_new_s_cells": 0,
+    "rank_certificates": {
+      "d1": {
+        "method": "rational_sparse_echelon"
+      },
+      "d2_old": {
+        "backend": "modular_sparse_v2",
+        "method": "modular_dim_z1_lower_bound",
+        "prime": 1000003,
+        "rank": 0,
+        "target_rank": 0
+      }
+    },
+    "rank_d1": 0,
+    "rank_d2_old": 0,
+    "raw_term_counts": {
+      "C0_raw_terms": 2,
+      "C1_raw_terms": 0,
+      "C2_old_raw_terms": 0
+    },
+    "runtime_seconds": 0.003,
+    "status": "completed",
+    "weight": 1
+  },
+  "status": "completed",
+  "weight": 1
+}

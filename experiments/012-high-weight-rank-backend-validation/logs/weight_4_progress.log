@@ -1,0 +1,24 @@
+2026-06-01T06:56:13 quotient dimensions: C0=10 C1=21 C2_old=6
+2026-06-01T06:56:13 matrix_workers=4
+2026-06-01T06:56:25 built d1 matrix rows=21 nnz=27 seconds=11.927
+2026-06-01T06:56:34 built d2_old matrix rows=6 nnz=6 seconds=8.906
+2026-06-01T06:56:34 d1 modular_sparse_v2 mod 1000003: conversion complete processed_rows=21 input_nnz=27 elapsed_seconds=0.000
+2026-06-01T06:56:34 d1 modular_sparse_v2 mod 1000003: elimination complete processed_rows=15 current_rank=10 pivot_count=10 reductions=10 max_live_row_nnz=3 elapsed_seconds=0.000
+2026-06-01T06:56:34 d1 modular rank mod 1000003: 10 backend=modular_sparse_v2
+2026-06-01T06:56:34 certified rank d1=10 by modular target-rank lower bound
+2026-06-01T06:56:34 d1 rank seconds=0.001
+2026-06-01T06:56:34 d2_old modular_sparse_v2 mod 1000003: conversion complete processed_rows=6 input_nnz=6 elapsed_seconds=0.000
+2026-06-01T06:56:34 d2_old modular_sparse_v2 mod 1000003: elimination complete processed_rows=6 current_rank=3 pivot_count=3 reductions=0 max_live_row_nnz=2 elapsed_seconds=0.000
+2026-06-01T06:56:34 d2_old modular rank mod 1000003: 3 backend=modular_sparse_v2
+2026-06-01T06:56:34 d2_old modular_sparse_v2 mod 1000033: conversion complete processed_rows=6 input_nnz=6 elapsed_seconds=0.000
+2026-06-01T06:56:34 d2_old modular_sparse_v2 mod 1000033: elimination complete processed_rows=6 current_rank=3 pivot_count=3 reductions=0 max_live_row_nnz=2 elapsed_seconds=0.000
+2026-06-01T06:56:34 d2_old modular rank mod 1000033: 3 backend=modular_sparse_v2
+2026-06-01T06:56:34 d2_old modular_sparse_v2 mod 1000037: conversion complete processed_rows=6 input_nnz=6 elapsed_seconds=0.000
+2026-06-01T06:56:34 d2_old modular_sparse_v2 mod 1000037: elimination complete processed_rows=6 current_rank=3 pivot_count=3 reductions=0 max_live_row_nnz=2 elapsed_seconds=0.000
+2026-06-01T06:56:34 d2_old modular rank mod 1000037: 3 backend=modular_sparse_v2
+2026-06-01T06:56:34 computed rank d2_old=3
+2026-06-01T06:56:34 d2_old rank seconds=0.001
+2026-06-01T06:56:34 chain condition seconds=0.001
+2026-06-01T06:56:34 rank precheck: dim_Z1=11 dim_B_old=3 dim_H1_old=8 chain_condition=True
+2026-06-01T06:56:34 computed B_old RREF rank=3
+2026-06-01T06:56:34 computed full Z1 basis size=11

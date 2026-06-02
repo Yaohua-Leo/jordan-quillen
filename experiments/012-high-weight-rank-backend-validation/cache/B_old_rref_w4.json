@@ -1,0 +1,28 @@
+{
+  "basis_available": true,
+  "basis_type": "rref",
+  "pivot_rows": [
+    {
+      "pivot": 13,
+      "row": {
+        "13": 1,
+        "15": -1
+      }
+    },
+    {
+      "pivot": 14,
+      "row": {
+        "14": 1,
+        "18": -1
+      }
+    },
+    {
+      "pivot": 17,
+      "row": {
+        "17": 1,
+        "19": -1
+      }
+    }
+  ],
+  "rank": 3
+}

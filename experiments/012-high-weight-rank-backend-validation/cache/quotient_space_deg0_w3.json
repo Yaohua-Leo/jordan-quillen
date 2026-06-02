@@ -1,0 +1,23 @@
+{
+  "basis": [
+    "((x*x)*x)",
+    "((x*x)*y)",
+    "((x*y)*x)",
+    "((x*y)*y)",
+    "((y*y)*x)",
+    "((y*y)*y)"
+  ],
+  "degree": 0,
+  "dimension": 6,
+  "free_columns": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "jordan_relation_rank": 0,
+  "raw_term_count": 6,
+  "weight": 3
+}

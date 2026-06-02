@@ -1,0 +1,17 @@
+{
+  "basis": [
+    "r_xx",
+    "r_xy",
+    "r_yy"
+  ],
+  "degree": 1,
+  "dimension": 3,
+  "free_columns": [
+    0,
+    1,
+    2
+  ],
+  "jordan_relation_rank": 0,
+  "raw_term_count": 3,
+  "weight": 2
+}

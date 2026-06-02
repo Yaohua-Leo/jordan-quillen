@@ -1,0 +1,8 @@
+{
+  "expected_dimension": 5292,
+  "full_basis_available": false,
+  "nnz": 0,
+  "omitted_reason": "Full Z1 basis omitted because rank-nullity gives dim_H1_old=0.",
+  "row_count": 0,
+  "rows": []
+}

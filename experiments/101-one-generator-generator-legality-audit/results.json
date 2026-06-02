@@ -1,0 +1,77 @@
+{
+  "applies_Q": false,
+  "arithmetic": "exact_rational",
+  "chain_audit_file": "data/chain_audit_W12.json",
+  "checks": {
+    "all_declared_generators_d_squared_zero": true,
+    "all_v1_generators_legal_through_bound": true,
+    "all_v2_generator_level_differentials_are_cycles": true,
+    "applies_Q_is_false": true,
+    "chain_condition_checks_passed": true,
+    "constructs_V3_plus_is_false": true,
+    "does_not_make_homology_killing_claims": true,
+    "exact_rational_arithmetic": true,
+    "reference_exp100_passed": true,
+    "report_language_has_no_forbidden_global_phrasing": true,
+    "v2_strict_attachability_audit_completed": true
+  },
+  "constructs_V3_plus": false,
+  "constructs_homology_killing_claims": false,
+  "experiment_directory": "experiments/101-one-generator-generator-legality-audit/",
+  "experiment_id": "EXP-101-one-generator-generator-legality-audit",
+  "field": "QQ",
+  "generator_d_squared": [
+    {
+      "d_squared_raw": "0",
+      "d_squared_zero": true,
+      "degree": 0,
+      "differential": "0",
+      "name": "x",
+      "weight": 1
+    },
+    {
+      "d_squared_raw": "0",
+      "d_squared_zero": true,
+      "degree": 1,
+      "differential": "(x*x)",
+      "name": "r1_00001_w2",
+      "weight": 2
+    },
+    {
+      "d_squared_raw": "0",
+      "d_squared_zero": true,
+      "degree": 1,
+      "differential": "((((((x*x)*x)*x)*x)*x)*((x*x)*(x*x)))",
+      "name": "r1_00002_w10",
+      "weight": 10
+    },
+    {
+      "d_squared_raw": "0",
+      "d_squared_zero": true,
+      "degree": 1,
+      "differential": "(((((x*x)*x)*x)*x)*(((x*x)*x)*(x*x)))",
+      "name": "r1_00003_w10",
+      "weight": 10
+    }
+  ],
+  "homology_killing_claim_count": 0,
+  "matrix_convention": "source_rows_target_coordinates",
+  "max_weight_requested": 12,
+  "passed": true,
+  "plan": "researchplan/subplan101.md",
+  "reference_cells": "D:/learning/(co)homology_of_Jordan/experiments/100-square-zero-nonunital-cofibrant-weight10/data/cells_W10.json",
+  "reference_exp100_passed": true,
+  "reference_experiment_id": "EXP-100-square-zero-nonunital-cofibrant-weight10",
+  "reference_results": "D:/learning/(co)homology_of_Jordan/experiments/100-square-zero-nonunital-cofibrant-weight10/results.json",
+  "runtime_seconds": 1.36,
+  "target_algebra": "Jord<x>/(x^2)",
+  "tex_report": "tex/exp101_one_generator_generator_legality_audit.tex",
+  "v1_candidate_count": 3,
+  "v1_legal_generator_count": 3,
+  "v1_legality_failure_count": 0,
+  "v1_legality_file": "data/v1_legality_W12.json",
+  "v2_candidate_count": 5,
+  "v2_strict_attachability_failure_count": 5,
+  "v2_strict_attachability_file": "data/v2_strict_attachability_W12.json",
+  "v2_strictly_attachable_cell_count": 0
+}

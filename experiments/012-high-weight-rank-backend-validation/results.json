@@ -1,0 +1,379 @@
+{
+  "adaptive_feasible_upper_bound": 11,
+  "applies_Q": false,
+  "arithmetic": "exact_rational",
+  "backend": {
+    "convention": "ordinary commutative nonassociative Jordan algebra modulo the linearized Jordan identity, with a signed derivation differential",
+    "convention_audit": "The output is relative to this backend convention.  A separate theory check is needed before identifying it exactly with a fully graded operadic dg Jordan convention.",
+    "does_not_apply_Q": true,
+    "does_not_attach_s_cells": true,
+    "does_not_construct_V3_plus": true,
+    "name": "low_weight_jordan ordinary backend"
+  },
+  "by_weight_file": "data/by_weight_W11.json",
+  "checks": {
+    "all_completed_weights_passed": true,
+    "all_reported_classes_independent_mod_B_old": true,
+    "all_reported_z_are_cycles": true,
+    "all_reported_z_have_nonzero_B_old_remainder": true,
+    "applies_Q_is_false": true,
+    "constructs_higher_cells_V3_plus_is_false": true,
+    "d_squared_zero_on_formal_s_cells": true,
+    "exact_rational_arithmetic": true,
+    "exp011_reproduction_matches_reference": true,
+    "report_language_has_no_forbidden_global_phrasing": true,
+    "sanity_exp009_low_weight_agreement": {
+      "agrees": true,
+      "exp009_degree_2_cell_count": 16,
+      "exp009_selected_weight_bound": 8,
+      "exp011_cumulative_v2_cell_count": 16,
+      "interpretation": "Compatibility check only; EXP011 does not use EXP009 as input or as mathematical authority.",
+      "status": "checked"
+    }
+  },
+  "completed_weights": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "constructs_higher_cells_V3_plus": false,
+  "exp011_reference_file": "experiments/011-v2-cells-no-Q/data/by_weight_W10.json",
+  "experiment_directory": "experiments/012-high-weight-rank-backend-validation/",
+  "experiment_id": "EXP-012-high-weight-rank-backend-validation",
+  "failed_weights": [],
+  "field": "QQ",
+  "finite_truncation_warning": "All conclusions are only for completed weights.",
+  "force_recompute_weights": [],
+  "global_claims_modified": false,
+  "matrix_convention": "source_rows_target_coordinates",
+  "max_weight_requested": 11,
+  "mode": "validation",
+  "not_tested_weights_in_requested_range": [],
+  "passed": true,
+  "plan": "researchplan/subplan012.md",
+  "preflight_skip": null,
+  "primary_object": "H1_old in A^(1)",
+  "rank_backend_validation": true,
+  "reproduction": {
+    "comparison_fields": [
+      "dim_C0",
+      "dim_C1",
+      "dim_C2_old",
+      "rank_d1",
+      "rank_d2_old",
+      "dim_Z1",
+      "dim_H1_old",
+      "number_of_new_s_cells"
+    ],
+    "exp011_reference_file": "experiments/011-v2-cells-no-Q/data/by_weight_W10.json",
+    "matches_exp011_reference": true,
+    "per_weight": [
+      {
+        "current": {
+          "dim_C0": 2,
+          "dim_C1": 0,
+          "dim_C2_old": 0,
+          "dim_H1_old": 0,
+          "dim_Z1": 0,
+          "number_of_new_s_cells": 0,
+          "rank_d1": 0,
+          "rank_d2_old": 0
+        },
+        "matches": true,
+        "mismatches": {},
+        "reference": {
+          "dim_C0": 2,
+          "dim_C1": 0,
+          "dim_C2_old": 0,
+          "dim_H1_old": 0,
+          "dim_Z1": 0,
+          "number_of_new_s_cells": 0,
+          "rank_d1": 0,
+          "rank_d2_old": 0
+        },
+        "weight": 1
+      },
+      {
+        "current": {
+          "dim_C0": 3,
+          "dim_C1": 3,
+          "dim_C2_old": 0,
+          "dim_H1_old": 0,
+          "dim_Z1": 0,
+          "number_of_new_s_cells": 0,
+          "rank_d1": 3,
+          "rank_d2_old": 0
+        },
+        "matches": true,
+        "mismatches": {},
+        "reference": {
+          "dim_C0": 3,
+          "dim_C1": 3,
+          "dim_C2_old": 0,
+          "dim_H1_old": 0,
+          "dim_Z1": 0,
+          "number_of_new_s_cells": 0,
+          "rank_d1": 3,
+          "rank_d2_old": 0
+        },
+        "weight": 2
+      },
+      {
+        "current": {
+          "dim_C0": 6,
+          "dim_C1": 6,
+          "dim_C2_old": 0,
+          "dim_H1_old": 0,
+          "dim_Z1": 0,
+          "number_of_new_s_cells": 0,
+          "rank_d1": 6,
+          "rank_d2_old": 0
+        },
+        "matches": true,
+        "mismatches": {},
+        "reference": {
+          "dim_C0": 6,
+          "dim_C1": 6,
+          "dim_C2_old": 0,
+          "dim_H1_old": 0,
+          "dim_Z1": 0,
+          "number_of_new_s_cells": 0,
+          "rank_d1": 6,
+          "rank_d2_old": 0
+        },
+        "weight": 3
+      },
+      {
+        "current": {
+          "dim_C0": 10,
+          "dim_C1": 21,
+          "dim_C2_old": 6,
+          "dim_H1_old": 8,
+          "dim_Z1": 11,
+          "number_of_new_s_cells": 8,
+          "rank_d1": 10,
+          "rank_d2_old": 3
+        },
+        "matches": true,
+        "mismatches": {},
+        "reference": {
+          "dim_C0": 10,
+          "dim_C1": 21,
+          "dim_C2_old": 6,
+          "dim_H1_old": 8,
+          "dim_Z1": 11,
+          "number_of_new_s_cells": 8,
+          "rank_d1": 10,
+          "rank_d2_old": 3
+        },
+        "weight": 4
+      },
+      {
+        "current": {
+          "dim_C0": 24,
+          "dim_C1": 48,
+          "dim_C2_old": 30,
+          "dim_H1_old": 0,
+          "dim_Z1": 24,
+          "number_of_new_s_cells": 0,
+          "rank_d1": 24,
+          "rank_d2_old": 24
+        },
+        "matches": true,
+        "mismatches": {},
+        "reference": {
+          "dim_C0": 24,
+          "dim_C1": 48,
+          "dim_C2_old": 30,
+          "dim_H1_old": 0,
+          "dim_Z1": 24,
+          "number_of_new_s_cells": 0,
+          "rank_d1": 24,
+          "rank_d2_old": 24
+        },
+        "weight": 5
+      },
+      {
+        "current": {
+          "dim_C0": 72,
+          "dim_C1": 159,
+          "dim_C2_old": 111,
+          "dim_H1_old": 0,
+          "dim_Z1": 87,
+          "number_of_new_s_cells": 0,
+          "rank_d1": 72,
+          "rank_d2_old": 87
+        },
+        "matches": true,
+        "mismatches": {},
+        "reference": {
+          "dim_C0": 72,
+          "dim_C1": 159,
+          "dim_C2_old": 111,
+          "dim_H1_old": 0,
+          "dim_Z1": 87,
+          "number_of_new_s_cells": 0,
+          "rank_d1": 72,
+          "rank_d2_old": 87
+        },
+        "weight": 6
+      },
+      {
+        "current": {
+          "dim_C0": 220,
+          "dim_C1": 552,
+          "dim_C2_old": 444,
+          "dim_H1_old": 6,
+          "dim_Z1": 332,
+          "number_of_new_s_cells": 6,
+          "rank_d1": 220,
+          "rank_d2_old": 326
+        },
+        "matches": true,
+        "mismatches": {},
+        "reference": {
+          "dim_C0": 220,
+          "dim_C1": 552,
+          "dim_C2_old": 444,
+          "dim_H1_old": 6,
+          "dim_Z1": 332,
+          "number_of_new_s_cells": 6,
+          "rank_d1": 220,
+          "rank_d2_old": 326
+        },
+        "weight": 7
+      },
+      {
+        "current": {
+          "dim_C0": 762,
+          "dim_C1": 2064,
+          "dim_C2_old": 1926,
+          "dim_H1_old": 2,
+          "dim_Z1": 1302,
+          "number_of_new_s_cells": 2,
+          "rank_d1": 762,
+          "rank_d2_old": 1300
+        },
+        "matches": true,
+        "mismatches": {},
+        "reference": {
+          "dim_C0": 762,
+          "dim_C1": 2064,
+          "dim_C2_old": 1926,
+          "dim_H1_old": 2,
+          "dim_Z1": 1302,
+          "number_of_new_s_cells": 2,
+          "rank_d1": 762,
+          "rank_d2_old": 1300
+        },
+        "weight": 8
+      },
+      {
+        "current": {
+          "dim_C0": 2688,
+          "dim_C1": 7980,
+          "dim_C2_old": 8454,
+          "dim_H1_old": 0,
+          "dim_Z1": 5292,
+          "number_of_new_s_cells": 0,
+          "rank_d1": 2688,
+          "rank_d2_old": 5292
+        },
+        "matches": true,
+        "mismatches": {},
+        "reference": {
+          "dim_C0": 2688,
+          "dim_C1": 7980,
+          "dim_C2_old": 8454,
+          "dim_H1_old": 0,
+          "dim_Z1": 5292,
+          "number_of_new_s_cells": 0,
+          "rank_d1": 2688,
+          "rank_d2_old": 5292
+        },
+        "weight": 9
+      },
+      {
+        "current": {
+          "dim_C0": 9884,
+          "dim_C1": 31719,
+          "dim_C2_old": 37770,
+          "dim_H1_old": 0,
+          "dim_Z1": 21835,
+          "number_of_new_s_cells": 0,
+          "rank_d1": 9884,
+          "rank_d2_old": 21835
+        },
+        "matches": true,
+        "mismatches": {},
+        "reference": {
+          "dim_C0": 9884,
+          "dim_C1": 31719,
+          "dim_C2_old": 37770,
+          "dim_H1_old": 0,
+          "dim_Z1": 21835,
+          "number_of_new_s_cells": 0,
+          "rank_d1": 9884,
+          "rank_d2_old": 21835
+        },
+        "weight": 10
+      }
+    ],
+    "recomputed_weights": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "requested_weights": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "resume": true,
+  "run_finished_at": "2026-06-01T08:51:55",
+  "run_started_at": "2026-06-01T07:20:58",
+  "runtime_seconds": 5455.423,
+  "skipped_weights": [
+    11
+  ],
+  "status": "run",
+  "target_algebra": "Jord<x,y>/(x^2,xy,y^2)",
+  "tex_report": "tex/exp012_high_weight_rank_backend_validation.tex",
+  "thresholds": {
+    "matrix_workers": 4,
+    "max_matrix_nnz": 100000000,
+    "max_memory_gb": 20.0,
+    "max_quotient_dim": 1000000,
+    "max_rank_seconds": 3600.0,
+    "max_raw_terms_per_space": 500000,
+    "max_runtime_per_weight": null,
+    "rank_backend": "modular_sparse_v2",
+    "rank_progress_interval": 10000,
+    "rank_progress_seconds": 15.0,
+    "workers": 6
+  },
+  "v2_cells_file": "data/v2_cells_W11.json"
+}

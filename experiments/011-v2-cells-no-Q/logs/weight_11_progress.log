@@ -1,0 +1,4 @@
+2026-06-01T06:18:31 quotient dimensions: C0=37050 C1=128286 C2_old=169614
+2026-06-01T06:18:31 matrix_workers=1
+2026-06-01T06:18:54 built d1 matrix rows=128286 nnz=3367664 seconds=23.251
+2026-06-01T06:19:18 built d2_old matrix rows=169614 nnz=5604386 seconds=24.246

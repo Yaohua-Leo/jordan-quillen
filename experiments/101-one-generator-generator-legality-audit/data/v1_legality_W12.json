@@ -1,0 +1,407 @@
+{
+  "cells": [
+    {
+      "cell_name": "r1_00001_w2",
+      "cell_weight": 2,
+      "degree": 1,
+      "differential": "(x*x)",
+      "first_failure": null,
+      "legal_through_weight": true,
+      "multiplier_checks": [
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "1",
+          "source_normal_form": "(x*x)",
+          "target_weight": 2
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "x",
+          "source_normal_form": "((x*x)*x)",
+          "target_weight": 3
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(x*x)",
+          "source_normal_form": "((x*x)*(x*x))",
+          "target_weight": 4
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((x*x)*x)",
+          "source_normal_form": "(((x*x)*x)*(x*x))",
+          "target_weight": 5
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((x*x)*(x*x))",
+          "source_normal_form": "(((x*x)*(x*x))*(x*x))",
+          "target_weight": 6
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(((x*x)*x)*(x*x))",
+          "source_normal_form": "(((x*x)*(x*x))*((x*x)*x))",
+          "target_weight": 7
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(((x*x)*(x*x))*(x*x))",
+          "source_normal_form": "(((x*x)*(x*x))*((x*x)*(x*x)))",
+          "target_weight": 8
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(((x*x)*x)*((x*x)*x))",
+          "source_normal_form": "((((x*x)*x)*((x*x)*x))*(x*x))",
+          "target_weight": 8
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*x)*x)*((x*x)*x))",
+          "source_normal_form": "1/4*(((((x*x)*x)*x)*x)*((x*x)*(x*x))) + 1/8*((((x*x)*(x*x))*(x*x))*((x*x)*x)) - 1/4*((((x*x)*(x*x))*x)*(((x*x)*x)*x)) + ((((x*x)*x)*(x*x))*(((x*x)*x)*x)) - 1/8*((((x*x)*x)*(x*x))*((x*x)*(x*x)))",
+          "target_weight": 9
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(((x*x)*(x*x))*((x*x)*x))",
+          "source_normal_form": "((((x*x)*x)*(x*x))*((x*x)*(x*x)))",
+          "target_weight": 9
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*x)*((x*x)*x))*(x*x))",
+          "source_normal_form": "(((((x*x)*x)*(x*x))*x)*((x*x)*(x*x))) + (((((x*x)*x)*x)*(x*x))*((x*x)*(x*x))) + ((((x*x)*(x*x))*((x*x)*x))*((x*x)*x)) - ((((x*x)*(x*x))*(x*x))*(((x*x)*x)*x)) - ((((x*x)*(x*x))*x)*(((x*x)*x)*(x*x)))",
+          "target_weight": 10
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*x)*(x*x))*((x*x)*x))",
+          "source_normal_form": "-1/2*((((x*x)*(x*x))*((x*x)*x))*((x*x)*x)) + 1/2*((((x*x)*x)*((x*x)*x))*((x*x)*(x*x))) + ((((x*x)*x)*(x*x))*(((x*x)*x)*(x*x)))",
+          "target_weight": 10
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*x)*x)*(((x*x)*x)*x))",
+          "source_normal_form": "(((((x*x)*x)*x)*(((x*x)*x)*x))*(x*x))",
+          "target_weight": 10
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*x)*x)*((x*x)*(x*x)))",
+          "source_normal_form": "(((((x*x)*x)*x)*(x*x))*((x*x)*(x*x)))",
+          "target_weight": 10
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(((x*x)*(x*x))*((x*x)*(x*x)))",
+          "source_normal_form": "((((x*x)*(x*x))*(x*x))*((x*x)*(x*x)))",
+          "target_weight": 10
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(((((x*x)*x)*x)*x)*(((x*x)*x)*x))",
+          "source_normal_form": "-1/4*((((((x*x)*x)*x)*x)*(x*x))*((x*x)*(x*x))) + 1/2*((((((x*x)*x)*x)*x)*x)*(((x*x)*x)*(x*x))) - 1/4*(((((x*x)*(x*x))*x)*(x*x))*(((x*x)*x)*x)) - 1/16*(((((x*x)*(x*x))*x)*(x*x))*((x*x)*(x*x))) - 1/8*(((((x*x)*(x*x))*x)*x)*(((x*x)*x)*(x*x))) + 1/4*(((((x*x)*x)*(x*x))*(x*x))*(((x*x)*x)*x)) - 1/2*(((((x*x)*x)*(x*x))*x)*((((x*x)*x)*x)*x)) + 1/8*(((((x*x)*x)*(x*x))*x)*(((x*x)*(x*x))*x)) + 1/2*(((((x*x)*x)*x)*(((x*x)*x)*x))*((x*x)*x)) + 3/8*(((((x*x)*x)*x)*((x*x)*(x*x)))*((x*x)*x)) - 1/2*(((((x*x)*x)*x)*((x*x)*x))*(((x*x)*x)*x)) - 1/4*(((((x*x)*x)*x)*((x*x)*x))*((x*x)*(x*x))) + (((((x*x)*x)*x)*(x*x))*((((x*x)*x)*x)*x)) + 1/4*(((((x*x)*x)*x)*(x*x))*(((x*x)*(x*x))*x)) - 1/4*(((((x*x)*x)*x)*(x*x))*(((x*x)*x)*(x*x))) + 1/4*(((((x*x)*x)*x)*x)*(((x*x)*(x*x))*(x*x))) + 1/32*((((x*x)*(x*x))*((x*x)*(x*x)))*((x*x)*x)) - 1/8*((((x*x)*(x*x))*((x*x)*x))*(((x*x)*x)*x)) - 1/32*((((x*x)*(x*x))*((x*x)*x))*((x*x)*(x*x))) + 1/16*((((x*x)*(x*x))*(x*x))*(((x*x)*(x*x))*x))",
+          "target_weight": 11
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(((((x*x)*x)*x)*x)*((x*x)*(x*x)))",
+          "source_normal_form": "((((((x*x)*x)*x)*x)*(x*x))*((x*x)*(x*x)))",
+          "target_weight": 11
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*(x*x))*(x*x))*((x*x)*x))",
+          "source_normal_form": "((((x*x)*(x*x))*(x*x))*(((x*x)*x)*(x*x)))",
+          "target_weight": 11
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*(x*x))*x)*(((x*x)*x)*x))",
+          "source_normal_form": "(((((x*x)*(x*x))*x)*(x*x))*(((x*x)*x)*x)) + (((((x*x)*(x*x))*x)*x)*(((x*x)*x)*(x*x))) - (((((x*x)*x)*(x*x))*x)*(((x*x)*(x*x))*x))",
+          "target_weight": 11
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*(x*x))*x)*((x*x)*(x*x)))",
+          "source_normal_form": "(((((x*x)*(x*x))*x)*(x*x))*((x*x)*(x*x)))",
+          "target_weight": 11
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*x)*((x*x)*x))*((x*x)*x))",
+          "source_normal_form": "-2*(((((x*x)*x)*(x*x))*((x*x)*x))*((x*x)*x)) + 3*((((x*x)*x)*((x*x)*x))*(((x*x)*x)*(x*x)))",
+          "target_weight": 11
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*x)*(x*x))*(((x*x)*x)*x))",
+          "source_normal_form": "-1/2*(((((x*x)*x)*x)*((x*x)*(x*x)))*((x*x)*x)) + 1/2*(((((x*x)*x)*x)*((x*x)*x))*((x*x)*(x*x))) + (((((x*x)*x)*x)*(x*x))*(((x*x)*x)*(x*x)))",
+          "target_weight": 11
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*x)*(x*x))*((x*x)*(x*x)))",
+          "source_normal_form": "-1/2*((((x*x)*(x*x))*((x*x)*(x*x)))*((x*x)*x)) + 1/2*((((x*x)*(x*x))*((x*x)*x))*((x*x)*(x*x))) + ((((x*x)*(x*x))*(x*x))*(((x*x)*x)*(x*x)))",
+          "target_weight": 11
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((((x*x)*x)*x)*x)*x)*((x*x)*(x*x)))",
+          "source_normal_form": "(((((((x*x)*x)*x)*x)*x)*(x*x))*((x*x)*(x*x)))",
+          "target_weight": 12
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(((((x*x)*(x*x))*x)*x)*((x*x)*(x*x)))",
+          "source_normal_form": "((((((x*x)*(x*x))*x)*x)*(x*x))*((x*x)*(x*x)))",
+          "target_weight": 12
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(((((x*x)*x)*(x*x))*x)*((x*x)*(x*x)))",
+          "source_normal_form": "((((((x*x)*x)*(x*x))*x)*(x*x))*((x*x)*(x*x)))",
+          "target_weight": 12
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(((((x*x)*x)*x)*(((x*x)*x)*x))*(x*x))",
+          "source_normal_form": "2*((((((x*x)*x)*x)*(x*x))*x)*(((x*x)*x)*(x*x))) + 8*((((((x*x)*x)*x)*x)*((x*x)*x))*(((x*x)*x)*x)) + 2*((((((x*x)*x)*x)*x)*((x*x)*x))*((x*x)*(x*x))) + 2*((((((x*x)*x)*x)*x)*(x*x))*(((x*x)*x)*(x*x))) + 2*((((((x*x)*x)*x)*x)*x)*(((x*x)*x)*((x*x)*x))) + 1/4*(((((x*x)*(x*x))*x)*((x*x)*(x*x)))*((x*x)*x)) + 2*(((((x*x)*(x*x))*x)*((x*x)*x))*(((x*x)*x)*x)) + 1/4*(((((x*x)*(x*x))*x)*((x*x)*x))*((x*x)*(x*x))) + 1/2*(((((x*x)*(x*x))*x)*x)*(((x*x)*x)*((x*x)*x))) - 2*(((((x*x)*x)*((x*x)*x))*x)*((((x*x)*x)*x)*x)) - 1/2*(((((x*x)*x)*((x*x)*x))*x)*(((x*x)*(x*x))*x)) - (((((x*x)*x)*((x*x)*x))*x)*(((x*x)*x)*(x*x))) - 4*(((((x*x)*x)*(x*x))*(((x*x)*x)*x))*((x*x)*x)) + 4*(((((x*x)*x)*(x*x))*((x*x)*x))*(((x*x)*x)*x)) - 2*(((((x*x)*x)*(x*x))*(x*x))*((((x*x)*x)*x)*x)) - 2*(((((x*x)*x)*(x*x))*x)*((((x*x)*x)*x)*(x*x))) + (((((x*x)*x)*(x*x))*x)*(((x*x)*x)*((x*x)*x))) + (((((x*x)*x)*x)*(((x*x)*x)*x))*((x*x)*(x*x))) + 1/4*(((((x*x)*x)*x)*((x*x)*(x*x)))*((x*x)*(x*x))) - 8*(((((x*x)*x)*x)*((x*x)*x))*((((x*x)*x)*x)*x)) - 2*(((((x*x)*x)*x)*((x*x)*x))*(((x*x)*(x*x))*x)) - 2*(((((x*x)*x)*x)*x)*(((x*x)*(x*x))*((x*x)*x))) - 1/4*((((x*x)*(x*x))*((x*x)*(x*x)))*(((x*x)*x)*x)) - 1/2*((((x*x)*(x*x))*((x*x)*x))*(((x*x)*(x*x))*x))",
+          "target_weight": 12
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(((((x*x)*x)*x)*(x*x))*(((x*x)*x)*x))",
+          "source_normal_form": "1/2*(((((x*x)*x)*x)*(((x*x)*x)*x))*((x*x)*(x*x))) - 1/2*(((((x*x)*x)*x)*((x*x)*(x*x)))*(((x*x)*x)*x)) + (((((x*x)*x)*x)*(x*x))*((((x*x)*x)*x)*(x*x)))",
+          "target_weight": 12
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(((((x*x)*x)*x)*(x*x))*((x*x)*(x*x)))",
+          "source_normal_form": "1/2*(((((x*x)*x)*x)*((x*x)*(x*x)))*((x*x)*(x*x))) + (((((x*x)*x)*x)*(x*x))*(((x*x)*(x*x))*(x*x))) - 1/2*((((x*x)*(x*x))*((x*x)*(x*x)))*(((x*x)*x)*x))",
+          "target_weight": 12
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(((((x*x)*x)*x)*x)*((((x*x)*x)*x)*x))",
+          "source_normal_form": "((((((x*x)*x)*x)*x)*((((x*x)*x)*x)*x))*(x*x))",
+          "target_weight": 12
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(((((x*x)*x)*x)*x)*(((x*x)*(x*x))*x))",
+          "source_normal_form": "-8*((((((x*x)*x)*x)*x)*((x*x)*x))*(((x*x)*x)*x)) - 2*((((((x*x)*x)*x)*x)*((x*x)*x))*((x*x)*(x*x))) + ((((((x*x)*x)*x)*x)*(x*x))*(((x*x)*(x*x))*x)) + ((((((x*x)*x)*x)*x)*x)*(((x*x)*(x*x))*(x*x))) - 2*((((((x*x)*x)*x)*x)*x)*(((x*x)*x)*((x*x)*x))) - (((((x*x)*(x*x))*(x*x))*x)*((((x*x)*x)*x)*x)) - 1/2*(((((x*x)*(x*x))*(x*x))*x)*(((x*x)*x)*(x*x))) - 2*(((((x*x)*(x*x))*x)*((x*x)*x))*(((x*x)*x)*x)) - 1/2*(((((x*x)*(x*x))*x)*((x*x)*x))*((x*x)*(x*x))) - 1/2*(((((x*x)*(x*x))*x)*(x*x))*(((x*x)*x)*(x*x))) - 1/2*(((((x*x)*(x*x))*x)*x)*(((x*x)*x)*((x*x)*x))) + 2*(((((x*x)*x)*((x*x)*x))*x)*((((x*x)*x)*x)*x)) + 1/2*(((((x*x)*x)*((x*x)*x))*x)*(((x*x)*(x*x))*x)) + (((((x*x)*x)*((x*x)*x))*x)*(((x*x)*x)*(x*x))) + 2*(((((x*x)*x)*(x*x))*(((x*x)*x)*x))*((x*x)*x)) + 1/2*(((((x*x)*x)*(x*x))*((x*x)*(x*x)))*((x*x)*x)) - 2*(((((x*x)*x)*(x*x))*((x*x)*x))*(((x*x)*x)*x)) - 1/2*(((((x*x)*x)*(x*x))*((x*x)*x))*((x*x)*(x*x))) + 1/2*(((((x*x)*x)*(x*x))*(x*x))*(((x*x)*(x*x))*x)) + 1/2*(((((x*x)*x)*(x*x))*x)*(((x*x)*(x*x))*(x*x))) - (((((x*x)*x)*(x*x))*x)*(((x*x)*x)*((x*x)*x))) - (((((x*x)*x)*x)*(((x*x)*x)*x))*((x*x)*(x*x))) + (((((x*x)*x)*x)*((x*x)*(x*x)))*(((x*x)*x)*x)) - 1/4*(((((x*x)*x)*x)*((x*x)*(x*x)))*((x*x)*(x*x))) + 8*(((((x*x)*x)*x)*((x*x)*x))*((((x*x)*x)*x)*x)) + 2*(((((x*x)*x)*x)*((x*x)*x))*(((x*x)*(x*x))*x)) + 2*(((((x*x)*x)*x)*x)*(((x*x)*(x*x))*((x*x)*x))) + 1/4*((((x*x)*(x*x))*((x*x)*(x*x)))*(((x*x)*x)*x)) + 1/2*((((x*x)*(x*x))*((x*x)*x))*(((x*x)*(x*x))*x))",
+          "target_weight": 12
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(((((x*x)*x)*x)*x)*(((x*x)*x)*(x*x)))",
+          "source_normal_form": "4*((((((x*x)*x)*x)*x)*((x*x)*x))*(((x*x)*x)*x)) + ((((((x*x)*x)*x)*x)*((x*x)*x))*((x*x)*(x*x))) + ((((((x*x)*x)*x)*x)*(x*x))*(((x*x)*x)*(x*x))) + ((((((x*x)*x)*x)*x)*x)*(((x*x)*x)*((x*x)*x))) + 1/8*(((((x*x)*(x*x))*x)*((x*x)*(x*x)))*((x*x)*x)) + (((((x*x)*(x*x))*x)*((x*x)*x))*(((x*x)*x)*x)) + 1/8*(((((x*x)*(x*x))*x)*((x*x)*x))*((x*x)*(x*x))) + 1/4*(((((x*x)*(x*x))*x)*x)*(((x*x)*x)*((x*x)*x))) - (((((x*x)*x)*((x*x)*x))*x)*((((x*x)*x)*x)*x)) - 1/4*(((((x*x)*x)*((x*x)*x))*x)*(((x*x)*(x*x))*x)) - 1/2*(((((x*x)*x)*((x*x)*x))*x)*(((x*x)*x)*(x*x))) - (((((x*x)*x)*(x*x))*(((x*x)*x)*x))*((x*x)*x)) + (((((x*x)*x)*(x*x))*((x*x)*x))*(((x*x)*x)*x)) + 1/2*(((((x*x)*x)*(x*x))*x)*(((x*x)*x)*((x*x)*x))) + 1/2*(((((x*x)*x)*x)*(((x*x)*x)*x))*((x*x)*(x*x))) - 1/2*(((((x*x)*x)*x)*((x*x)*(x*x)))*(((x*x)*x)*x)) + 1/8*(((((x*x)*x)*x)*((x*x)*(x*x)))*((x*x)*(x*x))) - 4*(((((x*x)*x)*x)*((x*x)*x))*((((x*x)*x)*x)*x)) - (((((x*x)*x)*x)*((x*x)*x))*(((x*x)*(x*x))*x)) - (((((x*x)*x)*x)*x)*(((x*x)*(x*x))*((x*x)*x))) - 1/8*((((x*x)*(x*x))*((x*x)*(x*x)))*(((x*x)*x)*x)) - 1/4*((((x*x)*(x*x))*((x*x)*x))*(((x*x)*(x*x))*x))",
+          "target_weight": 12
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*(x*x))*((x*x)*x))*((x*x)*x))",
+          "source_normal_form": "1/2*(((((x*x)*(x*x))*x)*((x*x)*(x*x)))*((x*x)*x)) + 1/2*(((((x*x)*(x*x))*x)*((x*x)*x))*((x*x)*(x*x))) + (((((x*x)*x)*(x*x))*((x*x)*(x*x)))*((x*x)*x)) + 1/2*(((((x*x)*x)*x)*((x*x)*(x*x)))*((x*x)*(x*x))) - 1/2*((((x*x)*(x*x))*((x*x)*(x*x)))*(((x*x)*x)*x)) - ((((x*x)*(x*x))*((x*x)*x))*(((x*x)*(x*x))*x))",
+          "target_weight": 12
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*(x*x))*(x*x))*(((x*x)*x)*x))",
+          "source_normal_form": "(((((x*x)*x)*x)*(x*x))*(((x*x)*(x*x))*(x*x)))",
+          "target_weight": 12
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*(x*x))*(x*x))*((x*x)*(x*x)))",
+          "source_normal_form": "((((x*x)*(x*x))*(x*x))*(((x*x)*(x*x))*(x*x)))",
+          "target_weight": 12
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*(x*x))*x)*(((x*x)*(x*x))*x))",
+          "source_normal_form": "(((((x*x)*(x*x))*x)*(((x*x)*(x*x))*x))*(x*x))",
+          "target_weight": 12
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*(x*x))*x)*(((x*x)*x)*(x*x)))",
+          "source_normal_form": "-1/2*(((((x*x)*(x*x))*x)*((x*x)*(x*x)))*((x*x)*x)) + 1/2*(((((x*x)*(x*x))*x)*((x*x)*x))*((x*x)*(x*x))) + (((((x*x)*(x*x))*x)*(x*x))*(((x*x)*x)*(x*x)))",
+          "target_weight": 12
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*x)*((x*x)*x))*(((x*x)*x)*x))",
+          "source_normal_form": "-2*(((((x*x)*x)*(x*x))*(((x*x)*x)*x))*((x*x)*x)) + 2*(((((x*x)*x)*x)*((x*x)*x))*(((x*x)*x)*(x*x))) + (((((x*x)*x)*x)*(x*x))*(((x*x)*x)*((x*x)*x)))",
+          "target_weight": 12
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*x)*((x*x)*x))*((x*x)*(x*x)))",
+          "source_normal_form": "-2*(((((x*x)*x)*(x*x))*((x*x)*(x*x)))*((x*x)*x)) + 2*((((x*x)*(x*x))*((x*x)*x))*(((x*x)*x)*(x*x))) + ((((x*x)*(x*x))*(x*x))*(((x*x)*x)*((x*x)*x)))",
+          "target_weight": 12
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "((((x*x)*x)*(x*x))*(((x*x)*x)*(x*x)))",
+          "source_normal_form": "-1/2*(((((x*x)*x)*(x*x))*((x*x)*(x*x)))*((x*x)*x)) + 1/2*(((((x*x)*x)*(x*x))*((x*x)*x))*((x*x)*(x*x))) + (((((x*x)*x)*(x*x))*(x*x))*(((x*x)*x)*(x*x)))",
+          "target_weight": 12
+        }
+      ],
+      "strictly_legal_through_weight": 12
+    },
+    {
+      "cell_name": "r1_00002_w10",
+      "cell_weight": 10,
+      "degree": 1,
+      "differential": "((((((x*x)*x)*x)*x)*x)*((x*x)*(x*x)))",
+      "first_failure": null,
+      "legal_through_weight": true,
+      "multiplier_checks": [
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "1",
+          "source_normal_form": "((((((x*x)*x)*x)*x)*x)*((x*x)*(x*x)))",
+          "target_weight": 10
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "x",
+          "source_normal_form": "1/2*((((((x*x)*x)*x)*x)*(x*x))*((x*x)*(x*x))) + (((((x*x)*(x*x))*x)*x)*((((x*x)*x)*x)*x)) + 1/2*(((((x*x)*(x*x))*x)*x)*(((x*x)*x)*(x*x))) - 1/2*(((((x*x)*x)*(x*x))*x)*(((x*x)*(x*x))*x)) - 1/2*(((((x*x)*x)*x)*x)*(((x*x)*(x*x))*(x*x)))",
+          "target_weight": 11
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(x*x)",
+          "source_normal_form": "(((((((x*x)*x)*x)*x)*x)*(x*x))*((x*x)*(x*x)))",
+          "target_weight": 12
+        }
+      ],
+      "strictly_legal_through_weight": 12
+    },
+    {
+      "cell_name": "r1_00003_w10",
+      "cell_weight": 10,
+      "degree": 1,
+      "differential": "(((((x*x)*x)*x)*x)*(((x*x)*x)*(x*x)))",
+      "first_failure": null,
+      "legal_through_weight": true,
+      "multiplier_checks": [
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "1",
+          "source_normal_form": "(((((x*x)*x)*x)*x)*(((x*x)*x)*(x*x)))",
+          "target_weight": 10
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "x",
+          "source_normal_form": "-1/2*(((((x*x)*x)*(x*x))*(x*x))*(((x*x)*x)*x)) + (((((x*x)*x)*(x*x))*x)*((((x*x)*x)*x)*x)) - 1/4*(((((x*x)*x)*x)*((x*x)*(x*x)))*((x*x)*x)) + 1/4*(((((x*x)*x)*x)*((x*x)*x))*((x*x)*(x*x))) + 1/2*(((((x*x)*x)*x)*(x*x))*(((x*x)*x)*(x*x)))",
+          "target_weight": 11
+        },
+        {
+          "epsilon_image": "0",
+          "epsilon_sparse_coordinates": {},
+          "maps_to_zero_in_target": true,
+          "multiplier": "(x*x)",
+          "source_normal_form": "4*((((((x*x)*x)*x)*x)*((x*x)*x))*(((x*x)*x)*x)) + ((((((x*x)*x)*x)*x)*((x*x)*x))*((x*x)*(x*x))) + ((((((x*x)*x)*x)*x)*(x*x))*(((x*x)*x)*(x*x))) + ((((((x*x)*x)*x)*x)*x)*(((x*x)*x)*((x*x)*x))) + 1/8*(((((x*x)*(x*x))*x)*((x*x)*(x*x)))*((x*x)*x)) + (((((x*x)*(x*x))*x)*((x*x)*x))*(((x*x)*x)*x)) + 1/8*(((((x*x)*(x*x))*x)*((x*x)*x))*((x*x)*(x*x))) + 1/4*(((((x*x)*(x*x))*x)*x)*(((x*x)*x)*((x*x)*x))) - (((((x*x)*x)*((x*x)*x))*x)*((((x*x)*x)*x)*x)) - 1/4*(((((x*x)*x)*((x*x)*x))*x)*(((x*x)*(x*x))*x)) - 1/2*(((((x*x)*x)*((x*x)*x))*x)*(((x*x)*x)*(x*x))) - (((((x*x)*x)*(x*x))*(((x*x)*x)*x))*((x*x)*x)) + (((((x*x)*x)*(x*x))*((x*x)*x))*(((x*x)*x)*x)) + 1/2*(((((x*x)*x)*(x*x))*x)*(((x*x)*x)*((x*x)*x))) + 1/2*(((((x*x)*x)*x)*(((x*x)*x)*x))*((x*x)*(x*x))) - 1/2*(((((x*x)*x)*x)*((x*x)*(x*x)))*(((x*x)*x)*x)) + 1/8*(((((x*x)*x)*x)*((x*x)*(x*x)))*((x*x)*(x*x))) - 4*(((((x*x)*x)*x)*((x*x)*x))*((((x*x)*x)*x)*x)) - (((((x*x)*x)*x)*((x*x)*x))*(((x*x)*(x*x))*x)) - (((((x*x)*x)*x)*x)*(((x*x)*(x*x))*((x*x)*x))) - 1/8*((((x*x)*(x*x))*((x*x)*(x*x)))*(((x*x)*x)*x)) - 1/4*((((x*x)*(x*x))*((x*x)*x))*(((x*x)*(x*x))*x))",
+          "target_weight": 12
+        }
+      ],
+      "strictly_legal_through_weight": 12
+    }
+  ],
+  "experiment_id": "EXP-101-one-generator-generator-legality-audit",
+  "max_weight_requested": 12
+}
