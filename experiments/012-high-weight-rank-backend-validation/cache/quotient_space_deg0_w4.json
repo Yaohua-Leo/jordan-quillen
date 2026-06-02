@@ -1,0 +1,31 @@
+{
+  "basis": [
+    "(((x*y)*x)*x)",
+    "(((x*y)*y)*x)",
+    "(((y*y)*x)*x)",
+    "(((y*y)*y)*x)",
+    "((x*x)*(x*x))",
+    "((x*x)*(x*y))",
+    "((x*x)*(y*y))",
+    "((x*y)*(x*y))",
+    "((x*y)*(y*y))",
+    "((y*y)*(y*y))"
+  ],
+  "degree": 0,
+  "dimension": 10,
+  "free_columns": [
+    4,
+    6,
+    8,
+    10,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "jordan_relation_rank": 8,
+  "raw_term_count": 18,
+  "weight": 4
+}

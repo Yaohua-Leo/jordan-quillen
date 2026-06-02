@@ -1,0 +1,358 @@
+{
+  "candidate_results": [
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "cell_name": "s2_00001_w4",
+      "chain_condition_verified": null,
+      "remainder_mod_augmented_boundaries": null,
+      "status": "not_tested_no_strict_low_cells",
+      "target_strictly_attachable": false,
+      "target_weight": 4
+    },
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "cell_name": "s2_00002_w4",
+      "chain_condition_verified": null,
+      "remainder_mod_augmented_boundaries": null,
+      "status": "not_tested_no_strict_low_cells",
+      "target_strictly_attachable": false,
+      "target_weight": 4
+    },
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "cell_name": "s2_00003_w4",
+      "chain_condition_verified": null,
+      "remainder_mod_augmented_boundaries": null,
+      "status": "not_tested_no_strict_low_cells",
+      "target_strictly_attachable": false,
+      "target_weight": 4
+    },
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "cell_name": "s2_00004_w4",
+      "chain_condition_verified": null,
+      "remainder_mod_augmented_boundaries": null,
+      "status": "not_tested_no_strict_low_cells",
+      "target_strictly_attachable": false,
+      "target_weight": 4
+    },
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "cell_name": "s2_00005_w4",
+      "chain_condition_verified": null,
+      "remainder_mod_augmented_boundaries": null,
+      "status": "not_tested_no_strict_low_cells",
+      "target_strictly_attachable": false,
+      "target_weight": 4
+    },
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "cell_name": "s2_00006_w4",
+      "chain_condition_verified": null,
+      "remainder_mod_augmented_boundaries": null,
+      "status": "not_tested_no_strict_low_cells",
+      "target_strictly_attachable": false,
+      "target_weight": 4
+    },
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "cell_name": "s2_00007_w4",
+      "chain_condition_verified": null,
+      "remainder_mod_augmented_boundaries": null,
+      "status": "not_tested_no_strict_low_cells",
+      "target_strictly_attachable": false,
+      "target_weight": 4
+    },
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "cell_name": "s2_00008_w4",
+      "chain_condition_verified": null,
+      "remainder_mod_augmented_boundaries": null,
+      "status": "not_tested_no_strict_low_cells",
+      "target_strictly_attachable": false,
+      "target_weight": 4
+    },
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "cell_name": "s2_00009_w7",
+      "chain_condition_verified": null,
+      "remainder_mod_augmented_boundaries": null,
+      "status": "not_tested_no_strict_low_cells",
+      "target_strictly_attachable": false,
+      "target_weight": 7
+    },
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "cell_name": "s2_00010_w7",
+      "chain_condition_verified": null,
+      "remainder_mod_augmented_boundaries": null,
+      "status": "not_tested_no_strict_low_cells",
+      "target_strictly_attachable": false,
+      "target_weight": 7
+    },
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "cell_name": "s2_00011_w7",
+      "chain_condition_verified": null,
+      "remainder_mod_augmented_boundaries": null,
+      "status": "not_tested_no_strict_low_cells",
+      "target_strictly_attachable": false,
+      "target_weight": 7
+    },
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "cell_name": "s2_00012_w7",
+      "chain_condition_verified": null,
+      "remainder_mod_augmented_boundaries": null,
+      "status": "not_tested_no_strict_low_cells",
+      "target_strictly_attachable": false,
+      "target_weight": 7
+    },
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "cell_name": "s2_00013_w7",
+      "chain_condition_verified": null,
+      "remainder_mod_augmented_boundaries": null,
+      "status": "not_tested_no_strict_low_cells",
+      "target_strictly_attachable": false,
+      "target_weight": 7
+    },
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "cell_name": "s2_00014_w7",
+      "chain_condition_verified": null,
+      "remainder_mod_augmented_boundaries": null,
+      "status": "not_tested_no_strict_low_cells",
+      "target_strictly_attachable": false,
+      "target_weight": 7
+    },
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "cell_name": "s2_00015_w8",
+      "chain_condition_verified": null,
+      "remainder_mod_augmented_boundaries": null,
+      "status": "not_tested_no_strict_low_cells",
+      "target_strictly_attachable": false,
+      "target_weight": 8
+    },
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "cell_name": "s2_00016_w8",
+      "chain_condition_verified": null,
+      "remainder_mod_augmented_boundaries": null,
+      "status": "not_tested_no_strict_low_cells",
+      "target_strictly_attachable": false,
+      "target_weight": 8
+    }
+  ],
+  "experiment_id": "EXP-013-strict-attachability-killing-audit",
+  "max_weight_requested": 10,
+  "weights": [
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "candidate_count": 8,
+      "candidates": [
+        {
+          "allowed_source_cell_names": [],
+          "allowed_source_weights": [],
+          "cell_name": "s2_00001_w4",
+          "chain_condition_verified": null,
+          "remainder_mod_augmented_boundaries": null,
+          "status": "not_tested_no_strict_low_cells",
+          "target_strictly_attachable": false,
+          "target_weight": 4
+        },
+        {
+          "allowed_source_cell_names": [],
+          "allowed_source_weights": [],
+          "cell_name": "s2_00002_w4",
+          "chain_condition_verified": null,
+          "remainder_mod_augmented_boundaries": null,
+          "status": "not_tested_no_strict_low_cells",
+          "target_strictly_attachable": false,
+          "target_weight": 4
+        },
+        {
+          "allowed_source_cell_names": [],
+          "allowed_source_weights": [],
+          "cell_name": "s2_00003_w4",
+          "chain_condition_verified": null,
+          "remainder_mod_augmented_boundaries": null,
+          "status": "not_tested_no_strict_low_cells",
+          "target_strictly_attachable": false,
+          "target_weight": 4
+        },
+        {
+          "allowed_source_cell_names": [],
+          "allowed_source_weights": [],
+          "cell_name": "s2_00004_w4",
+          "chain_condition_verified": null,
+          "remainder_mod_augmented_boundaries": null,
+          "status": "not_tested_no_strict_low_cells",
+          "target_strictly_attachable": false,
+          "target_weight": 4
+        },
+        {
+          "allowed_source_cell_names": [],
+          "allowed_source_weights": [],
+          "cell_name": "s2_00005_w4",
+          "chain_condition_verified": null,
+          "remainder_mod_augmented_boundaries": null,
+          "status": "not_tested_no_strict_low_cells",
+          "target_strictly_attachable": false,
+          "target_weight": 4
+        },
+        {
+          "allowed_source_cell_names": [],
+          "allowed_source_weights": [],
+          "cell_name": "s2_00006_w4",
+          "chain_condition_verified": null,
+          "remainder_mod_augmented_boundaries": null,
+          "status": "not_tested_no_strict_low_cells",
+          "target_strictly_attachable": false,
+          "target_weight": 4
+        },
+        {
+          "allowed_source_cell_names": [],
+          "allowed_source_weights": [],
+          "cell_name": "s2_00007_w4",
+          "chain_condition_verified": null,
+          "remainder_mod_augmented_boundaries": null,
+          "status": "not_tested_no_strict_low_cells",
+          "target_strictly_attachable": false,
+          "target_weight": 4
+        },
+        {
+          "allowed_source_cell_names": [],
+          "allowed_source_weights": [],
+          "cell_name": "s2_00008_w4",
+          "chain_condition_verified": null,
+          "remainder_mod_augmented_boundaries": null,
+          "status": "not_tested_no_strict_low_cells",
+          "target_strictly_attachable": false,
+          "target_weight": 4
+        }
+      ],
+      "chain_condition_verified": null,
+      "chain_failure_reason": null,
+      "weight": 4
+    },
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "candidate_count": 6,
+      "candidates": [
+        {
+          "allowed_source_cell_names": [],
+          "allowed_source_weights": [],
+          "cell_name": "s2_00009_w7",
+          "chain_condition_verified": null,
+          "remainder_mod_augmented_boundaries": null,
+          "status": "not_tested_no_strict_low_cells",
+          "target_strictly_attachable": false,
+          "target_weight": 7
+        },
+        {
+          "allowed_source_cell_names": [],
+          "allowed_source_weights": [],
+          "cell_name": "s2_00010_w7",
+          "chain_condition_verified": null,
+          "remainder_mod_augmented_boundaries": null,
+          "status": "not_tested_no_strict_low_cells",
+          "target_strictly_attachable": false,
+          "target_weight": 7
+        },
+        {
+          "allowed_source_cell_names": [],
+          "allowed_source_weights": [],
+          "cell_name": "s2_00011_w7",
+          "chain_condition_verified": null,
+          "remainder_mod_augmented_boundaries": null,
+          "status": "not_tested_no_strict_low_cells",
+          "target_strictly_attachable": false,
+          "target_weight": 7
+        },
+        {
+          "allowed_source_cell_names": [],
+          "allowed_source_weights": [],
+          "cell_name": "s2_00012_w7",
+          "chain_condition_verified": null,
+          "remainder_mod_augmented_boundaries": null,
+          "status": "not_tested_no_strict_low_cells",
+          "target_strictly_attachable": false,
+          "target_weight": 7
+        },
+        {
+          "allowed_source_cell_names": [],
+          "allowed_source_weights": [],
+          "cell_name": "s2_00013_w7",
+          "chain_condition_verified": null,
+          "remainder_mod_augmented_boundaries": null,
+          "status": "not_tested_no_strict_low_cells",
+          "target_strictly_attachable": false,
+          "target_weight": 7
+        },
+        {
+          "allowed_source_cell_names": [],
+          "allowed_source_weights": [],
+          "cell_name": "s2_00014_w7",
+          "chain_condition_verified": null,
+          "remainder_mod_augmented_boundaries": null,
+          "status": "not_tested_no_strict_low_cells",
+          "target_strictly_attachable": false,
+          "target_weight": 7
+        }
+      ],
+      "chain_condition_verified": null,
+      "chain_failure_reason": null,
+      "weight": 7
+    },
+    {
+      "allowed_source_cell_names": [],
+      "allowed_source_weights": [],
+      "candidate_count": 2,
+      "candidates": [
+        {
+          "allowed_source_cell_names": [],
+          "allowed_source_weights": [],
+          "cell_name": "s2_00015_w8",
+          "chain_condition_verified": null,
+          "remainder_mod_augmented_boundaries": null,
+          "status": "not_tested_no_strict_low_cells",
+          "target_strictly_attachable": false,
+          "target_weight": 8
+        },
+        {
+          "allowed_source_cell_names": [],
+          "allowed_source_weights": [],
+          "cell_name": "s2_00016_w8",
+          "chain_condition_verified": null,
+          "remainder_mod_augmented_boundaries": null,
+          "status": "not_tested_no_strict_low_cells",
+          "target_strictly_attachable": false,
+          "target_weight": 8
+        }
+      ],
+      "chain_condition_verified": null,
+      "chain_failure_reason": null,
+      "weight": 8
+    }
+  ]
+}

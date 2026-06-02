@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{hyperref}
+\begin{document}
+\section*{Experiment 012: High-Weight Rank Backend Validation}
+This experiment recomputes the EXP011 bounded object $H_{1,w}^{old}$ using the modular sparse v2 rank backend. It does not apply $Q$, does not attach the formal cells, and does not construct $V_3,V_4,\ldots$.
+\paragraph{Boundary.}
+All statements are bounded computational evidence for completed weights only. Skipped, failed, and untested weights are not used to infer global stabilization or absence of future cells.
+\paragraph{Reproduction gate.}
+Reference file: experiments/011-v2-cells-no-Q/data/by\_weight\_W10.json\\
+Recomputed weights: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]\\
+Matches EXP011 reference: True
+\section*{Weight Summary}
+\begin{longtable}{rrrrrrrrl}
+\toprule $w$ & $\dim C_0$ & $\dim C_1$ & $\dim C_2^{old}$ & $\operatorname{rank} d_1$ & $\operatorname{rank} d_2$ & $\dim Z_1$ & $\dim H_1^{old}$ & status \\
+\midrule
+1 & 2 & 0 & 0 & 0 & 0 & 0 & 0 & completed \\
+2 & 3 & 3 & 0 & 3 & 0 & 0 & 0 & completed \\
+3 & 6 & 6 & 0 & 6 & 0 & 0 & 0 & completed \\
+4 & 10 & 21 & 6 & 10 & 3 & 11 & 8 & completed \\
+5 & 24 & 48 & 30 & 24 & 24 & 24 & 0 & completed \\
+6 & 72 & 159 & 111 & 72 & 87 & 87 & 0 & completed \\
+7 & 220 & 552 & 444 & 220 & 326 & 332 & 6 & completed \\
+8 & 762 & 2064 & 1926 & 762 & 1300 & 1302 & 2 & completed \\
+9 & 2688 & 7980 & 8454 & 2688 & 5292 & 5292 & 0 & completed \\
+10 & 9884 & 31719 & 37770 & 9884 & 21835 & 21835 & 0 & completed \\
+11 & - & - & - & - & - & - & - & skipped \\
+\bottomrule
+\end{longtable}
+\section*{Formal V2 Candidates}
+Total candidates reported in completed weights: 16.
+\section*{Checks}
+\begin{verbatim}
+all_completed_weights_passed: True
+all_reported_classes_independent_mod_B_old: True
+all_reported_z_are_cycles: True
+all_reported_z_have_nonzero_B_old_remainder: True
+applies_Q_is_false: True
+constructs_higher_cells_V3_plus_is_false: True
+d_squared_zero_on_formal_s_cells: True
+exact_rational_arithmetic: True
+exp011_reproduction_matches_reference: True
+report_language_has_no_forbidden_global_phrasing: True
+sanity_exp009_low_weight_agreement: {'status': 'checked', 'interpretation': 'Compatibility check only; EXP011 does not use EXP009 as input or as mathematical authority.', 'exp009_selected_weight_bound': 8, 'exp009_degree_2_cell_count': 16, 'exp011_cumulative_v2_cell_count': 16, 'agrees': True}
+\end{verbatim}
+\end{document}

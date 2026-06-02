@@ -1,0 +1,13 @@
+2026-06-01T06:14:54 quotient dimensions: C0=9884 C1=31719 C2_old=37770
+2026-06-01T06:14:54 matrix_workers=4
+2026-06-01T06:15:05 built d1 matrix rows=31719 nnz=309691 seconds=10.505
+2026-06-01T06:15:16 built d2_old matrix rows=37770 nnz=618961 seconds=10.887
+2026-06-01T06:15:47 d1 modular rank mod 1000003: 9884
+2026-06-01T06:15:47 certified rank d1=9884 by modular target-rank lower bound
+2026-06-01T06:15:47 d1 rank seconds=31.624
+2026-06-01T06:17:27 d2_old modular rank mod 1000003: 21835
+2026-06-01T06:17:27 certified rank d2_old>=21835 by modular lower bound
+2026-06-01T06:17:27 d2_old rank seconds=99.476
+2026-06-01T06:17:30 chain condition seconds=3.595
+2026-06-01T06:17:30 rank precheck: dim_Z1=21835 dim_B_old=21835 dim_H1_old=0 chain_condition=True
+2026-06-01T06:17:30 used zero-H1 rank fast path; no cell representatives needed

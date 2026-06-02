@@ -1,0 +1,17 @@
+2026-06-01T06:58:04 quotient dimensions: C0=2688 C1=7980 C2_old=8454
+2026-06-01T06:58:04 matrix_workers=4
+2026-06-01T06:58:15 built d1 matrix rows=7980 nnz=50164 seconds=10.596
+2026-06-01T06:58:25 built d2_old matrix rows=8454 nnz=81212 seconds=10.496
+2026-06-01T06:58:25 d1 modular_sparse_v2 mod 1000003: conversion complete processed_rows=7980 input_nnz=50164 elapsed_seconds=0.032
+2026-06-01T06:58:26 d1 modular_sparse_v2 mod 1000003: elimination complete processed_rows=7713 current_rank=2688 pivot_count=2688 reductions=132335 max_live_row_nnz=244 elapsed_seconds=0.686
+2026-06-01T06:58:26 d1 modular rank mod 1000003: 2688 backend=modular_sparse_v2
+2026-06-01T06:58:26 certified rank d1=2688 by modular target-rank lower bound
+2026-06-01T06:58:26 d1 rank seconds=0.723
+2026-06-01T06:58:26 d2_old modular_sparse_v2 mod 1000003: conversion complete processed_rows=8454 input_nnz=81212 elapsed_seconds=0.051
+2026-06-01T06:58:27 d2_old modular_sparse_v2 mod 1000003: elimination complete processed_rows=7593 current_rank=5292 pivot_count=5292 reductions=90631 max_live_row_nnz=510 elapsed_seconds=1.026
+2026-06-01T06:58:27 d2_old modular rank mod 1000003: 5292 backend=modular_sparse_v2
+2026-06-01T06:58:27 certified rank d2_old>=5292 by modular lower bound
+2026-06-01T06:58:27 d2_old rank seconds=1.088
+2026-06-01T06:58:27 chain condition seconds=0.377
+2026-06-01T06:58:27 rank precheck: dim_Z1=5292 dim_B_old=5292 dim_H1_old=0 chain_condition=True
+2026-06-01T06:58:27 used zero-H1 rank fast path; no cell representatives needed

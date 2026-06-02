@@ -1,5 +1,5 @@
 {
-  "adaptive_feasible_upper_bound": 8,
+  "adaptive_feasible_upper_bound": 10,
   "applies_Q": false,
   "arithmetic": "exact_rational",
   "backend": {
@@ -10,7 +10,7 @@
     "does_not_construct_V3_plus": true,
     "name": "low_weight_jordan ordinary backend"
   },
-  "by_weight_file": "data/by_weight_W20.json",
+  "by_weight_file": "data/by_weight_W10.json",
   "checks": {
     "all_completed_weights_passed": true,
     "all_reported_classes_independent_mod_B_old": true,
@@ -38,7 +38,9 @@
     5,
     6,
     7,
-    8
+    8,
+    9,
+    10
   ],
   "constructs_higher_cells_V3_plus": false,
   "experiment_directory": "experiments/011-v2-cells-no-Q/",
@@ -46,28 +48,17 @@
   "failed_weights": [],
   "field": "QQ",
   "finite_truncation_warning": "All conclusions are only for completed weights.",
+  "force_recompute_weights": [
+    10
+  ],
   "global_claims_modified": false,
   "matrix_convention": "source_rows_target_coordinates",
-  "max_weight_requested": 20,
-  "mode": "overnight",
+  "max_weight_requested": 10,
+  "mode": "validation",
   "not_tested_weights_in_requested_range": [],
   "passed": true,
   "plan": "researchplan/subplan011.md",
-  "preflight_skip": {
-    "estimate": {
-      "max_raw_terms_per_space": 21426,
-      "raw_terms_by_degree": {
-        "degree_0": 8610,
-        "degree_1": 21426,
-        "degree_2": 19542
-      },
-      "total_raw_terms": 49578,
-      "weight": 9
-    },
-    "first_skipped_weight": 9,
-    "skip_reason": "estimated max raw terms per homogeneous space is 21426, exceeding max_raw_terms_per_space=10000",
-    "threshold_triggered": "max_raw_terms_per_space"
-  },
+  "preflight_skip": null,
   "primary_object": "H1_old in A^(1)",
   "requested_weights": [
     1,
@@ -79,45 +70,24 @@
     7,
     8,
     9,
-    10,
-    11,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-    20
+    10
   ],
   "resume": true,
-  "run_finished_at": "2026-05-31T13:21:33",
-  "run_started_at": "2026-05-31T13:21:33",
-  "runtime_seconds": 0.012,
-  "skipped_weights": [
-    9,
-    10,
-    11,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-    20
-  ],
+  "run_finished_at": "2026-06-01T06:17:32",
+  "run_started_at": "2026-06-01T06:14:47",
+  "runtime_seconds": 164.482,
+  "skipped_weights": [],
   "status": "run",
   "target_algebra": "Jord<x,y>/(x^2,xy,y^2)",
   "tex_report": "tex/exp011_v2_cells_no_Q.tex",
   "thresholds": {
-    "max_matrix_nnz": 250000,
-    "max_memory_gb": null,
-    "max_quotient_dim": 3000,
-    "max_raw_terms_per_space": 10000,
-    "max_runtime_per_weight": null
+    "matrix_workers": 4,
+    "max_matrix_nnz": 50000000,
+    "max_memory_gb": 10.0,
+    "max_quotient_dim": 500000,
+    "max_raw_terms_per_space": 120000,
+    "max_runtime_per_weight": null,
+    "workers": 6
   },
-  "v2_cells_file": "data/v2_cells_W20.json"
+  "v2_cells_file": "data/v2_cells_W10.json"
 }

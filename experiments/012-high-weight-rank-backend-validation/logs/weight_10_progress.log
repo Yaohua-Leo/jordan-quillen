@@ -1,0 +1,36 @@
+2026-06-01T06:58:28 quotient dimensions: C0=9884 C1=31719 C2_old=37770
+2026-06-01T06:58:28 matrix_workers=4
+2026-06-01T06:58:38 built d1 matrix rows=31719 nnz=309691 seconds=10.748
+2026-06-01T06:58:50 built d2_old matrix rows=37770 nnz=618961 seconds=11.137
+2026-06-01T06:58:50 d1 modular_sparse_v2 mod 1000003: conversion processed_rows=10000 input_nnz=167551 elapsed_seconds=0.100
+2026-06-01T06:58:50 d1 modular_sparse_v2 mod 1000003: conversion processed_rows=20000 input_nnz=270402 elapsed_seconds=0.164
+2026-06-01T06:58:50 d1 modular_sparse_v2 mod 1000003: conversion processed_rows=30000 input_nnz=307921 elapsed_seconds=0.189
+2026-06-01T06:58:50 d1 modular_sparse_v2 mod 1000003: conversion complete processed_rows=31719 input_nnz=309691 elapsed_seconds=0.191
+2026-06-01T06:58:51 d1 modular_sparse_v2 mod 1000003: elimination processed_rows=10000 current_rank=5524 pivot_count=5524 reductions=42412 max_live_row_nnz=826 rows_per_second=8809.069 elapsed_seconds=1.135
+2026-06-01T06:59:05 d1 modular_sparse_v2 mod 1000003: elimination processed_rows=20000 current_rank=9251 pivot_count=9251 reductions=579175 max_live_row_nnz=826 rows_per_second=1305.412 elapsed_seconds=15.321
+2026-06-01T06:59:20 d1 modular_sparse_v2 mod 1000003: elimination processed_rows=25806 current_rank=9711 pivot_count=9711 reductions=1460613 max_live_row_nnz=826 rows_per_second=850.976 elapsed_seconds=30.325
+2026-06-01T06:59:23 d1 modular_sparse_v2 mod 1000003: elimination processed_rows=30000 current_rank=9871 pivot_count=9871 reductions=1785333 max_live_row_nnz=826 rows_per_second=902.319 elapsed_seconds=33.248
+2026-06-01T06:59:23 d1 modular_sparse_v2 mod 1000003: elimination complete processed_rows=31140 current_rank=9884 pivot_count=9884 reductions=1814645 max_live_row_nnz=826 elapsed_seconds=33.343
+2026-06-01T06:59:23 d1 modular rank mod 1000003: 9884 backend=modular_sparse_v2
+2026-06-01T06:59:23 certified rank d1=9884 by modular target-rank lower bound
+2026-06-01T06:59:23 d1 rank seconds=33.583
+2026-06-01T06:59:23 d2_old modular_sparse_v2 mod 1000003: conversion processed_rows=10000 input_nnz=254370 elapsed_seconds=0.153
+2026-06-01T06:59:23 d2_old modular_sparse_v2 mod 1000003: conversion processed_rows=20000 input_nnz=478631 elapsed_seconds=0.285
+2026-06-01T06:59:23 d2_old modular_sparse_v2 mod 1000003: conversion processed_rows=30000 input_nnz=600945 elapsed_seconds=0.360
+2026-06-01T06:59:23 d2_old modular_sparse_v2 mod 1000003: conversion complete processed_rows=37770 input_nnz=618961 elapsed_seconds=0.373
+2026-06-01T06:59:24 d2_old modular_sparse_v2 mod 1000003: elimination processed_rows=10000 current_rank=8489 pivot_count=8489 reductions=12686 max_live_row_nnz=1544 rows_per_second=32128.597 elapsed_seconds=0.311
+2026-06-01T06:59:29 d2_old modular_sparse_v2 mod 1000003: elimination processed_rows=20000 current_rank=15905 pivot_count=15905 reductions=121723 max_live_row_nnz=2509 rows_per_second=3404.995 elapsed_seconds=5.874
+2026-06-01T06:59:44 d2_old modular_sparse_v2 mod 1000003: elimination processed_rows=25112 current_rank=19346 pivot_count=19346 reductions=401831 max_live_row_nnz=2509 rows_per_second=1202.992 elapsed_seconds=20.875
+2026-06-01T06:59:59 d2_old modular_sparse_v2 mod 1000003: elimination processed_rows=26321 current_rank=19833 pivot_count=19833 reductions=664747 max_live_row_nnz=2509 rows_per_second=733.527 elapsed_seconds=35.883
+2026-06-01T07:00:14 d2_old modular_sparse_v2 mod 1000003: elimination processed_rows=27550 current_rank=20233 pivot_count=20233 reductions=938775 max_live_row_nnz=2509 rows_per_second=541.333 elapsed_seconds=50.893
+2026-06-01T07:00:29 d2_old modular_sparse_v2 mod 1000003: elimination processed_rows=28446 current_rank=20550 pivot_count=20550 reductions=1226684 max_live_row_nnz=2509 rows_per_second=431.428 elapsed_seconds=65.935
+2026-06-01T07:00:44 d2_old modular_sparse_v2 mod 1000003: elimination processed_rows=29624 current_rank=20900 pivot_count=20900 reductions=1565418 max_live_row_nnz=2509 rows_per_second=366.024 elapsed_seconds=80.935
+2026-06-01T07:00:50 d2_old modular_sparse_v2 mod 1000003: elimination processed_rows=30000 current_rank=20982 pivot_count=20982 reductions=1706362 max_live_row_nnz=2509 rows_per_second=347.116 elapsed_seconds=86.426
+2026-06-01T07:01:05 d2_old modular_sparse_v2 mod 1000003: elimination processed_rows=34106 current_rank=21677 pivot_count=21677 reductions=2411780 max_live_row_nnz=2509 rows_per_second=336.263 elapsed_seconds=101.427
+2026-06-01T07:01:07 d2_old modular_sparse_v2 mod 1000003: elimination complete processed_rows=36792 current_rank=21835 pivot_count=21835 reductions=2624164 max_live_row_nnz=2509 elapsed_seconds=103.754
+2026-06-01T07:01:07 d2_old modular rank mod 1000003: 21835 backend=modular_sparse_v2
+2026-06-01T07:01:07 certified rank d2_old>=21835 by modular lower bound
+2026-06-01T07:01:07 d2_old rank seconds=104.313
+2026-06-01T07:01:11 chain condition seconds=3.539
+2026-06-01T07:01:11 rank precheck: dim_Z1=21835 dim_B_old=21835 dim_H1_old=0 chain_condition=True
+2026-06-01T07:01:11 used zero-H1 rank fast path; no cell representatives needed

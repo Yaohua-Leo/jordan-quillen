@@ -1,0 +1,49 @@
+{
+  "experiment_id": "EXP-100-square-zero-nonunital-cofibrant-weight10",
+  "record": {
+    "basis_data": {
+      "C0_basis": [
+        "((x*x)*x)"
+      ],
+      "C1_basis": [
+        "(r1_00001_w2*x)"
+      ],
+      "C2_old_basis": []
+    },
+    "checks": {
+      "all_V2_certificates_valid": true,
+      "all_V2_differentials_are_cycles": true,
+      "all_V2_representatives_have_nonzero_B_old_remainder": true,
+      "all_V2_representatives_independent_mod_B_old": true,
+      "d2_old_matrix_times_d1_matrix_is_zero": true,
+      "dim_B_old_matches_rank_d2_old": true,
+      "dim_H1_old_matches_V2_count": true,
+      "dim_Z1_matches_rank_nullity": true
+    },
+    "computed_V1_cell_names": [],
+    "computed_V2_cell_names": [],
+    "dim_B_old": 0,
+    "dim_C0": 1,
+    "dim_C1": 1,
+    "dim_C2_old": 0,
+    "dim_H1_old": 0,
+    "dim_Z1": 0,
+    "matrix_stats": {
+      "d1_cols": 1,
+      "d1_nnz": 1,
+      "d1_rows": 1,
+      "d2_old_cols": 1,
+      "d2_old_nnz": 0,
+      "d2_old_rows": 0
+    },
+    "memory_notes": "Memory controlled by bounded W=10 exact sparse computation.",
+    "rank_d1": 1,
+    "rank_d2_old": 0,
+    "runtime_seconds": 0.003,
+    "status": "completed",
+    "weight": 3
+  },
+  "status": "completed",
+  "v2_cells": [],
+  "weight": 3
+}

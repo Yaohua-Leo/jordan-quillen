@@ -1,0 +1,23 @@
+{
+  "basis": [
+    "(r_xx*x)",
+    "(r_xx*y)",
+    "(r_xy*x)",
+    "(r_xy*y)",
+    "(r_yy*x)",
+    "(r_yy*y)"
+  ],
+  "degree": 1,
+  "dimension": 6,
+  "free_columns": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "jordan_relation_rank": 0,
+  "raw_term_count": 6,
+  "weight": 3
+}

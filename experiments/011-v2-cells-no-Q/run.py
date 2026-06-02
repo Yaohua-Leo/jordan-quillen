@@ -10,6 +10,26 @@ EXPERIMENT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = EXPERIMENT_DIR.parents[1]
 
 
+def parse_weight_list(value: str) -> tuple[int, ...]:
+    if not value.strip():
+        return ()
+    weights: set[int] = set()
+    for part in value.split(","):
+        item = part.strip()
+        if not item:
+            continue
+        try:
+            weight = int(item)
+        except ValueError as exc:
+            msg = "--force-recompute-weights must contain positive integers"
+            raise argparse.ArgumentTypeError(msg) from exc
+        if weight < 1:
+            msg = "--force-recompute-weights must contain positive integers"
+            raise argparse.ArgumentTypeError(msg)
+        weights.add(weight)
+    return tuple(sorted(weights))
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--max-weight", type=int, default=8)
@@ -24,6 +44,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-matrix-nnz", type=int, default=250_000)
     parser.add_argument("--max-runtime-per-weight", type=float, default=None)
     parser.add_argument("--max-memory-gb", type=float, default=None)
+    parser.add_argument("--workers", type=int, default=1)
+    parser.add_argument("--matrix-workers", type=int, default=1)
+    parser.add_argument(
+        "--force-recompute-weights",
+        type=parse_weight_list,
+        default=(),
+        help="Comma-separated weights to recompute even when --resume is set.",
+    )
     return parser.parse_args()
 
 
@@ -42,6 +70,8 @@ def main() -> int:
         max_matrix_nnz=args.max_matrix_nnz,
         max_runtime_per_weight=args.max_runtime_per_weight,
         max_memory_gb=args.max_memory_gb,
+        workers=args.workers,
+        matrix_workers=args.matrix_workers,
     )
     run = compute_exp011(
         max_weight=args.max_weight,
@@ -49,6 +79,7 @@ def main() -> int:
         output_dir=EXPERIMENT_DIR,
         thresholds=thresholds,
         resume=args.resume,
+        force_recompute_weights=args.force_recompute_weights,
     )
     write_run_outputs(run, EXPERIMENT_DIR)
     print(

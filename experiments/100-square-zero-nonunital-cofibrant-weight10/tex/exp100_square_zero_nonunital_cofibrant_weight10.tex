@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{longtable}
+\title{Experiment 100: One-Generator Cofibrant Cell Computation}
+\author{Jordan Quillen Homology Project}
+\date{}
+\begin{document}
+\maketitle
+\section*{Scope}
+Experiment ID: \texttt{EXP-100-square-zero-nonunital-cofibrant-weight10}.
+
+Target algebra: \texttt{Jord<x>/(x^2)}.
+
+The computation records the bounded cell layers $V_0$, $V_1$, and $V_2$ through product weight 10. The functor $Q$ is not applied, and layers $V_3,V_4,\ldots$ are not constructed.
+
+The run does not use predicted formulas as inputs.  Cells are accepted only from exact linear algebra and recorded certificates.
+\section*{Backend}
+ordinary commutative nonassociative Jordan algebra modulo the linearized Jordan identity, with a signed derivation differential
+
+The output is relative to this backend convention. A separate theory check is needed before identifying it exactly with a fully graded operadic dg Jordan convention.
+\section*{Computed Cell Counts}
+\begin{tabular}{rrrr}
+\toprule
+Weight & V1 cells & V2 cells & $\dim H^{old}_{1,w}$ \\
+\midrule
+1 & 0 & 0 & 0 \\
+2 & 1 & 0 & 0 \\
+3 & 0 & 0 & 0 \\
+4 & 0 & 1 & 1 \\
+5 & 0 & 0 & 0 \\
+6 & 0 & 0 & 0 \\
+7 & 0 & 1 & 1 \\
+8 & 0 & 1 & 1 \\
+9 & 0 & 0 & 0 \\
+10 & 2 & 2 & 2 \\
+\bottomrule
+\end{tabular}
+\section*{V1 Cells}
+\texttt{r1\_00001\_w2} weight 2: $d=(x*x)$.
+
+\texttt{r1\_00002\_w10} weight 10: $d=((((((x*x)*x)*x)*x)*x)*((x*x)*(x*x)))$.
+
+\texttt{r1\_00003\_w10} weight 10: $d=(((((x*x)*x)*x)*x)*(((x*x)*x)*(x*x)))$.
+
+\section*{V2 Cells}
+\texttt{s2\_00001\_w4} weight 4: $d=-((r1\_00001\_w2*x)*x) + ((x*x)*r1\_00001\_w2)$.
+
+\texttt{s2\_00002\_w7} weight 7: $d=-(((((x*x)*x)*x)*x)*r1\_00001\_w2) + ((((x*x)*x)*x)*(r1\_00001\_w2*x))$.
+
+\texttt{s2\_00003\_w8} weight 8: $d=-((((((x*x)*x)*x)*x)*x)*r1\_00001\_w2) + 1/2*(((((x*x)*(x*x))*x)*x)*r1\_00001\_w2) - 1/2*(((((x*x)*x)*x)*r1\_00001\_w2)*(x*x)) + (((((x*x)*x)*x)*x)*(r1\_00001\_w2*x))$.
+
+\texttt{s2\_00004\_w10} weight 10: $d=2*((((((((x*x)*x)*x)*x)*x)*x)*x)*r1\_00001\_w2) - (((((((x*x)*x)*x)*x)*x)*r1\_00001\_w2)*(x*x)) - 2*(((((((x*x)*x)*x)*x)*x)*x)*(r1\_00001\_w2*x)) + r1\_00002\_w10$.
+
+\texttt{s2\_00005\_w10} weight 10: $d=((((((((x*x)*x)*x)*x)*x)*x)*x)*r1\_00001\_w2) + 1/12*(((((((x*x)*(x*x))*x)*x)*x)*x)*r1\_00001\_w2) - 1/12*(((((((x*x)*x)*(x*x))*x)*x)*x)*r1\_00001\_w2) + 1/4*(((((((x*x)*x)*x)*x)*x)*r1\_00001\_w2)*(x*x)) - 1/3*(((((((x*x)*x)*x)*x)*x)*x)*(r1\_00001\_w2*x)) - 1/3*((((((x*x)*(x*x))*x)*x)*x)*(r1\_00001\_w2*x)) - 11/12*((((((x*x)*x)*x)*x)*(x*x))*(r1\_00001\_w2*x)) - 2/3*((((((x*x)*x)*x)*x)*x)*((r1\_00001\_w2*x)*x)) + r1\_00003\_w10$.
+
+\section*{Checks}
+\begin{verbatim}
+all_V2_differentials_are_cycles: True
+all_V2_representatives_have_nonzero_B_old_remainder: True
+all_V2_representatives_independent_mod_B_old: True
+all_completed_weights_passed: True
+all_relation_cells_map_to_kernel: True
+applies_Q_is_false: True
+chain_condition_checks_passed: True
+constructs_higher_cells_V3_plus_is_false: True
+exact_rational_arithmetic: True
+expected_setup_has_no_prefilled_results: True
+rank_nullity_checks_passed: True
+report_language_has_no_forbidden_global_phrasing: True
+\end{verbatim}
+\section*{Finite-Weight Boundary}
+All conclusions in this report are restricted to completed weights with status completed. Skipped, failed, and untested weights are not used for any mathematical conclusion. This is bounded computational evidence, not a theorem about the full cofibrant replacement.
+\end{document}

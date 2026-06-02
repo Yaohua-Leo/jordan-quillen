@@ -42,12 +42,22 @@ literature/papers-local/*.djvu
 experiments/**/generated/
 
 # Experiment TeX build output
+experiments/**/*.aux
+experiments/**/*.fdb_latexmk
+experiments/**/*.fls
+experiments/**/*.out
+experiments/**/*.synctex.gz
+experiments/**/*_report.log
 experiments/**/tex/*.aux
 experiments/**/tex/*.fdb_latexmk
 experiments/**/tex/*.fls
 experiments/**/tex/*.log
 experiments/**/tex/*.out
 experiments/**/tex/*.synctex.gz
+experiments/**/tex/test_*.pdf
+
+# Large local audit tables
+experiments/014-backend-differential-ideal-audit/data/relation_stability_W*.json
 
 # TeX build output
 paper/*.aux

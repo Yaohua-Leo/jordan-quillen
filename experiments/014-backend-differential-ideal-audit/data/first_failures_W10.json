@@ -1,0 +1,67 @@
+{
+  "experiment_id": "EXP-014-backend-differential-ideal-audit",
+  "first_differential_failure": {
+    "differential_stable": false,
+    "first_differential_defect": {
+      "defect_nonzero": true,
+      "defect_normal_form": "2*(((x*x)*(x*x))*r_xx) - 2*(((x*x)*r_xx)*(x*x))",
+      "defect_sparse_coordinates": {
+        "78": 2,
+        "87": -2
+      },
+      "raw_vector": "2*((((x*x)*x)*r_xx)*x) - 2*(((r_xx*x)*(x*x))*x) + (((x*x)*(x*x))*r_xx) - (((x*x)*r_xx)*(x*x))",
+      "target_degree": 1,
+      "target_weight": 6
+    },
+    "first_multiplication_defect": {
+      "defect_nonzero": true,
+      "defect_normal_form": "-2*((((r_xx*x)*x)*x)*r_xx) - ((((x*x)*x)*r_xx)*r_xx) + 3*(((r_xx*x)*(x*x))*r_xx)",
+      "defect_sparse_coordinates": {
+        "108": -1,
+        "180": 3,
+        "6": -2
+      },
+      "multiplier": "x",
+      "multiplier_degree": 0,
+      "multiplier_weight": 1,
+      "raw_vector": "2*((((r_xx*x)*r_xx)*x)*x) + ((((x*x)*r_xx)*r_xx)*x) - (((r_xx*r_xx)*(x*x))*x) - 2*(((r_xx*x)*(r_xx*x))*x)",
+      "target_degree": 2,
+      "target_weight": 7
+    },
+    "multiplication_stable": false,
+    "relation_formula": "2*(((r_xx*x)*r_xx)*x) + (((x*x)*r_xx)*r_xx) - ((r_xx*r_xx)*(x*x)) - 2*((r_xx*x)*(r_xx*x))",
+    "relation_index": 0,
+    "relation_reduces_to_zero": true,
+    "relation_reduction_defect": null,
+    "source_degree": 2,
+    "source_weight": 6
+  },
+  "first_multiplication_failure": {
+    "differential_stable": true,
+    "first_differential_defect": null,
+    "first_multiplication_defect": {
+      "defect_nonzero": true,
+      "defect_normal_form": "-3*((((x*x)*y)*x)*x) + 3*(((x*y)*x)*(x*x))",
+      "defect_sparse_coordinates": {
+        "0": -3,
+        "12": 3
+      },
+      "multiplier": "y",
+      "multiplier_degree": 0,
+      "multiplier_weight": 1,
+      "raw_vector": "3*((((x*x)*x)*x)*y) - 3*(((x*x)*(x*x))*y)",
+      "target_degree": 0,
+      "target_weight": 5
+    },
+    "multiplication_stable": false,
+    "relation_formula": "3*(((x*x)*x)*x) - 3*((x*x)*(x*x))",
+    "relation_index": 0,
+    "relation_reduces_to_zero": true,
+    "relation_reduction_defect": null,
+    "source_degree": 0,
+    "source_weight": 4
+  },
+  "first_relation_reduction_failure": null,
+  "max_degree_requested": 2,
+  "max_weight_requested": 10
+}

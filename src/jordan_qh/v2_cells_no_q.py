@@ -12,6 +12,7 @@ without applying Q.
 from __future__ import annotations
 
 from collections import defaultdict
+from collections.abc import Callable
 from dataclasses import asdict, dataclass
 from datetime import datetime
 from fractions import Fraction
@@ -29,7 +30,10 @@ from jordan_qh.low_weight_jordan import (
     product_term,
     raw_vector_to_terms,
     reduce_sparse_row,
+    sparse_echelon,
     sparse_kernel_basis,
+    sparse_modular_rank,
+    sparse_modular_rank_v2,
     sparse_rref,
     term_to_str,
 )
@@ -52,6 +56,7 @@ REPORT_FORBIDDEN_PHRASES = (
     "The infinite-weight case is complete.",
     "H1_old has global dimension",
 )
+RANK_CERTIFICATE_PRIMES = (1_000_003, 1_000_033, 1_000_037)
 
 
 @dataclass(frozen=True)
@@ -63,6 +68,12 @@ class Exp011Thresholds:
     max_matrix_nnz: int = DEFAULT_MAX_MATRIX_NNZ
     max_runtime_per_weight: float | None = None
     max_memory_gb: float | None = None
+    workers: int = 1
+    matrix_workers: int = 1
+    rank_backend: str = "modular_sparse"
+    rank_progress_interval: int = 10_000
+    rank_progress_seconds: float = 15.0
+    max_rank_seconds: float | None = None
 
 
 @dataclass(frozen=True)
@@ -196,6 +207,7 @@ def compute_exp011(
     output_dir: Path,
     thresholds: Exp011Thresholds | None = None,
     resume: bool = False,
+    force_recompute_weights: tuple[int, ...] = (),
 ) -> Exp011Run:
     """Compute EXP011 and write caches/checkpoints under ``output_dir``."""
 
@@ -204,14 +216,20 @@ def compute_exp011(
         raise ValueError(msg)
     if thresholds is None:
         thresholds = Exp011Thresholds()
+    forced_weights = frozenset(force_recompute_weights)
+    if any(weight < 1 for weight in forced_weights):
+        msg = "force_recompute_weights must contain positive weights"
+        raise ValueError(msg)
 
     start_time = datetime.now().isoformat(timespec="seconds")
     start_counter = perf_counter()
     output_dir.mkdir(parents=True, exist_ok=True)
     cache_dir = output_dir / "cache"
     checkpoint_dir = output_dir / "checkpoints"
+    log_dir = output_dir / "logs"
     cache_dir.mkdir(parents=True, exist_ok=True)
     checkpoint_dir.mkdir(parents=True, exist_ok=True)
+    log_dir.mkdir(parents=True, exist_ok=True)
 
     feasible_weight, preflight_skip, raw_estimates = select_feasible_weight(
         max_weight,
@@ -222,6 +240,7 @@ def compute_exp011(
         f"mode: {mode}",
         f"max weight requested: {max_weight}",
         f"resume: {resume}",
+        f"force recompute weights: {sorted(forced_weights)}",
         f"thresholds: {asdict(thresholds)}",
         f"preflight feasible upper bound: {feasible_weight}",
     ]
@@ -236,23 +255,38 @@ def compute_exp011(
     previous_completed_weight: int | None = None
 
     need_model = any(
-        not _valid_resume_checkpoint(checkpoint_dir / f"weight_{weight}_status.json")
+        weight in forced_weights
+        or not _valid_resume_checkpoint(
+            checkpoint_dir / f"weight_{weight}_status.json",
+        )
         for weight in range(1, feasible_weight + 1)
     )
     model: LowWeightJordanModel | None = None
     if need_model and feasible_weight > 0:
         generators, differentials = initial_generators_and_differentials()
         model_start = perf_counter()
+        progress_path = log_dir / f"model_W{feasible_weight}_progress.log"
+        progress_path.write_text("", encoding="utf-8")
+
+        def progress(message: str) -> None:
+            with progress_path.open("a", encoding="utf-8") as handle:
+                handle.write(
+                    f"{datetime.now().isoformat(timespec='seconds')} {message}\n",
+                )
+
         model = build_low_weight_jordan_model(
             generators,
             differentials,
             weight_bound=feasible_weight,
             max_degree=2,
+            workers=max(1, thresholds.workers),
+            progress=progress,
         )
         log_lines.append(
             f"model build seconds for W={feasible_weight}: "
             f"{perf_counter() - model_start:.3f}",
         )
+        log_lines.append(f"model progress log: {progress_path.as_posix()}")
 
     for weight in range(1, max_weight + 1):
         checkpoint_path = checkpoint_dir / f"weight_{weight}_status.json"
@@ -270,7 +304,9 @@ def compute_exp011(
             )
             continue
 
-        if resume and _valid_resume_checkpoint(checkpoint_path):
+        if resume and weight not in forced_weights and _valid_resume_checkpoint(
+            checkpoint_path,
+        ):
             checkpoint = _read_json(checkpoint_path)
             record = checkpoint["record"]
             cells = checkpoint.get("cells", [])
@@ -289,6 +325,7 @@ def compute_exp011(
             msg = "internal error: missing model for uncheckpointed weight"
             raise RuntimeError(msg)
 
+        weight_attempt_start = perf_counter()
         try:
             record, cells = _compute_weight_record(
                 model=model,
@@ -305,7 +342,7 @@ def compute_exp011(
                 "threshold_triggered": exc.threshold,
                 "previous_completed_weight": previous_completed_weight,
                 "partial_outputs_preserved": True,
-                "runtime_seconds": None,
+                "runtime_seconds": round(perf_counter() - weight_attempt_start, 3),
                 "memory_notes": _memory_notes(thresholds),
             }
             skipped_records.append(record)
@@ -319,7 +356,7 @@ def compute_exp011(
                 "failure_stage": "weight_computation",
                 "error_message": str(exc),
                 "partial_outputs_preserved": True,
-                "runtime_seconds": None,
+                "runtime_seconds": round(perf_counter() - weight_attempt_start, 3),
                 "memory_notes": _memory_notes(thresholds),
             }
             failed_records.append(record)
@@ -392,6 +429,7 @@ def compute_exp011(
         "backend": _backend_record(),
         "mode": mode,
         "resume": resume,
+        "force_recompute_weights": sorted(forced_weights),
         "thresholds": asdict(thresholds),
         "adaptive_feasible_upper_bound": feasible_weight,
         "preflight_skip": preflight_skip,
@@ -595,6 +633,48 @@ def write_run_outputs(run: Exp011Run, output_dir: Path) -> None:
     )
 
 
+def _modular_rank_certificate(
+    rows: tuple[SparseRow, ...],
+    *,
+    target_rank: int,
+    label: str,
+    progress: Callable[[str], None],
+    thresholds: Exp011Thresholds,
+) -> tuple[int, int] | None:
+    for prime in RANK_CERTIFICATE_PRIMES:
+        try:
+            if thresholds.rank_backend == "modular_sparse":
+                rank = sparse_modular_rank(rows, prime=prime, max_rank=target_rank)
+            elif thresholds.rank_backend == "modular_sparse_v2":
+                rank = sparse_modular_rank_v2(
+                    rows,
+                    prime=prime,
+                    max_rank=target_rank,
+                    progress=lambda message, prime=prime: progress(
+                        f"{label} modular_sparse_v2 mod {prime}: {message}",
+                    ),
+                    progress_interval=thresholds.rank_progress_interval,
+                    progress_seconds=thresholds.rank_progress_seconds,
+                    max_seconds=thresholds.max_rank_seconds,
+                )
+            else:
+                msg = f"unknown rank backend: {thresholds.rank_backend}"
+                raise ValueError(msg)
+        except TimeoutError as exc:
+            progress(f"{label} modular rank timed out mod {prime}: {exc}")
+            raise WeightSkipped(str(exc), "rank_timeout") from exc
+        except ValueError as exc:
+            progress(f"{label} modular rank skipped mod {prime}: {exc}")
+            continue
+        progress(
+            f"{label} modular rank mod {prime}: {rank} "
+            f"backend={thresholds.rank_backend}",
+        )
+        if rank >= target_rank:
+            return rank, prime
+    return None
+
+
 def _compute_weight_record(
     *,
     model: LowWeightJordanModel,
@@ -604,6 +684,14 @@ def _compute_weight_record(
     cache_dir: Path,
 ) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     weight_start = perf_counter()
+    progress_path = cache_dir.parent / "logs" / f"weight_{weight}_progress.log"
+    progress_path.parent.mkdir(parents=True, exist_ok=True)
+    progress_path.write_text("", encoding="utf-8")
+
+    def progress(message: str) -> None:
+        with progress_path.open("a", encoding="utf-8") as handle:
+            handle.write(f"{datetime.now().isoformat(timespec='seconds')} {message}\n")
+
     c0 = model.quotient_space(0, weight)
     c1 = model.quotient_space(1, weight)
     c2_old = model.quotient_space(2, weight)
@@ -620,8 +708,36 @@ def _compute_weight_record(
             "max_quotient_dim",
         )
 
-    d1_rows = model.differential_sparse_matrix(1, weight)
-    d2_old_rows = model.differential_sparse_matrix(2, weight)
+    progress(
+        "quotient dimensions: "
+        f"C0={dim_c0} C1={dim_c1} C2_old={dim_c2_old}",
+    )
+    matrix_worker_count = max(1, thresholds.matrix_workers)
+    progress(f"matrix_workers={matrix_worker_count}")
+    d1_matrix_start = perf_counter()
+    d1_rows = model.differential_sparse_matrix(
+        1,
+        weight,
+        workers=matrix_worker_count,
+    )
+    d1_matrix_seconds = perf_counter() - d1_matrix_start
+    progress(
+        f"built d1 matrix rows={len(d1_rows)} "
+        f"nnz={_sparse_rows_nnz(d1_rows)} "
+        f"seconds={d1_matrix_seconds:.3f}",
+    )
+    d2_matrix_start = perf_counter()
+    d2_old_rows = model.differential_sparse_matrix(
+        2,
+        weight,
+        workers=matrix_worker_count,
+    )
+    d2_matrix_seconds = perf_counter() - d2_matrix_start
+    progress(
+        f"built d2_old matrix rows={len(d2_old_rows)} "
+        f"nnz={_sparse_rows_nnz(d2_old_rows)} "
+        f"seconds={d2_matrix_seconds:.3f}",
+    )
     d1_nnz = _sparse_rows_nnz(d1_rows)
     d2_old_nnz = _sparse_rows_nnz(d2_old_rows)
     if max(d1_nnz, d2_old_nnz) > thresholds.max_matrix_nnz:
@@ -633,76 +749,160 @@ def _compute_weight_record(
             "max_matrix_nnz",
         )
 
-    d1_rref = sparse_rref(d1_rows)
-    d2_old_rref = sparse_rref(d2_old_rows)
-    rank_d1 = len(d1_rref)
-    rank_d2_old = len(d2_old_rref)
-    z1_basis = sparse_kernel_basis(
+    rank_certificates: dict[str, Any] = {}
+    d1_rank_start = perf_counter()
+    d1_certificate = _modular_rank_certificate(
         d1_rows,
-        source_dimension=dim_c1,
-        target_dimension=dim_c0,
+        target_rank=dim_c0,
+        label="d1",
+        progress=progress,
+        thresholds=thresholds,
     )
-    dim_z1 = len(z1_basis)
+    if d1_certificate is not None:
+        rank_d1, prime = d1_certificate
+        rank_certificates["d1"] = {
+            "method": "modular_full_target_rank",
+            "backend": thresholds.rank_backend,
+            "prime": prime,
+            "rank": rank_d1,
+            "target_rank": dim_c0,
+        }
+        progress(f"certified rank d1={rank_d1} by modular target-rank lower bound")
+    else:
+        d1_rank_basis = sparse_echelon(d1_rows, max_rank=dim_c0)
+        rank_d1 = len(d1_rank_basis)
+        rank_certificates["d1"] = {"method": "rational_sparse_echelon"}
+        progress(f"computed rank d1={rank_d1}")
+    d1_rank_seconds = perf_counter() - d1_rank_start
+    progress(f"d1 rank seconds={d1_rank_seconds:.3f}")
+    dim_z1 = dim_c1 - rank_d1
+    d2_old_rank_basis: dict[int, SparseRow] = {}
+    d2_rank_start = perf_counter()
+    d2_certificate = (
+        _modular_rank_certificate(
+            d2_old_rows,
+            target_rank=dim_z1,
+            label="d2_old",
+            progress=progress,
+            thresholds=thresholds,
+        )
+        if dim_z1 >= 0
+        else None
+    )
+    if d2_certificate is not None:
+        rank_d2_old, prime = d2_certificate
+        rank_certificates["d2_old"] = {
+            "method": "modular_dim_z1_lower_bound",
+            "backend": thresholds.rank_backend,
+            "prime": prime,
+            "rank": rank_d2_old,
+            "target_rank": dim_z1,
+        }
+        progress(
+            f"certified rank d2_old>={rank_d2_old} "
+            "by modular lower bound",
+        )
+    else:
+        d2_rank_stop = dim_z1 if dim_z1 >= 0 else None
+        d2_old_rank_basis = sparse_echelon(d2_old_rows, max_rank=d2_rank_stop)
+        rank_d2_old = len(d2_old_rank_basis)
+        rank_certificates["d2_old"] = {"method": "rational_sparse_echelon"}
+        progress(f"computed rank d2_old={rank_d2_old}")
+    d2_rank_seconds = perf_counter() - d2_rank_start
+    progress(f"d2_old rank seconds={d2_rank_seconds:.3f}")
     dim_b_old = rank_d2_old
     dim_h1_old = dim_z1 - dim_b_old
+    chain_start = perf_counter()
     chain_condition = _source_row_composition_is_zero(
         first_rows=d2_old_rows,
         second_rows=d1_rows,
         first_target_dimension=dim_c1,
         second_target_dimension=dim_c0,
     )
+    chain_seconds = perf_counter() - chain_start
+    progress(f"chain condition seconds={chain_seconds:.3f}")
+    progress(
+        "rank precheck: "
+        f"dim_Z1={dim_z1} dim_B_old={dim_b_old} "
+        f"dim_H1_old={dim_h1_old} chain_condition={chain_condition}",
+    )
 
     cells: list[dict[str, Any]] = []
-    selection_rref = dict(d2_old_rref)
     c0_basis = tuple(term_to_str(term) for term in c0.basis_terms())
     c1_basis = tuple(term_to_str(term) for term in c1.basis_terms())
     c2_old_basis = tuple(term_to_str(term) for term in c2_old.basis_terms())
-    for cycle in z1_basis:
-        boundary_remainder = reduce_sparse_row(cycle, d2_old_rref)
-        selection_remainder = reduce_sparse_row(cycle, selection_rref)
-        if not selection_remainder:
-            continue
-        global_index = global_index_start + len(cells)
-        name = f"s2_{global_index:05d}_w{weight}"
-        d1_z = _apply_source_row_map(cycle, d1_rows)
-        raw_lift = c1.lift_sparse_coordinates(cycle)
-        cells.append(
-            {
-                "name": name,
-                "degree": 2,
-                "weight": weight,
-                "global_index": global_index,
-                "cycle_z": _sparse_row_formula(cycle, c1_basis),
-                "cycle_z_coordinates_in_C1_basis": _dense_sparse_row_json(
-                    cycle,
-                    dim_c1,
-                ),
-                "cycle_z_sparse_coordinates_in_C1_basis": _sparse_row_json(cycle),
-                "cycle_z_raw_lift": raw_vector_to_terms(raw_lift),
-                "d1_z_normal_form": _sparse_row_formula(d1_z, c0_basis),
-                "boundary_remainder_mod_B_old": _sparse_row_record(
-                    boundary_remainder,
-                    c1_basis,
-                ),
-                "boundary_remainder_nonzero": bool(boundary_remainder),
-                "selection_remainder_mod_B_old_plus_accepted_reps": (
-                    _sparse_row_record(selection_remainder, c1_basis)
-                ),
-                "independent_mod_B_old_plus_previous_reps": True,
-                "not_in_B_old": bool(boundary_remainder),
-                "certificate_type": "rref_remainder",
-                "optional_dual_certificate": None,
-            },
-        )
-        pivot = min(selection_remainder)
-        coefficient = selection_remainder[pivot]
-        selection_rref[pivot] = {
-            column: value / coefficient
-            for column, value in selection_remainder.items()
-        }
-        selection_rref = sparse_rref(selection_rref.values())
 
-    quotient_independence = len(selection_rref) == len(d2_old_rref) + len(cells)
+    z1_omitted_reason: str | None = None
+    b_old_basis_type = "rref"
+    if dim_h1_old == 0 and chain_condition:
+        d2_old_rref = d2_old_rank_basis
+        z1_basis: tuple[SparseRow, ...] = ()
+        quotient_independence = True
+        z1_omitted_reason = (
+            "Full Z1 basis omitted because rank-nullity gives dim_H1_old=0."
+        )
+        b_old_basis_type = (
+            "row_echelon_rank_basis"
+            if d2_old_rank_basis
+            else "modular_rank_certificate_no_basis"
+        )
+        progress("used zero-H1 rank fast path; no cell representatives needed")
+    else:
+        d2_old_rref = sparse_rref(d2_old_rows)
+        progress(f"computed B_old RREF rank={len(d2_old_rref)}")
+        z1_basis = sparse_kernel_basis(
+            d1_rows,
+            source_dimension=dim_c1,
+            target_dimension=dim_c0,
+        )
+        progress(f"computed full Z1 basis size={len(z1_basis)}")
+        selection_rref = dict(d2_old_rref)
+        for cycle in z1_basis:
+            boundary_remainder = reduce_sparse_row(cycle, d2_old_rref)
+            selection_remainder = reduce_sparse_row(cycle, selection_rref)
+            if not selection_remainder:
+                continue
+            global_index = global_index_start + len(cells)
+            name = f"s2_{global_index:05d}_w{weight}"
+            d1_z = _apply_source_row_map(cycle, d1_rows)
+            raw_lift = c1.lift_sparse_coordinates(cycle)
+            cells.append(
+                {
+                    "name": name,
+                    "degree": 2,
+                    "weight": weight,
+                    "global_index": global_index,
+                    "cycle_z": _sparse_row_formula(cycle, c1_basis),
+                    "cycle_z_coordinates_in_C1_basis": _dense_sparse_row_json(
+                        cycle,
+                        dim_c1,
+                    ),
+                    "cycle_z_sparse_coordinates_in_C1_basis": _sparse_row_json(cycle),
+                    "cycle_z_raw_lift": raw_vector_to_terms(raw_lift),
+                    "d1_z_normal_form": _sparse_row_formula(d1_z, c0_basis),
+                    "boundary_remainder_mod_B_old": _sparse_row_record(
+                        boundary_remainder,
+                        c1_basis,
+                    ),
+                    "boundary_remainder_nonzero": bool(boundary_remainder),
+                    "selection_remainder_mod_B_old_plus_accepted_reps": (
+                        _sparse_row_record(selection_remainder, c1_basis)
+                    ),
+                    "independent_mod_B_old_plus_previous_reps": True,
+                    "not_in_B_old": bool(boundary_remainder),
+                    "certificate_type": "rref_remainder",
+                    "optional_dual_certificate": None,
+                },
+            )
+            pivot = min(selection_remainder)
+            coefficient = selection_remainder[pivot]
+            selection_rref[pivot] = {
+                column: value / coefficient
+                for column, value in selection_remainder.items()
+            }
+            selection_rref = sparse_rref(selection_rref.values())
+
+        quotient_independence = len(selection_rref) == len(d2_old_rref) + len(cells)
     all_cycles = all(cell["d1_z_normal_form"] == "0" for cell in cells)
     all_non_boundaries = all(
         cell["boundary_remainder_nonzero"] and cell["not_in_B_old"]
@@ -730,7 +930,11 @@ def _compute_weight_record(
         d1_rows=d1_rows,
         d2_old_rows=d2_old_rows,
         b_old_rref=d2_old_rref,
+        b_old_rank=rank_d2_old,
+        b_old_basis_type=b_old_basis_type,
         z1_basis=z1_basis,
+        z1_expected_dimension=dim_z1,
+        z1_omitted_reason=z1_omitted_reason,
         cells=cells,
     )
 
@@ -769,7 +973,14 @@ def _compute_weight_record(
             "d2_old_rows": dim_c2_old,
             "d2_old_cols": dim_c1,
             "d2_old_nnz": d2_old_nnz,
+            "matrix_workers": matrix_worker_count,
+            "d1_build_seconds": round(d1_matrix_seconds, 3),
+            "d2_old_build_seconds": round(d2_matrix_seconds, 3),
+            "d1_rank_seconds": round(d1_rank_seconds, 3),
+            "d2_old_rank_seconds": round(d2_rank_seconds, 3),
+            "chain_condition_seconds": round(chain_seconds, 3),
         },
+        "rank_certificates": rank_certificates,
         "raw_term_counts": {
             "C0_raw_terms": len(c0.raw_terms),
             "C1_raw_terms": len(c1.raw_terms),
@@ -795,7 +1006,11 @@ def _write_weight_caches(
     d1_rows: tuple[SparseRow, ...],
     d2_old_rows: tuple[SparseRow, ...],
     b_old_rref: dict[int, SparseRow],
+    b_old_rank: int,
+    b_old_basis_type: str,
     z1_basis: tuple[SparseRow, ...],
+    z1_expected_dimension: int,
+    z1_omitted_reason: str | None,
     cells: list[dict[str, Any]],
 ) -> None:
     for degree, quotient_space, basis in zip(
@@ -821,11 +1036,19 @@ def _write_weight_caches(
         cache_dir / f"d2_old_w{weight}.json",
         _sparse_rows_record(d2_old_rows),
     )
-    _write_json(
-        cache_dir / f"B_old_rref_w{weight}.json",
-        _pivot_rows_record(b_old_rref),
-    )
-    _write_json(cache_dir / f"Z1_basis_w{weight}.json", _sparse_rows_record(z1_basis))
+    b_old_record = _pivot_rows_record(b_old_rref) | {
+        "rank": b_old_rank,
+        "basis_type": b_old_basis_type,
+        "basis_available": bool(b_old_rref) or b_old_rank == 0,
+    }
+    _write_json(cache_dir / f"B_old_rref_w{weight}.json", b_old_record)
+    z1_record = _sparse_rows_record(z1_basis) | {
+        "expected_dimension": z1_expected_dimension,
+        "full_basis_available": z1_omitted_reason is None,
+    }
+    if z1_omitted_reason is not None:
+        z1_record["omitted_reason"] = z1_omitted_reason
+    _write_json(cache_dir / f"Z1_basis_w{weight}.json", z1_record)
     _write_json(
         cache_dir / f"H1_old_reps_w{weight}.json",
         {

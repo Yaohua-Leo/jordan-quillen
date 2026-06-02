@@ -1,0 +1,29 @@
+EXP012 wrapper
+reference_exp011: experiments/011-v2-cells-no-Q/data/by_weight_W10.json
+matches_exp011_reference: True
+rank_backend: modular_sparse_v2
+start time: 2026-06-01T07:20:58
+mode: validation
+max weight requested: 11
+resume: True
+force recompute weights: []
+thresholds: {'max_raw_terms_per_space': 500000, 'max_quotient_dim': 1000000, 'max_matrix_nnz': 100000000, 'max_runtime_per_weight': None, 'max_memory_gb': 20.0, 'workers': 6, 'matrix_workers': 4, 'rank_backend': 'modular_sparse_v2', 'rank_progress_interval': 10000, 'rank_progress_seconds': 15.0, 'max_rank_seconds': 3600.0}
+preflight feasible upper bound: 11
+model build seconds for W=11: 46.937
+model progress log: D:/learning/(co)homology_of_Jordan/experiments/012-high-weight-rank-backend-validation/logs/model_W11_progress.log
+weight 1: completed from checkpoint
+weight 2: completed from checkpoint
+weight 3: completed from checkpoint
+weight 4: completed from checkpoint
+weight 5: completed from checkpoint
+weight 6: completed from checkpoint
+weight 7: completed from checkpoint
+weight 8: completed from checkpoint
+weight 9: completed from checkpoint
+weight 10: completed from checkpoint
+weight 11: skipped (modular rank exceeded max_rank_seconds=3600.0)
+end time: 2026-06-01T08:51:54
+runtime seconds: 5455.423
+completed weights: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+skipped weights: [11]
+failed weights: []

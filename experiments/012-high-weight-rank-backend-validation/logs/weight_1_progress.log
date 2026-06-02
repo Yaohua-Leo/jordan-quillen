@@ -1,0 +1,23 @@
+2026-06-01T06:55:58 quotient dimensions: C0=2 C1=0 C2_old=0
+2026-06-01T06:55:58 matrix_workers=4
+2026-06-01T06:55:58 built d1 matrix rows=0 nnz=0 seconds=0.000
+2026-06-01T06:55:58 built d2_old matrix rows=0 nnz=0 seconds=0.000
+2026-06-01T06:55:58 d1 modular_sparse_v2 mod 1000003: conversion complete processed_rows=0 input_nnz=0 elapsed_seconds=0.000
+2026-06-01T06:55:58 d1 modular_sparse_v2 mod 1000003: elimination complete processed_rows=0 current_rank=0 pivot_count=0 reductions=0 max_live_row_nnz=0 elapsed_seconds=0.000
+2026-06-01T06:55:58 d1 modular rank mod 1000003: 0 backend=modular_sparse_v2
+2026-06-01T06:55:58 d1 modular_sparse_v2 mod 1000033: conversion complete processed_rows=0 input_nnz=0 elapsed_seconds=0.000
+2026-06-01T06:55:58 d1 modular_sparse_v2 mod 1000033: elimination complete processed_rows=0 current_rank=0 pivot_count=0 reductions=0 max_live_row_nnz=0 elapsed_seconds=0.000
+2026-06-01T06:55:58 d1 modular rank mod 1000033: 0 backend=modular_sparse_v2
+2026-06-01T06:55:58 d1 modular_sparse_v2 mod 1000037: conversion complete processed_rows=0 input_nnz=0 elapsed_seconds=0.000
+2026-06-01T06:55:58 d1 modular_sparse_v2 mod 1000037: elimination complete processed_rows=0 current_rank=0 pivot_count=0 reductions=0 max_live_row_nnz=0 elapsed_seconds=0.000
+2026-06-01T06:55:58 d1 modular rank mod 1000037: 0 backend=modular_sparse_v2
+2026-06-01T06:55:58 computed rank d1=0
+2026-06-01T06:55:58 d1 rank seconds=0.001
+2026-06-01T06:55:58 d2_old modular_sparse_v2 mod 1000003: conversion complete processed_rows=0 input_nnz=0 elapsed_seconds=0.000
+2026-06-01T06:55:58 d2_old modular_sparse_v2 mod 1000003: elimination complete processed_rows=0 current_rank=0 pivot_count=0 reductions=0 max_live_row_nnz=0 elapsed_seconds=0.000
+2026-06-01T06:55:58 d2_old modular rank mod 1000003: 0 backend=modular_sparse_v2
+2026-06-01T06:55:58 certified rank d2_old>=0 by modular lower bound
+2026-06-01T06:55:58 d2_old rank seconds=0.000
+2026-06-01T06:55:58 chain condition seconds=0.000
+2026-06-01T06:55:58 rank precheck: dim_Z1=0 dim_B_old=0 dim_H1_old=0 chain_condition=True
+2026-06-01T06:55:58 used zero-H1 rank fast path; no cell representatives needed

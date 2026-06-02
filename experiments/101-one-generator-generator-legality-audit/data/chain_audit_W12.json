@@ -1,0 +1,114 @@
+{
+  "experiment_id": "EXP-101-one-generator-generator-legality-audit",
+  "max_weight_requested": 12,
+  "weights": [
+    {
+      "d2_matrix_times_d1_matrix_is_zero": true,
+      "dim_C0": 1,
+      "dim_C1": 0,
+      "dim_C2": 0,
+      "rank_d1": 0,
+      "rank_d2": 0,
+      "weight": 1
+    },
+    {
+      "d2_matrix_times_d1_matrix_is_zero": true,
+      "dim_C0": 1,
+      "dim_C1": 1,
+      "dim_C2": 0,
+      "rank_d1": 1,
+      "rank_d2": 0,
+      "weight": 2
+    },
+    {
+      "d2_matrix_times_d1_matrix_is_zero": true,
+      "dim_C0": 1,
+      "dim_C1": 1,
+      "dim_C2": 0,
+      "rank_d1": 1,
+      "rank_d2": 0,
+      "weight": 3
+    },
+    {
+      "d2_matrix_times_d1_matrix_is_zero": true,
+      "dim_C0": 1,
+      "dim_C1": 2,
+      "dim_C2": 1,
+      "rank_d1": 1,
+      "rank_d2": 0,
+      "weight": 4
+    },
+    {
+      "d2_matrix_times_d1_matrix_is_zero": true,
+      "dim_C0": 1,
+      "dim_C1": 2,
+      "dim_C2": 2,
+      "rank_d1": 1,
+      "rank_d2": 1,
+      "weight": 5
+    },
+    {
+      "d2_matrix_times_d1_matrix_is_zero": true,
+      "dim_C0": 2,
+      "dim_C1": 4,
+      "dim_C2": 4,
+      "rank_d1": 2,
+      "rank_d2": 2,
+      "weight": 6
+    },
+    {
+      "d2_matrix_times_d1_matrix_is_zero": true,
+      "dim_C0": 2,
+      "dim_C1": 7,
+      "dim_C2": 7,
+      "rank_d1": 2,
+      "rank_d2": 4,
+      "weight": 7
+    },
+    {
+      "d2_matrix_times_d1_matrix_is_zero": true,
+      "dim_C0": 5,
+      "dim_C1": 14,
+      "dim_C2": 17,
+      "rank_d1": 5,
+      "rank_d2": 8,
+      "weight": 8
+    },
+    {
+      "d2_matrix_times_d1_matrix_is_zero": true,
+      "dim_C0": 8,
+      "dim_C1": 29,
+      "dim_C2": 37,
+      "rank_d1": 8,
+      "rank_d2": 21,
+      "weight": 9
+    },
+    {
+      "d2_matrix_times_d1_matrix_is_zero": true,
+      "dim_C0": 17,
+      "dim_C1": 65,
+      "dim_C2": 90,
+      "rank_d1": 17,
+      "rank_d2": 46,
+      "weight": 10
+    },
+    {
+      "d2_matrix_times_d1_matrix_is_zero": true,
+      "dim_C0": 32,
+      "dim_C1": 139,
+      "dim_C2": 212,
+      "rank_d1": 32,
+      "rank_d2": 105,
+      "weight": 11
+    },
+    {
+      "d2_matrix_times_d1_matrix_is_zero": true,
+      "dim_C0": 71,
+      "dim_C1": 311,
+      "dim_C2": 523,
+      "rank_d1": 71,
+      "rank_d2": 238,
+      "weight": 12
+    }
+  ]
+}

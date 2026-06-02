@@ -1,0 +1,31 @@
+2026-06-01T06:17:53 generated terms: 1239239 raw terms across 29 homogeneous spaces
+2026-06-01T06:18:03 generated relation rows: 799325 rows
+2026-06-01T06:18:03 built quotient space degree=0 weight=1 dim=2 raw=2
+2026-06-01T06:18:03 built quotient space degree=0 weight=2 dim=3 raw=3
+2026-06-01T06:18:03 built quotient space degree=0 weight=3 dim=6 raw=6
+2026-06-01T06:18:03 built quotient space degree=0 weight=4 dim=10 raw=18
+2026-06-01T06:18:03 built quotient space degree=0 weight=5 dim=24 raw=54
+2026-06-01T06:18:03 built quotient space degree=0 weight=6 dim=72 raw=183
+2026-06-01T06:18:03 built quotient space degree=0 weight=7 dim=220 raw=636
+2026-06-01T06:18:03 built quotient space degree=0 weight=8 dim=762 raw=2316
+2026-06-01T06:18:03 built quotient space degree=0 weight=9 dim=2688 raw=8610
+2026-06-01T06:18:05 built quotient space degree=0 weight=10 dim=9884 raw=32763
+2026-06-01T06:18:13 built quotient space degree=0 weight=11 dim=37050 raw=126582
+2026-06-01T06:18:13 built quotient space degree=1 weight=2 dim=3 raw=3
+2026-06-01T06:18:13 built quotient space degree=1 weight=3 dim=6 raw=6
+2026-06-01T06:18:13 built quotient space degree=1 weight=4 dim=21 raw=21
+2026-06-01T06:18:13 built quotient space degree=1 weight=5 dim=48 raw=78
+2026-06-01T06:18:13 built quotient space degree=1 weight=6 dim=159 raw=309
+2026-06-01T06:18:13 built quotient space degree=1 weight=7 dim=552 raw=1248
+2026-06-01T06:18:13 built quotient space degree=1 weight=8 dim=2064 raw=5142
+2026-06-01T06:18:13 built quotient space degree=1 weight=9 dim=7980 raw=21426
+2026-06-01T06:18:13 built quotient space degree=1 weight=10 dim=31719 raw=90147
+2026-06-01T06:18:30 built quotient space degree=1 weight=11 dim=128286 raw=381930
+2026-06-01T06:18:30 built quotient space degree=2 weight=4 dim=6 raw=6
+2026-06-01T06:18:30 built quotient space degree=2 weight=5 dim=30 raw=30
+2026-06-01T06:18:30 built quotient space degree=2 weight=6 dim=111 raw=162
+2026-06-01T06:18:30 built quotient space degree=2 weight=7 dim=444 raw=810
+2026-06-01T06:18:30 built quotient space degree=2 weight=8 dim=1926 raw=4020
+2026-06-01T06:18:30 built quotient space degree=2 weight=9 dim=8454 raw=19542
+2026-06-01T06:18:30 built quotient space degree=2 weight=10 dim=37770 raw=94122
+2026-06-01T06:18:30 built quotient space degree=2 weight=11 dim=169614 raw=449064

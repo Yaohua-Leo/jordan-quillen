@@ -1,0 +1,11 @@
+EXP101 one-generator generator legality audit
+started_at: 2026-06-03T05:21:49
+max_weight: 12
+reference_cells: D:/learning/(co)homology_of_Jordan/experiments/100-square-zero-nonunital-cofibrant-weight10/data/cells_W10.json
+reference_results: D:/learning/(co)homology_of_Jordan/experiments/100-square-zero-nonunital-cofibrant-weight10/results.json
+v1_candidate_count: 3
+v1_legal_generator_count: 3
+v2_candidate_count: 5
+v2_strictly_attachable_cell_count: 0
+runtime_seconds: 1.36
+passed: True

@@ -1,0 +1,20 @@
+{
+  "applies_Q": false,
+  "base_field": "QQ",
+  "category": "nonunital dg Jordan algebras",
+  "do_not_prefill": [
+    "computed_V1_cells",
+    "computed_V2_cells",
+    "predicted_raw_cycle_counts",
+    "predicted_minimal_cell_table",
+    "computed_differentials",
+    "outcomes"
+  ],
+  "experiment": "EXP-100-square-zero-nonunital-cofibrant-weight10",
+  "matrix_convention": "source_rows_target_coordinates",
+  "max_homological_degree": 2,
+  "max_weight": 10,
+  "plan": "researchplan/subplan100.md",
+  "status": "expected_setup",
+  "target_algebra": "Jord<x>/(x^2)"
+}

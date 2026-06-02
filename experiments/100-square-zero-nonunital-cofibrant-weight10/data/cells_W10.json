@@ -1,0 +1,1073 @@
+{
+  "V0_cell_count": 1,
+  "V0_cells": [
+    {
+      "degree": 0,
+      "layer": "V0",
+      "maps_to": "x_bar",
+      "name": "x",
+      "source": "computed presentation generator",
+      "weight": 1
+    }
+  ],
+  "V1_cell_count": 3,
+  "V1_cells": [
+    {
+      "degree": 1,
+      "differential_coordinates": [
+        1
+      ],
+      "differential_formula": "(x*x)",
+      "differential_sparse_coordinates": {
+        "0": 1
+      },
+      "global_index": 1,
+      "independence_certificate": {
+        "independent_mod_prior_closure": true,
+        "prior_closure_rank": 0,
+        "remainder_mod_prior_closure": {
+          "formula": "(x*x)",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "0": 1
+          }
+        }
+      },
+      "kernel_certificate": {
+        "epsilon_image": "0",
+        "maps_to_kernel": true
+      },
+      "layer": "V1",
+      "minimality_certified": true,
+      "name": "r1_00001_w2",
+      "weight": 2
+    },
+    {
+      "degree": 1,
+      "differential_coordinates": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "differential_formula": "((((((x*x)*x)*x)*x)*x)*((x*x)*(x*x)))",
+      "differential_sparse_coordinates": {
+        "0": 1
+      },
+      "global_index": 2,
+      "independence_certificate": {
+        "independent_mod_prior_closure": true,
+        "prior_closure_rank": 15,
+        "remainder_mod_prior_closure": {
+          "formula": "((((((x*x)*x)*x)*x)*x)*((x*x)*(x*x)))",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "0": 1
+          }
+        }
+      },
+      "kernel_certificate": {
+        "epsilon_image": "0",
+        "maps_to_kernel": true
+      },
+      "layer": "V1",
+      "minimality_certified": true,
+      "name": "r1_00002_w10",
+      "weight": 10
+    },
+    {
+      "degree": 1,
+      "differential_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "differential_formula": "(((((x*x)*x)*x)*x)*(((x*x)*x)*(x*x)))",
+      "differential_sparse_coordinates": {
+        "8": 1
+      },
+      "global_index": 3,
+      "independence_certificate": {
+        "independent_mod_prior_closure": true,
+        "prior_closure_rank": 16,
+        "remainder_mod_prior_closure": {
+          "formula": "(((((x*x)*x)*x)*x)*(((x*x)*x)*(x*x)))",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "8": 1
+          }
+        }
+      },
+      "kernel_certificate": {
+        "epsilon_image": "0",
+        "maps_to_kernel": true
+      },
+      "layer": "V1",
+      "minimality_certified": true,
+      "name": "r1_00003_w10",
+      "weight": 10
+    }
+  ],
+  "V2_cell_count": 5,
+  "V2_cells": [
+    {
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_certificate": {
+        "d1_z_normal_form": "0",
+        "is_cycle": true
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "differential_coordinates": [
+        -1,
+        1
+      ],
+      "differential_formula": "-((r1_00001_w2*x)*x) + ((x*x)*r1_00001_w2)",
+      "differential_raw_lift": "-((r1_00001_w2*x)*x) + ((x*x)*r1_00001_w2)",
+      "differential_sparse_coordinates": {
+        "0": -1,
+        "1": 1
+      },
+      "global_index": 1,
+      "independence_certificate": {
+        "independent_mod_B_old_plus_previous_reps": true,
+        "selection_remainder_mod_B_old_plus_accepted_reps": {
+          "formula": "-((r1_00001_w2*x)*x) + ((x*x)*r1_00001_w2)",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "0": -1,
+            "1": 1
+          }
+        }
+      },
+      "layer": "V2",
+      "name": "s2_00001_w4",
+      "non_boundary_certificate": {
+        "boundary_remainder_mod_B_old": {
+          "formula": "-((r1_00001_w2*x)*x) + ((x*x)*r1_00001_w2)",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "0": -1,
+            "1": 1
+          }
+        },
+        "boundary_remainder_nonzero": true,
+        "certificate_type": "rref_remainder",
+        "not_in_B_old": true
+      },
+      "not_in_B_old": true,
+      "weight": 4
+    },
+    {
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_certificate": {
+        "d1_z_normal_form": "0",
+        "is_cycle": true
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "differential_coordinates": [
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "differential_formula": "-(((((x*x)*x)*x)*x)*r1_00001_w2) + ((((x*x)*x)*x)*(r1_00001_w2*x))",
+      "differential_raw_lift": "-(((((x*x)*x)*x)*x)*r1_00001_w2) + ((((x*x)*x)*x)*(r1_00001_w2*x))",
+      "differential_sparse_coordinates": {
+        "0": -1,
+        "2": 1
+      },
+      "global_index": 2,
+      "independence_certificate": {
+        "independent_mod_B_old_plus_previous_reps": true,
+        "selection_remainder_mod_B_old_plus_accepted_reps": {
+          "formula": "-1/2*(((r1_00001_w2*x)*(x*x))*(x*x)) + 1/2*(((x*x)*r1_00001_w2)*((x*x)*x))",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "3": "-1/2",
+            "6": "1/2"
+          }
+        }
+      },
+      "layer": "V2",
+      "name": "s2_00002_w7",
+      "non_boundary_certificate": {
+        "boundary_remainder_mod_B_old": {
+          "formula": "-1/2*(((r1_00001_w2*x)*(x*x))*(x*x)) + 1/2*(((x*x)*r1_00001_w2)*((x*x)*x))",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "3": "-1/2",
+            "6": "1/2"
+          }
+        },
+        "boundary_remainder_nonzero": true,
+        "certificate_type": "rref_remainder",
+        "not_in_B_old": true
+      },
+      "not_in_B_old": true,
+      "weight": 7
+    },
+    {
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_certificate": {
+        "d1_z_normal_form": "0",
+        "is_cycle": true
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "differential_coordinates": [
+        -1,
+        "1/2",
+        "-1/2",
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "differential_formula": "-((((((x*x)*x)*x)*x)*x)*r1_00001_w2) + 1/2*(((((x*x)*(x*x))*x)*x)*r1_00001_w2) - 1/2*(((((x*x)*x)*x)*r1_00001_w2)*(x*x)) + (((((x*x)*x)*x)*x)*(r1_00001_w2*x))",
+      "differential_raw_lift": "-((((((x*x)*x)*x)*x)*x)*r1_00001_w2) + 1/2*(((((x*x)*(x*x))*x)*x)*r1_00001_w2) - 1/2*(((((x*x)*x)*x)*r1_00001_w2)*(x*x)) + (((((x*x)*x)*x)*x)*(r1_00001_w2*x))",
+      "differential_sparse_coordinates": {
+        "0": -1,
+        "1": "1/2",
+        "2": "-1/2",
+        "3": 1
+      },
+      "global_index": 3,
+      "independence_certificate": {
+        "independent_mod_B_old_plus_previous_reps": true,
+        "selection_remainder_mod_B_old_plus_accepted_reps": {
+          "formula": "1/4*((((x*x)*x)*((x*x)*x))*r1_00001_w2) - 1/4*((((x*x)*x)*(r1_00001_w2*x))*(x*x))",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "5": "1/4",
+            "6": "-1/4"
+          }
+        }
+      },
+      "layer": "V2",
+      "name": "s2_00003_w8",
+      "non_boundary_certificate": {
+        "boundary_remainder_mod_B_old": {
+          "formula": "1/4*((((x*x)*x)*((x*x)*x))*r1_00001_w2) - 1/4*((((x*x)*x)*(r1_00001_w2*x))*(x*x))",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "5": "1/4",
+            "6": "-1/4"
+          }
+        },
+        "boundary_remainder_nonzero": true,
+        "certificate_type": "rref_remainder",
+        "not_in_B_old": true
+      },
+      "not_in_B_old": true,
+      "weight": 8
+    },
+    {
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_certificate": {
+        "d1_z_normal_form": "0",
+        "is_cycle": true
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "differential_coordinates": [
+        2,
+        0,
+        0,
+        0,
+        -1,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "differential_formula": "2*((((((((x*x)*x)*x)*x)*x)*x)*x)*r1_00001_w2) - (((((((x*x)*x)*x)*x)*x)*r1_00001_w2)*(x*x)) - 2*(((((((x*x)*x)*x)*x)*x)*x)*(r1_00001_w2*x)) + r1_00002_w10",
+      "differential_raw_lift": "2*((((((((x*x)*x)*x)*x)*x)*x)*x)*r1_00001_w2) - (((((((x*x)*x)*x)*x)*x)*r1_00001_w2)*(x*x)) - 2*(((((((x*x)*x)*x)*x)*x)*x)*(r1_00001_w2*x)) + r1_00002_w10",
+      "differential_sparse_coordinates": {
+        "0": 2,
+        "4": -1,
+        "5": -2,
+        "63": 1
+      },
+      "global_index": 4,
+      "independence_certificate": {
+        "independent_mod_B_old_plus_previous_reps": true,
+        "selection_remainder_mod_B_old_plus_accepted_reps": {
+          "formula": "-(((((r1_00001_w2*x)*x)*x)*x)*((x*x)*(x*x))) + r1_00002_w10",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "16": -1,
+            "63": 1
+          }
+        }
+      },
+      "layer": "V2",
+      "name": "s2_00004_w10",
+      "non_boundary_certificate": {
+        "boundary_remainder_mod_B_old": {
+          "formula": "-(((((r1_00001_w2*x)*x)*x)*x)*((x*x)*(x*x))) + r1_00002_w10",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "16": -1,
+            "63": 1
+          }
+        },
+        "boundary_remainder_nonzero": true,
+        "certificate_type": "rref_remainder",
+        "not_in_B_old": true
+      },
+      "not_in_B_old": true,
+      "weight": 10
+    },
+    {
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_certificate": {
+        "d1_z_normal_form": "0",
+        "is_cycle": true
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "differential_coordinates": [
+        1,
+        "1/12",
+        "-1/12",
+        0,
+        "1/4",
+        "-1/3",
+        0,
+        0,
+        "-1/3",
+        0,
+        0,
+        0,
+        "-11/12",
+        0,
+        "-2/3",
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "differential_formula": "((((((((x*x)*x)*x)*x)*x)*x)*x)*r1_00001_w2) + 1/12*(((((((x*x)*(x*x))*x)*x)*x)*x)*r1_00001_w2) - 1/12*(((((((x*x)*x)*(x*x))*x)*x)*x)*r1_00001_w2) + 1/4*(((((((x*x)*x)*x)*x)*x)*r1_00001_w2)*(x*x)) - 1/3*(((((((x*x)*x)*x)*x)*x)*x)*(r1_00001_w2*x)) - 1/3*((((((x*x)*(x*x))*x)*x)*x)*(r1_00001_w2*x)) - 11/12*((((((x*x)*x)*x)*x)*(x*x))*(r1_00001_w2*x)) - 2/3*((((((x*x)*x)*x)*x)*x)*((r1_00001_w2*x)*x)) + r1_00003_w10",
+      "differential_raw_lift": "((((((((x*x)*x)*x)*x)*x)*x)*x)*r1_00001_w2) + 1/12*(((((((x*x)*(x*x))*x)*x)*x)*x)*r1_00001_w2) - 1/12*(((((((x*x)*x)*(x*x))*x)*x)*x)*r1_00001_w2) + 1/4*(((((((x*x)*x)*x)*x)*x)*r1_00001_w2)*(x*x)) - 1/3*(((((((x*x)*x)*x)*x)*x)*x)*(r1_00001_w2*x)) - 1/3*((((((x*x)*(x*x))*x)*x)*x)*(r1_00001_w2*x)) - 11/12*((((((x*x)*x)*x)*x)*(x*x))*(r1_00001_w2*x)) - 2/3*((((((x*x)*x)*x)*x)*x)*((r1_00001_w2*x)*x)) + r1_00003_w10",
+      "differential_sparse_coordinates": {
+        "0": 1,
+        "1": "1/12",
+        "12": "-11/12",
+        "14": "-2/3",
+        "2": "-1/12",
+        "4": "1/4",
+        "5": "-1/3",
+        "64": 1,
+        "8": "-1/3"
+      },
+      "global_index": 5,
+      "independence_certificate": {
+        "independent_mod_B_old_plus_previous_reps": true,
+        "selection_remainder_mod_B_old_plus_accepted_reps": {
+          "formula": "-((((r1_00001_w2*x)*x)*x)*(((x*x)*x)*(x*x))) + r1_00003_w10",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "43": -1,
+            "64": 1
+          }
+        }
+      },
+      "layer": "V2",
+      "name": "s2_00005_w10",
+      "non_boundary_certificate": {
+        "boundary_remainder_mod_B_old": {
+          "formula": "-((((r1_00001_w2*x)*x)*x)*(((x*x)*x)*(x*x))) + r1_00003_w10",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "43": -1,
+            "64": 1
+          }
+        },
+        "boundary_remainder_nonzero": true,
+        "certificate_type": "rref_remainder",
+        "not_in_B_old": true
+      },
+      "not_in_B_old": true,
+      "weight": 10
+    }
+  ],
+  "cells": [
+    {
+      "degree": 0,
+      "layer": "V0",
+      "maps_to": "x_bar",
+      "name": "x",
+      "source": "computed presentation generator",
+      "weight": 1
+    },
+    {
+      "degree": 1,
+      "differential_coordinates": [
+        1
+      ],
+      "differential_formula": "(x*x)",
+      "differential_sparse_coordinates": {
+        "0": 1
+      },
+      "global_index": 1,
+      "independence_certificate": {
+        "independent_mod_prior_closure": true,
+        "prior_closure_rank": 0,
+        "remainder_mod_prior_closure": {
+          "formula": "(x*x)",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "0": 1
+          }
+        }
+      },
+      "kernel_certificate": {
+        "epsilon_image": "0",
+        "maps_to_kernel": true
+      },
+      "layer": "V1",
+      "minimality_certified": true,
+      "name": "r1_00001_w2",
+      "weight": 2
+    },
+    {
+      "degree": 1,
+      "differential_coordinates": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "differential_formula": "((((((x*x)*x)*x)*x)*x)*((x*x)*(x*x)))",
+      "differential_sparse_coordinates": {
+        "0": 1
+      },
+      "global_index": 2,
+      "independence_certificate": {
+        "independent_mod_prior_closure": true,
+        "prior_closure_rank": 15,
+        "remainder_mod_prior_closure": {
+          "formula": "((((((x*x)*x)*x)*x)*x)*((x*x)*(x*x)))",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "0": 1
+          }
+        }
+      },
+      "kernel_certificate": {
+        "epsilon_image": "0",
+        "maps_to_kernel": true
+      },
+      "layer": "V1",
+      "minimality_certified": true,
+      "name": "r1_00002_w10",
+      "weight": 10
+    },
+    {
+      "degree": 1,
+      "differential_coordinates": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "differential_formula": "(((((x*x)*x)*x)*x)*(((x*x)*x)*(x*x)))",
+      "differential_sparse_coordinates": {
+        "8": 1
+      },
+      "global_index": 3,
+      "independence_certificate": {
+        "independent_mod_prior_closure": true,
+        "prior_closure_rank": 16,
+        "remainder_mod_prior_closure": {
+          "formula": "(((((x*x)*x)*x)*x)*(((x*x)*x)*(x*x)))",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "8": 1
+          }
+        }
+      },
+      "kernel_certificate": {
+        "epsilon_image": "0",
+        "maps_to_kernel": true
+      },
+      "layer": "V1",
+      "minimality_certified": true,
+      "name": "r1_00003_w10",
+      "weight": 10
+    },
+    {
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_certificate": {
+        "d1_z_normal_form": "0",
+        "is_cycle": true
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "differential_coordinates": [
+        -1,
+        1
+      ],
+      "differential_formula": "-((r1_00001_w2*x)*x) + ((x*x)*r1_00001_w2)",
+      "differential_raw_lift": "-((r1_00001_w2*x)*x) + ((x*x)*r1_00001_w2)",
+      "differential_sparse_coordinates": {
+        "0": -1,
+        "1": 1
+      },
+      "global_index": 1,
+      "independence_certificate": {
+        "independent_mod_B_old_plus_previous_reps": true,
+        "selection_remainder_mod_B_old_plus_accepted_reps": {
+          "formula": "-((r1_00001_w2*x)*x) + ((x*x)*r1_00001_w2)",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "0": -1,
+            "1": 1
+          }
+        }
+      },
+      "layer": "V2",
+      "name": "s2_00001_w4",
+      "non_boundary_certificate": {
+        "boundary_remainder_mod_B_old": {
+          "formula": "-((r1_00001_w2*x)*x) + ((x*x)*r1_00001_w2)",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "0": -1,
+            "1": 1
+          }
+        },
+        "boundary_remainder_nonzero": true,
+        "certificate_type": "rref_remainder",
+        "not_in_B_old": true
+      },
+      "not_in_B_old": true,
+      "weight": 4
+    },
+    {
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_certificate": {
+        "d1_z_normal_form": "0",
+        "is_cycle": true
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "differential_coordinates": [
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "differential_formula": "-(((((x*x)*x)*x)*x)*r1_00001_w2) + ((((x*x)*x)*x)*(r1_00001_w2*x))",
+      "differential_raw_lift": "-(((((x*x)*x)*x)*x)*r1_00001_w2) + ((((x*x)*x)*x)*(r1_00001_w2*x))",
+      "differential_sparse_coordinates": {
+        "0": -1,
+        "2": 1
+      },
+      "global_index": 2,
+      "independence_certificate": {
+        "independent_mod_B_old_plus_previous_reps": true,
+        "selection_remainder_mod_B_old_plus_accepted_reps": {
+          "formula": "-1/2*(((r1_00001_w2*x)*(x*x))*(x*x)) + 1/2*(((x*x)*r1_00001_w2)*((x*x)*x))",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "3": "-1/2",
+            "6": "1/2"
+          }
+        }
+      },
+      "layer": "V2",
+      "name": "s2_00002_w7",
+      "non_boundary_certificate": {
+        "boundary_remainder_mod_B_old": {
+          "formula": "-1/2*(((r1_00001_w2*x)*(x*x))*(x*x)) + 1/2*(((x*x)*r1_00001_w2)*((x*x)*x))",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "3": "-1/2",
+            "6": "1/2"
+          }
+        },
+        "boundary_remainder_nonzero": true,
+        "certificate_type": "rref_remainder",
+        "not_in_B_old": true
+      },
+      "not_in_B_old": true,
+      "weight": 7
+    },
+    {
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_certificate": {
+        "d1_z_normal_form": "0",
+        "is_cycle": true
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "differential_coordinates": [
+        -1,
+        "1/2",
+        "-1/2",
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "differential_formula": "-((((((x*x)*x)*x)*x)*x)*r1_00001_w2) + 1/2*(((((x*x)*(x*x))*x)*x)*r1_00001_w2) - 1/2*(((((x*x)*x)*x)*r1_00001_w2)*(x*x)) + (((((x*x)*x)*x)*x)*(r1_00001_w2*x))",
+      "differential_raw_lift": "-((((((x*x)*x)*x)*x)*x)*r1_00001_w2) + 1/2*(((((x*x)*(x*x))*x)*x)*r1_00001_w2) - 1/2*(((((x*x)*x)*x)*r1_00001_w2)*(x*x)) + (((((x*x)*x)*x)*x)*(r1_00001_w2*x))",
+      "differential_sparse_coordinates": {
+        "0": -1,
+        "1": "1/2",
+        "2": "-1/2",
+        "3": 1
+      },
+      "global_index": 3,
+      "independence_certificate": {
+        "independent_mod_B_old_plus_previous_reps": true,
+        "selection_remainder_mod_B_old_plus_accepted_reps": {
+          "formula": "1/4*((((x*x)*x)*((x*x)*x))*r1_00001_w2) - 1/4*((((x*x)*x)*(r1_00001_w2*x))*(x*x))",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "5": "1/4",
+            "6": "-1/4"
+          }
+        }
+      },
+      "layer": "V2",
+      "name": "s2_00003_w8",
+      "non_boundary_certificate": {
+        "boundary_remainder_mod_B_old": {
+          "formula": "1/4*((((x*x)*x)*((x*x)*x))*r1_00001_w2) - 1/4*((((x*x)*x)*(r1_00001_w2*x))*(x*x))",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "5": "1/4",
+            "6": "-1/4"
+          }
+        },
+        "boundary_remainder_nonzero": true,
+        "certificate_type": "rref_remainder",
+        "not_in_B_old": true
+      },
+      "not_in_B_old": true,
+      "weight": 8
+    },
+    {
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_certificate": {
+        "d1_z_normal_form": "0",
+        "is_cycle": true
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "differential_coordinates": [
+        2,
+        0,
+        0,
+        0,
+        -1,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "differential_formula": "2*((((((((x*x)*x)*x)*x)*x)*x)*x)*r1_00001_w2) - (((((((x*x)*x)*x)*x)*x)*r1_00001_w2)*(x*x)) - 2*(((((((x*x)*x)*x)*x)*x)*x)*(r1_00001_w2*x)) + r1_00002_w10",
+      "differential_raw_lift": "2*((((((((x*x)*x)*x)*x)*x)*x)*x)*r1_00001_w2) - (((((((x*x)*x)*x)*x)*x)*r1_00001_w2)*(x*x)) - 2*(((((((x*x)*x)*x)*x)*x)*x)*(r1_00001_w2*x)) + r1_00002_w10",
+      "differential_sparse_coordinates": {
+        "0": 2,
+        "4": -1,
+        "5": -2,
+        "63": 1
+      },
+      "global_index": 4,
+      "independence_certificate": {
+        "independent_mod_B_old_plus_previous_reps": true,
+        "selection_remainder_mod_B_old_plus_accepted_reps": {
+          "formula": "-(((((r1_00001_w2*x)*x)*x)*x)*((x*x)*(x*x))) + r1_00002_w10",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "16": -1,
+            "63": 1
+          }
+        }
+      },
+      "layer": "V2",
+      "name": "s2_00004_w10",
+      "non_boundary_certificate": {
+        "boundary_remainder_mod_B_old": {
+          "formula": "-(((((r1_00001_w2*x)*x)*x)*x)*((x*x)*(x*x))) + r1_00002_w10",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "16": -1,
+            "63": 1
+          }
+        },
+        "boundary_remainder_nonzero": true,
+        "certificate_type": "rref_remainder",
+        "not_in_B_old": true
+      },
+      "not_in_B_old": true,
+      "weight": 10
+    },
+    {
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_certificate": {
+        "d1_z_normal_form": "0",
+        "is_cycle": true
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "differential_coordinates": [
+        1,
+        "1/12",
+        "-1/12",
+        0,
+        "1/4",
+        "-1/3",
+        0,
+        0,
+        "-1/3",
+        0,
+        0,
+        0,
+        "-11/12",
+        0,
+        "-2/3",
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "differential_formula": "((((((((x*x)*x)*x)*x)*x)*x)*x)*r1_00001_w2) + 1/12*(((((((x*x)*(x*x))*x)*x)*x)*x)*r1_00001_w2) - 1/12*(((((((x*x)*x)*(x*x))*x)*x)*x)*r1_00001_w2) + 1/4*(((((((x*x)*x)*x)*x)*x)*r1_00001_w2)*(x*x)) - 1/3*(((((((x*x)*x)*x)*x)*x)*x)*(r1_00001_w2*x)) - 1/3*((((((x*x)*(x*x))*x)*x)*x)*(r1_00001_w2*x)) - 11/12*((((((x*x)*x)*x)*x)*(x*x))*(r1_00001_w2*x)) - 2/3*((((((x*x)*x)*x)*x)*x)*((r1_00001_w2*x)*x)) + r1_00003_w10",
+      "differential_raw_lift": "((((((((x*x)*x)*x)*x)*x)*x)*x)*r1_00001_w2) + 1/12*(((((((x*x)*(x*x))*x)*x)*x)*x)*r1_00001_w2) - 1/12*(((((((x*x)*x)*(x*x))*x)*x)*x)*r1_00001_w2) + 1/4*(((((((x*x)*x)*x)*x)*x)*r1_00001_w2)*(x*x)) - 1/3*(((((((x*x)*x)*x)*x)*x)*x)*(r1_00001_w2*x)) - 1/3*((((((x*x)*(x*x))*x)*x)*x)*(r1_00001_w2*x)) - 11/12*((((((x*x)*x)*x)*x)*(x*x))*(r1_00001_w2*x)) - 2/3*((((((x*x)*x)*x)*x)*x)*((r1_00001_w2*x)*x)) + r1_00003_w10",
+      "differential_sparse_coordinates": {
+        "0": 1,
+        "1": "1/12",
+        "12": "-11/12",
+        "14": "-2/3",
+        "2": "-1/12",
+        "4": "1/4",
+        "5": "-1/3",
+        "64": 1,
+        "8": "-1/3"
+      },
+      "global_index": 5,
+      "independence_certificate": {
+        "independent_mod_B_old_plus_previous_reps": true,
+        "selection_remainder_mod_B_old_plus_accepted_reps": {
+          "formula": "-((((r1_00001_w2*x)*x)*x)*(((x*x)*x)*(x*x))) + r1_00003_w10",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "43": -1,
+            "64": 1
+          }
+        }
+      },
+      "layer": "V2",
+      "name": "s2_00005_w10",
+      "non_boundary_certificate": {
+        "boundary_remainder_mod_B_old": {
+          "formula": "-((((r1_00001_w2*x)*x)*x)*(((x*x)*x)*(x*x))) + r1_00003_w10",
+          "nonzero": true,
+          "sparse_coordinates": {
+            "43": -1,
+            "64": 1
+          }
+        },
+        "boundary_remainder_nonzero": true,
+        "certificate_type": "rref_remainder",
+        "not_in_B_old": true
+      },
+      "not_in_B_old": true,
+      "weight": 10
+    }
+  ],
+  "experiment_id": "EXP-100-square-zero-nonunital-cofibrant-weight10",
+  "max_weight_requested": 10
+}

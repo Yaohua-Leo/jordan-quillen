@@ -1,0 +1,17 @@
+2026-06-01T06:56:04 quotient dimensions: C0=6 C1=6 C2_old=0
+2026-06-01T06:56:04 matrix_workers=4
+2026-06-01T06:56:13 built d1 matrix rows=6 nnz=6 seconds=9.100
+2026-06-01T06:56:13 built d2_old matrix rows=0 nnz=0 seconds=0.000
+2026-06-01T06:56:13 d1 modular_sparse_v2 mod 1000003: conversion complete processed_rows=6 input_nnz=6 elapsed_seconds=0.000
+2026-06-01T06:56:13 d1 modular_sparse_v2 mod 1000003: elimination complete processed_rows=6 current_rank=6 pivot_count=6 reductions=0 max_live_row_nnz=1 elapsed_seconds=0.000
+2026-06-01T06:56:13 d1 modular rank mod 1000003: 6 backend=modular_sparse_v2
+2026-06-01T06:56:13 certified rank d1=6 by modular target-rank lower bound
+2026-06-01T06:56:13 d1 rank seconds=0.001
+2026-06-01T06:56:13 d2_old modular_sparse_v2 mod 1000003: conversion complete processed_rows=0 input_nnz=0 elapsed_seconds=0.000
+2026-06-01T06:56:13 d2_old modular_sparse_v2 mod 1000003: elimination complete processed_rows=0 current_rank=0 pivot_count=0 reductions=0 max_live_row_nnz=0 elapsed_seconds=0.000
+2026-06-01T06:56:13 d2_old modular rank mod 1000003: 0 backend=modular_sparse_v2
+2026-06-01T06:56:13 certified rank d2_old>=0 by modular lower bound
+2026-06-01T06:56:13 d2_old rank seconds=0.000
+2026-06-01T06:56:13 chain condition seconds=0.000
+2026-06-01T06:56:13 rank precheck: dim_Z1=0 dim_B_old=0 dim_H1_old=0 chain_condition=True
+2026-06-01T06:56:13 used zero-H1 rank fast path; no cell representatives needed

@@ -1,0 +1,13 @@
+{
+  "basis": [
+    "((x*x)*(x*x))"
+  ],
+  "degree": 0,
+  "dimension": 1,
+  "free_columns": [
+    1
+  ],
+  "jordan_relation_rank": 1,
+  "raw_term_count": 2,
+  "weight": 4
+}

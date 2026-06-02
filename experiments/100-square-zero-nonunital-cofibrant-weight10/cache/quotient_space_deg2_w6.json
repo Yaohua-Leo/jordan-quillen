@@ -1,0 +1,19 @@
+{
+  "basis": [
+    "(((r1_00001_w2*x)*x)*r1_00001_w2)",
+    "(((x*x)*r1_00001_w2)*r1_00001_w2)",
+    "((r1_00001_w2*r1_00001_w2)*(x*x))",
+    "((r1_00001_w2*x)*(r1_00001_w2*x))"
+  ],
+  "degree": 2,
+  "dimension": 4,
+  "free_columns": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "jordan_relation_rank": 2,
+  "raw_term_count": 6,
+  "weight": 6
+}

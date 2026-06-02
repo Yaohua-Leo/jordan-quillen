@@ -1,0 +1,38 @@
+EXP013 strict attachability and low-to-high killing audit
+started_at: 2026-06-03T04:28:56
+mode: validation
+max_weight: 10
+attach_policy: strict-prefix
+reference_v2_cells: experiments/011-v2-cells-no-Q/data/v2_cells_W10.json
+reference_by_weight: experiments/011-v2-cells-no-Q/data/by_weight_W10.json
+candidate_cells_loaded: 16
+base_model: generated terms: 281663 raw terms across 26 homogeneous spaces
+base_model: generated relation rows: 176699 rows
+base_model: built quotient space degree=0 weight=1 dim=2 raw=2
+base_model: built quotient space degree=0 weight=2 dim=3 raw=3
+base_model: built quotient space degree=0 weight=3 dim=6 raw=6
+base_model: built quotient space degree=0 weight=4 dim=10 raw=18
+base_model: built quotient space degree=0 weight=5 dim=24 raw=54
+base_model: built quotient space degree=0 weight=6 dim=72 raw=183
+base_model: built quotient space degree=0 weight=7 dim=220 raw=636
+base_model: built quotient space degree=0 weight=8 dim=762 raw=2316
+base_model: built quotient space degree=0 weight=9 dim=2688 raw=8610
+base_model: built quotient space degree=0 weight=10 dim=9884 raw=32763
+base_model: built quotient space degree=1 weight=2 dim=3 raw=3
+base_model: built quotient space degree=1 weight=3 dim=6 raw=6
+base_model: built quotient space degree=1 weight=4 dim=21 raw=21
+base_model: built quotient space degree=1 weight=5 dim=48 raw=78
+base_model: built quotient space degree=1 weight=6 dim=159 raw=309
+base_model: built quotient space degree=1 weight=7 dim=552 raw=1248
+base_model: built quotient space degree=1 weight=8 dim=2064 raw=5142
+base_model: built quotient space degree=1 weight=9 dim=7980 raw=21426
+base_model: built quotient space degree=1 weight=10 dim=31719 raw=90147
+base_model: built quotient space degree=2 weight=4 dim=6 raw=6
+base_model: built quotient space degree=2 weight=5 dim=30 raw=30
+base_model: built quotient space degree=2 weight=6 dim=111 raw=162
+base_model: built quotient space degree=2 weight=7 dim=444 raw=810
+base_model: built quotient space degree=2 weight=8 dim=1926 raw=4020
+base_model: built quotient space degree=2 weight=9 dim=8454 raw=19542
+base_model: built quotient space degree=2 weight=10 dim=37770 raw=94122
+runtime_seconds: 9.73
+passed: True

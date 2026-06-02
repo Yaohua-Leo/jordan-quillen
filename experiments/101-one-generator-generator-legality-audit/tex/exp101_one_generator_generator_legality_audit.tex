@@ -1,0 +1,79 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{url}
+\begin{document}
+\section*{Experiment 101: Generator Legality Audit}
+This experiment audits EXP100 generator candidates through a bounded weight range. It does not apply $Q$, does not construct $V_3,V_4,\ldots$, and makes no homology killing claim.
+\paragraph{Reference artifacts.}
+\begin{description}
+\item[results] \path|experiments/100-square-zero-nonunital-cofibrant-weight10/results.json|
+\item[cells] \path|experiments/100-square-zero-nonunital-cofibrant-weight10/data/cells_W10.json|
+\end{description}
+\paragraph{Summary.}
+V1 candidates: 3; legal through W: 3.
+V2 candidates: 5; strictly attachable through W: 0.
+\section*{V1 Relation-Generator Audit}
+\begin{center}
+\begin{tabular}{rll}
+\toprule weight & cell & status \\
+\midrule
+2 & r1\_00001\_w2 & legal through W \\
+10 & r1\_00002\_w10 & legal through W \\
+10 & r1\_00003\_w10 & legal through W \\
+\bottomrule
+\end{tabular}
+\end{center}
+\section*{V2 Strict Attachability Audit}
+\begin{center}
+\begin{tabular}{rlll}
+\toprule weight & cell & status & first defect \\
+\midrule
+4 & s2\_00001\_w4 & obstructed & W=6, m=(x*x) \\
+7 & s2\_00002\_w7 & obstructed & W=8, m=x \\
+8 & s2\_00003\_w8 & obstructed & W=9, m=x \\
+10 & s2\_00004\_w10 & obstructed & W=11, m=x \\
+10 & s2\_00005\_w10 & obstructed & W=11, m=x \\
+\bottomrule
+\end{tabular}
+\end{center}
+\section*{Chain Condition}
+\begin{center}
+\begin{tabular}{rrrrc}
+\toprule weight & $\dim C_0$ & $\dim C_1$ & $\dim C_2$ & $d_2d_1=0$ \\
+\midrule
+1 & 1 & 0 & 0 & True \\
+2 & 1 & 1 & 0 & True \\
+3 & 1 & 1 & 0 & True \\
+4 & 1 & 2 & 1 & True \\
+5 & 1 & 2 & 2 & True \\
+6 & 2 & 4 & 4 & True \\
+7 & 2 & 7 & 7 & True \\
+8 & 5 & 14 & 17 & True \\
+9 & 8 & 29 & 37 & True \\
+10 & 17 & 65 & 90 & True \\
+11 & 32 & 139 & 212 & True \\
+12 & 71 & 311 & 523 & True \\
+\bottomrule
+\end{tabular}
+\end{center}
+\section*{Checks}
+\begin{verbatim}
+{
+  "all_declared_generators_d_squared_zero": true,
+  "all_v1_generators_legal_through_bound": true,
+  "all_v2_generator_level_differentials_are_cycles": true,
+  "applies_Q_is_false": true,
+  "chain_condition_checks_passed": true,
+  "constructs_V3_plus_is_false": true,
+  "does_not_make_homology_killing_claims": true,
+  "exact_rational_arithmetic": true,
+  "reference_exp100_passed": true,
+  "report_language_has_no_forbidden_global_phrasing": true,
+  "v2_strict_attachability_audit_completed": true
+}
+\end{verbatim}
+\section*{Interpretation Boundary}
+A V2 obstruction means the chosen EXP100 representative is not accepted as a strict dg attaching differential in this bounded backend and audit range. It does not rule out an alternative representative, a corrected lift, or behavior outside the tested bound.
+\end{document}

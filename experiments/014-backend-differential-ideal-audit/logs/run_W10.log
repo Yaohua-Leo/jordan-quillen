@@ -1,0 +1,216 @@
+EXP014 backend differential and multiplicative-ideal audit
+started_at: 2026-06-03T04:53:06
+mode: validation
+max_weight: 10
+max_degree: 2
+workers: 6
+max_memory_gb: 20.0
+multiplier_degrees: 0,1,2
+model: generated terms: 281663 raw terms across 26 homogeneous spaces
+model: generated relation rows: 176699 rows
+model: built quotient space degree=0 weight=1 dim=2 raw=2
+model: built quotient space degree=0 weight=2 dim=3 raw=3
+model: built quotient space degree=0 weight=3 dim=6 raw=6
+model: built quotient space degree=0 weight=4 dim=10 raw=18
+model: built quotient space degree=0 weight=5 dim=24 raw=54
+model: built quotient space degree=0 weight=6 dim=72 raw=183
+model: built quotient space degree=0 weight=7 dim=220 raw=636
+model: built quotient space degree=0 weight=8 dim=762 raw=2316
+model: built quotient space degree=0 weight=9 dim=2688 raw=8610
+model: built quotient space degree=0 weight=10 dim=9884 raw=32763
+model: built quotient space degree=1 weight=2 dim=3 raw=3
+model: built quotient space degree=1 weight=3 dim=6 raw=6
+model: built quotient space degree=1 weight=4 dim=21 raw=21
+model: built quotient space degree=1 weight=5 dim=48 raw=78
+model: built quotient space degree=1 weight=6 dim=159 raw=309
+model: built quotient space degree=1 weight=7 dim=552 raw=1248
+model: built quotient space degree=1 weight=8 dim=2064 raw=5142
+model: built quotient space degree=1 weight=9 dim=7980 raw=21426
+model: built quotient space degree=1 weight=10 dim=31719 raw=90147
+model: built quotient space degree=2 weight=4 dim=6 raw=6
+model: built quotient space degree=2 weight=5 dim=30 raw=30
+model: built quotient space degree=2 weight=6 dim=111 raw=162
+model: built quotient space degree=2 weight=7 dim=444 raw=810
+model: built quotient space degree=2 weight=8 dim=1926 raw=4020
+model: built quotient space degree=2 weight=9 dim=8454 raw=19542
+model: built quotient space degree=2 weight=10 dim=37770 raw=94122
+relation_rows_to_audit: 176699
+audit_progress checked=1000 relation_failures=0 differential_failures=0 multiplication_failures=1000
+audit_progress checked=2000 relation_failures=0 differential_failures=0 multiplication_failures=2000
+audit_progress checked=3000 relation_failures=0 differential_failures=0 multiplication_failures=3000
+audit_progress checked=4000 relation_failures=0 differential_failures=0 multiplication_failures=4000
+audit_progress checked=5000 relation_failures=0 differential_failures=0 multiplication_failures=5000
+audit_progress checked=6000 relation_failures=0 differential_failures=0 multiplication_failures=6000
+audit_progress checked=7000 relation_failures=0 differential_failures=0 multiplication_failures=7000
+audit_progress checked=8000 relation_failures=0 differential_failures=0 multiplication_failures=8000
+audit_progress checked=9000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=10000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=11000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=12000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=13000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=14000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=15000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=16000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=17000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=18000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=19000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=20000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=21000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=22000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=23000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=24000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=25000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=26000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=27000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=28000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=29000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=30000 relation_failures=0 differential_failures=0 multiplication_failures=8041
+audit_progress checked=31000 relation_failures=0 differential_failures=0 multiplication_failures=8121
+audit_progress checked=32000 relation_failures=0 differential_failures=0 multiplication_failures=9121
+audit_progress checked=33000 relation_failures=0 differential_failures=0 multiplication_failures=10121
+audit_progress checked=34000 relation_failures=0 differential_failures=0 multiplication_failures=11121
+audit_progress checked=35000 relation_failures=0 differential_failures=0 multiplication_failures=12121
+audit_progress checked=36000 relation_failures=0 differential_failures=0 multiplication_failures=13121
+audit_progress checked=37000 relation_failures=0 differential_failures=0 multiplication_failures=14121
+audit_progress checked=38000 relation_failures=0 differential_failures=0 multiplication_failures=15121
+audit_progress checked=39000 relation_failures=0 differential_failures=0 multiplication_failures=16121
+audit_progress checked=40000 relation_failures=0 differential_failures=0 multiplication_failures=17121
+audit_progress checked=41000 relation_failures=0 differential_failures=0 multiplication_failures=18121
+audit_progress checked=42000 relation_failures=0 differential_failures=0 multiplication_failures=19121
+audit_progress checked=43000 relation_failures=0 differential_failures=0 multiplication_failures=20121
+audit_progress checked=44000 relation_failures=0 differential_failures=0 multiplication_failures=21121
+audit_progress checked=45000 relation_failures=0 differential_failures=0 multiplication_failures=22121
+audit_progress checked=46000 relation_failures=0 differential_failures=0 multiplication_failures=23121
+audit_progress checked=47000 relation_failures=0 differential_failures=0 multiplication_failures=24121
+audit_progress checked=48000 relation_failures=0 differential_failures=0 multiplication_failures=25121
+audit_progress checked=49000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=50000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=51000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=52000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=53000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=54000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=55000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=56000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=57000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=58000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=59000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=60000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=61000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=62000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=63000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=64000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=65000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=66000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=67000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=68000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=69000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=70000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=71000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=72000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=73000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=74000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=75000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=76000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=77000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=78000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=79000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=80000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=81000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=82000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=83000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=84000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=85000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=86000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=87000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=88000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=89000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=90000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=91000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=92000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=93000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=94000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=95000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=96000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=97000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=98000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=99000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=100000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=101000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=102000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=103000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=104000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=105000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=106000 relation_failures=0 differential_failures=0 multiplication_failures=25441
+audit_progress checked=107000 relation_failures=0 differential_failures=162 multiplication_failures=25693
+audit_progress checked=108000 relation_failures=0 differential_failures=471 multiplication_failures=26693
+audit_progress checked=109000 relation_failures=0 differential_failures=1262 multiplication_failures=27693
+audit_progress checked=110000 relation_failures=0 differential_failures=1521 multiplication_failures=28693
+audit_progress checked=111000 relation_failures=0 differential_failures=1533 multiplication_failures=29693
+audit_progress checked=112000 relation_failures=0 differential_failures=2073 multiplication_failures=30693
+audit_progress checked=113000 relation_failures=0 differential_failures=2073 multiplication_failures=31693
+audit_progress checked=114000 relation_failures=0 differential_failures=2106 multiplication_failures=32693
+audit_progress checked=115000 relation_failures=0 differential_failures=2739 multiplication_failures=33693
+audit_progress checked=116000 relation_failures=0 differential_failures=3288 multiplication_failures=34693
+audit_progress checked=117000 relation_failures=0 differential_failures=4198 multiplication_failures=35693
+audit_progress checked=118000 relation_failures=0 differential_failures=4352 multiplication_failures=36693
+audit_progress checked=119000 relation_failures=0 differential_failures=5280 multiplication_failures=37693
+audit_progress checked=120000 relation_failures=0 differential_failures=6280 multiplication_failures=38693
+audit_progress checked=121000 relation_failures=0 differential_failures=6627 multiplication_failures=39040
+audit_progress checked=122000 relation_failures=0 differential_failures=6627 multiplication_failures=39040
+audit_progress checked=123000 relation_failures=0 differential_failures=6627 multiplication_failures=39040
+audit_progress checked=124000 relation_failures=0 differential_failures=6627 multiplication_failures=39040
+audit_progress checked=125000 relation_failures=0 differential_failures=6627 multiplication_failures=39040
+audit_progress checked=126000 relation_failures=0 differential_failures=6627 multiplication_failures=39040
+audit_progress checked=127000 relation_failures=0 differential_failures=6627 multiplication_failures=39040
+audit_progress checked=128000 relation_failures=0 differential_failures=6627 multiplication_failures=39040
+audit_progress checked=129000 relation_failures=0 differential_failures=6667 multiplication_failures=39040
+audit_progress checked=130000 relation_failures=0 differential_failures=6759 multiplication_failures=39040
+audit_progress checked=131000 relation_failures=0 differential_failures=7668 multiplication_failures=39040
+audit_progress checked=132000 relation_failures=0 differential_failures=8142 multiplication_failures=39040
+audit_progress checked=133000 relation_failures=0 differential_failures=8238 multiplication_failures=39040
+audit_progress checked=134000 relation_failures=0 differential_failures=8238 multiplication_failures=39040
+audit_progress checked=135000 relation_failures=0 differential_failures=8238 multiplication_failures=39040
+audit_progress checked=136000 relation_failures=0 differential_failures=8238 multiplication_failures=39040
+audit_progress checked=137000 relation_failures=0 differential_failures=8238 multiplication_failures=39040
+audit_progress checked=138000 relation_failures=0 differential_failures=8238 multiplication_failures=39040
+audit_progress checked=139000 relation_failures=0 differential_failures=8238 multiplication_failures=39040
+audit_progress checked=140000 relation_failures=0 differential_failures=8238 multiplication_failures=39040
+audit_progress checked=141000 relation_failures=0 differential_failures=8238 multiplication_failures=39040
+audit_progress checked=142000 relation_failures=0 differential_failures=8238 multiplication_failures=39040
+audit_progress checked=143000 relation_failures=0 differential_failures=8238 multiplication_failures=39040
+audit_progress checked=144000 relation_failures=0 differential_failures=8238 multiplication_failures=39040
+audit_progress checked=145000 relation_failures=0 differential_failures=8419 multiplication_failures=39040
+audit_progress checked=146000 relation_failures=0 differential_failures=9294 multiplication_failures=39040
+audit_progress checked=147000 relation_failures=0 differential_failures=9876 multiplication_failures=39040
+audit_progress checked=148000 relation_failures=0 differential_failures=10155 multiplication_failures=39040
+audit_progress checked=149000 relation_failures=0 differential_failures=10155 multiplication_failures=39040
+audit_progress checked=150000 relation_failures=0 differential_failures=10155 multiplication_failures=39040
+audit_progress checked=151000 relation_failures=0 differential_failures=10775 multiplication_failures=39040
+audit_progress checked=152000 relation_failures=0 differential_failures=11775 multiplication_failures=39040
+audit_progress checked=153000 relation_failures=0 differential_failures=12099 multiplication_failures=39040
+audit_progress checked=154000 relation_failures=0 differential_failures=12839 multiplication_failures=39040
+audit_progress checked=155000 relation_failures=0 differential_failures=13407 multiplication_failures=39040
+audit_progress checked=156000 relation_failures=0 differential_failures=14407 multiplication_failures=39040
+audit_progress checked=157000 relation_failures=0 differential_failures=15407 multiplication_failures=39040
+audit_progress checked=158000 relation_failures=0 differential_failures=16407 multiplication_failures=39040
+audit_progress checked=159000 relation_failures=0 differential_failures=16548 multiplication_failures=39040
+audit_progress checked=160000 relation_failures=0 differential_failures=16572 multiplication_failures=39040
+audit_progress checked=161000 relation_failures=0 differential_failures=16572 multiplication_failures=39040
+audit_progress checked=162000 relation_failures=0 differential_failures=16572 multiplication_failures=39040
+audit_progress checked=163000 relation_failures=0 differential_failures=16572 multiplication_failures=39040
+audit_progress checked=164000 relation_failures=0 differential_failures=17448 multiplication_failures=39040
+audit_progress checked=165000 relation_failures=0 differential_failures=18310 multiplication_failures=39040
+audit_progress checked=166000 relation_failures=0 differential_failures=19148 multiplication_failures=39040
+audit_progress checked=167000 relation_failures=0 differential_failures=20076 multiplication_failures=39040
+audit_progress checked=168000 relation_failures=0 differential_failures=20760 multiplication_failures=39040
+audit_progress checked=169000 relation_failures=0 differential_failures=21332 multiplication_failures=39040
+audit_progress checked=170000 relation_failures=0 differential_failures=22116 multiplication_failures=39040
+audit_progress checked=171000 relation_failures=0 differential_failures=23109 multiplication_failures=39040
+audit_progress checked=172000 relation_failures=0 differential_failures=23643 multiplication_failures=39040
+audit_progress checked=173000 relation_failures=0 differential_failures=24405 multiplication_failures=39040
+audit_progress checked=174000 relation_failures=0 differential_failures=25405 multiplication_failures=39040
+audit_progress checked=175000 relation_failures=0 differential_failures=26405 multiplication_failures=39040
+audit_progress checked=176000 relation_failures=0 differential_failures=27405 multiplication_failures=39040
+runtime_seconds: 1167.715
+passed: False
+failures: relation=0 differential=28104 multiplication=39040

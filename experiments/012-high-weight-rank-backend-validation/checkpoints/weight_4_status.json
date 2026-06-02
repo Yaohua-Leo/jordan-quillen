@@ -1,0 +1,593 @@
+{
+  "cells": [
+    {
+      "boundary_remainder_mod_B_old": {
+        "formula": "1/2*((r_xx*x)*y) - 3/2*((r_xx*y)*x) + ((r_xy*x)*x)",
+        "nonzero": true,
+        "sparse_coordinates": {
+          "1": "1/2",
+          "2": "-3/2",
+          "4": 1
+        }
+      },
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_z": "1/2*((r_xx*x)*y) - 3/2*((r_xx*y)*x) + ((r_xy*x)*x)",
+      "cycle_z_coordinates_in_C1_basis": [
+        0,
+        "1/2",
+        "-3/2",
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "cycle_z_raw_lift": "1/2*((r_xx*x)*y) - 3/2*((r_xx*y)*x) + ((r_xy*x)*x)",
+      "cycle_z_sparse_coordinates_in_C1_basis": {
+        "1": "1/2",
+        "2": "-3/2",
+        "4": 1
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "global_index": 1,
+      "independent_mod_B_old_plus_previous_reps": true,
+      "name": "s2_00001_w4",
+      "not_in_B_old": true,
+      "optional_dual_certificate": null,
+      "selection_remainder_mod_B_old_plus_accepted_reps": {
+        "formula": "1/2*((r_xx*x)*y) - 3/2*((r_xx*y)*x) + ((r_xy*x)*x)",
+        "nonzero": true,
+        "sparse_coordinates": {
+          "1": "1/2",
+          "2": "-3/2",
+          "4": 1
+        }
+      },
+      "weight": 4
+    },
+    {
+      "boundary_remainder_mod_B_old": {
+        "formula": "-((r_xx*y)*y) + 2*((r_xy*x)*y) - 2*((r_xy*y)*x) + ((r_yy*x)*x)",
+        "nonzero": true,
+        "sparse_coordinates": {
+          "3": -1,
+          "5": 2,
+          "6": -2,
+          "8": 1
+        }
+      },
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_z": "-((r_xx*y)*y) + 2*((r_xy*x)*y) - 2*((r_xy*y)*x) + ((r_yy*x)*x)",
+      "cycle_z_coordinates_in_C1_basis": [
+        0,
+        0,
+        0,
+        -1,
+        0,
+        2,
+        -2,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "cycle_z_raw_lift": "-((r_xx*y)*y) + 2*((r_xy*x)*y) - 2*((r_xy*y)*x) + ((r_yy*x)*x)",
+      "cycle_z_sparse_coordinates_in_C1_basis": {
+        "3": -1,
+        "5": 2,
+        "6": -2,
+        "8": 1
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "global_index": 2,
+      "independent_mod_B_old_plus_previous_reps": true,
+      "name": "s2_00002_w4",
+      "not_in_B_old": true,
+      "optional_dual_certificate": null,
+      "selection_remainder_mod_B_old_plus_accepted_reps": {
+        "formula": "-((r_xx*y)*y) + 2*((r_xy*x)*y) - 2*((r_xy*y)*x) + ((r_yy*x)*x)",
+        "nonzero": true,
+        "sparse_coordinates": {
+          "3": -1,
+          "5": 2,
+          "6": -2,
+          "8": 1
+        }
+      },
+      "weight": 4
+    },
+    {
+      "boundary_remainder_mod_B_old": {
+        "formula": "2*((r_xy*y)*y) - 3*((r_yy*x)*y) + ((r_yy*y)*x)",
+        "nonzero": true,
+        "sparse_coordinates": {
+          "10": 1,
+          "7": 2,
+          "9": -3
+        }
+      },
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_z": "2*((r_xy*y)*y) - 3*((r_yy*x)*y) + ((r_yy*y)*x)",
+      "cycle_z_coordinates_in_C1_basis": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        -3,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "cycle_z_raw_lift": "2*((r_xy*y)*y) - 3*((r_yy*x)*y) + ((r_yy*y)*x)",
+      "cycle_z_sparse_coordinates_in_C1_basis": {
+        "10": 1,
+        "7": 2,
+        "9": -3
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "global_index": 3,
+      "independent_mod_B_old_plus_previous_reps": true,
+      "name": "s2_00003_w4",
+      "not_in_B_old": true,
+      "optional_dual_certificate": null,
+      "selection_remainder_mod_B_old_plus_accepted_reps": {
+        "formula": "2*((r_xy*y)*y) - 3*((r_yy*x)*y) + ((r_yy*y)*x)",
+        "nonzero": true,
+        "sparse_coordinates": {
+          "10": 1,
+          "7": 2,
+          "9": -3
+        }
+      },
+      "weight": 4
+    },
+    {
+      "boundary_remainder_mod_B_old": {
+        "formula": "-((r_xx*x)*x) + ((x*x)*r_xx)",
+        "nonzero": true,
+        "sparse_coordinates": {
+          "0": -1,
+          "12": 1
+        }
+      },
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_z": "-((r_xx*x)*x) + ((x*x)*r_xx)",
+      "cycle_z_coordinates_in_C1_basis": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "cycle_z_raw_lift": "-((r_xx*x)*x) + ((x*x)*r_xx)",
+      "cycle_z_sparse_coordinates_in_C1_basis": {
+        "0": -1,
+        "12": 1
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "global_index": 4,
+      "independent_mod_B_old_plus_previous_reps": true,
+      "name": "s2_00004_w4",
+      "not_in_B_old": true,
+      "optional_dual_certificate": null,
+      "selection_remainder_mod_B_old_plus_accepted_reps": {
+        "formula": "-((r_xx*x)*x) + ((x*x)*r_xx)",
+        "nonzero": true,
+        "sparse_coordinates": {
+          "0": -1,
+          "12": 1
+        }
+      },
+      "weight": 4
+    },
+    {
+      "boundary_remainder_mod_B_old": {
+        "formula": "-((r_xx*y)*x) + ((x*y)*r_xx)",
+        "nonzero": true,
+        "sparse_coordinates": {
+          "15": 1,
+          "2": -1
+        }
+      },
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_z": "-((r_xx*y)*x) + ((x*x)*r_xy)",
+      "cycle_z_coordinates_in_C1_basis": [
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "cycle_z_raw_lift": "-((r_xx*y)*x) + ((x*x)*r_xy)",
+      "cycle_z_sparse_coordinates_in_C1_basis": {
+        "13": 1,
+        "2": -1
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "global_index": 5,
+      "independent_mod_B_old_plus_previous_reps": true,
+      "name": "s2_00005_w4",
+      "not_in_B_old": true,
+      "optional_dual_certificate": null,
+      "selection_remainder_mod_B_old_plus_accepted_reps": {
+        "formula": "-((r_xx*y)*x) + ((x*y)*r_xx)",
+        "nonzero": true,
+        "sparse_coordinates": {
+          "15": 1,
+          "2": -1
+        }
+      },
+      "weight": 4
+    },
+    {
+      "boundary_remainder_mod_B_old": {
+        "formula": "-1/2*((r_xx*y)*y) - ((r_xy*y)*x) + ((x*y)*r_xy) + 1/2*((y*y)*r_xx)",
+        "nonzero": true,
+        "sparse_coordinates": {
+          "16": 1,
+          "18": "1/2",
+          "3": "-1/2",
+          "6": -1
+        }
+      },
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_z": "-1/2*((r_xx*y)*y) - ((r_xy*y)*x) + 1/2*((x*x)*r_yy) + ((x*y)*r_xy)",
+      "cycle_z_coordinates_in_C1_basis": [
+        0,
+        0,
+        0,
+        "-1/2",
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        "1/2",
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "cycle_z_raw_lift": "-1/2*((r_xx*y)*y) - ((r_xy*y)*x) + 1/2*((x*x)*r_yy) + ((x*y)*r_xy)",
+      "cycle_z_sparse_coordinates_in_C1_basis": {
+        "14": "1/2",
+        "16": 1,
+        "3": "-1/2",
+        "6": -1
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "global_index": 6,
+      "independent_mod_B_old_plus_previous_reps": true,
+      "name": "s2_00006_w4",
+      "not_in_B_old": true,
+      "optional_dual_certificate": null,
+      "selection_remainder_mod_B_old_plus_accepted_reps": {
+        "formula": "-((r_xy*x)*y) - 1/2*((r_yy*x)*x) + ((x*y)*r_xy) + 1/2*((y*y)*r_xx)",
+        "nonzero": true,
+        "sparse_coordinates": {
+          "16": 1,
+          "18": "1/2",
+          "5": -1,
+          "8": "-1/2"
+        }
+      },
+      "weight": 4
+    },
+    {
+      "boundary_remainder_mod_B_old": {
+        "formula": "-((r_yy*x)*y) + ((y*y)*r_xy)",
+        "nonzero": true,
+        "sparse_coordinates": {
+          "19": 1,
+          "9": -1
+        }
+      },
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_z": "-((r_yy*x)*y) + ((x*y)*r_yy)",
+      "cycle_z_coordinates_in_C1_basis": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "cycle_z_raw_lift": "-((r_yy*x)*y) + ((x*y)*r_yy)",
+      "cycle_z_sparse_coordinates_in_C1_basis": {
+        "17": 1,
+        "9": -1
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "global_index": 7,
+      "independent_mod_B_old_plus_previous_reps": true,
+      "name": "s2_00007_w4",
+      "not_in_B_old": true,
+      "optional_dual_certificate": null,
+      "selection_remainder_mod_B_old_plus_accepted_reps": {
+        "formula": "-((r_yy*x)*y) + ((y*y)*r_xy)",
+        "nonzero": true,
+        "sparse_coordinates": {
+          "19": 1,
+          "9": -1
+        }
+      },
+      "weight": 4
+    },
+    {
+      "boundary_remainder_mod_B_old": {
+        "formula": "-((r_yy*y)*y) + ((y*y)*r_yy)",
+        "nonzero": true,
+        "sparse_coordinates": {
+          "11": -1,
+          "20": 1
+        }
+      },
+      "boundary_remainder_nonzero": true,
+      "certificate_type": "rref_remainder",
+      "cycle_z": "-((r_yy*y)*y) + ((y*y)*r_yy)",
+      "cycle_z_coordinates_in_C1_basis": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "cycle_z_raw_lift": "-((r_yy*y)*y) + ((y*y)*r_yy)",
+      "cycle_z_sparse_coordinates_in_C1_basis": {
+        "11": -1,
+        "20": 1
+      },
+      "d1_z_normal_form": "0",
+      "degree": 2,
+      "global_index": 8,
+      "independent_mod_B_old_plus_previous_reps": true,
+      "name": "s2_00008_w4",
+      "not_in_B_old": true,
+      "optional_dual_certificate": null,
+      "selection_remainder_mod_B_old_plus_accepted_reps": {
+        "formula": "-((r_yy*y)*y) + ((y*y)*r_yy)",
+        "nonzero": true,
+        "sparse_coordinates": {
+          "11": -1,
+          "20": 1
+        }
+      },
+      "weight": 4
+    }
+  ],
+  "checkpoint_schema_version": 1,
+  "experiment_id": "EXP-011-v2-cells-no-Q",
+  "record": {
+    "basis_data": {
+      "C0_basis": [
+        "(((x*y)*x)*x)",
+        "(((x*y)*y)*x)",
+        "(((y*y)*x)*x)",
+        "(((y*y)*y)*x)",
+        "((x*x)*(x*x))",
+        "((x*x)*(x*y))",
+        "((x*x)*(y*y))",
+        "((x*y)*(x*y))",
+        "((x*y)*(y*y))",
+        "((y*y)*(y*y))"
+      ],
+      "C1_basis": [
+        "((r_xx*x)*x)",
+        "((r_xx*x)*y)",
+        "((r_xx*y)*x)",
+        "((r_xx*y)*y)",
+        "((r_xy*x)*x)",
+        "((r_xy*x)*y)",
+        "((r_xy*y)*x)",
+        "((r_xy*y)*y)",
+        "((r_yy*x)*x)",
+        "((r_yy*x)*y)",
+        "((r_yy*y)*x)",
+        "((r_yy*y)*y)",
+        "((x*x)*r_xx)",
+        "((x*x)*r_xy)",
+        "((x*x)*r_yy)",
+        "((x*y)*r_xx)",
+        "((x*y)*r_xy)",
+        "((x*y)*r_yy)",
+        "((y*y)*r_xx)",
+        "((y*y)*r_xy)",
+        "((y*y)*r_yy)"
+      ],
+      "C2_old_basis": [
+        "(r_xx*r_xx)",
+        "(r_xx*r_xy)",
+        "(r_xx*r_yy)",
+        "(r_xy*r_xy)",
+        "(r_xy*r_yy)",
+        "(r_yy*r_yy)"
+      ]
+    },
+    "cache_paths": {
+      "B_old_rref_cache": "cache/B_old_rref_w4.json",
+      "H1_old_reps_cache": "cache/H1_old_reps_w4.json",
+      "Z1_basis_cache": "cache/Z1_basis_w4.json",
+      "d1_matrix_cache": "cache/d1_w4.json",
+      "d2_old_matrix_cache": "cache/d2_old_w4.json",
+      "quotient_space_cache": "cache/quotient_space_deg{p}_w4.json"
+    },
+    "checks": {
+      "all_cell_certificates_valid": true,
+      "all_cells_are_cycles": true,
+      "all_cells_have_nonzero_B_old_remainder": true,
+      "d2_old_matrix_times_d1_matrix_is_zero": true,
+      "dim_B_old_matches_rank_d2_old": true,
+      "dim_H1_old_matches_quotient_count": true,
+      "dim_Z1_matches_rank_nullity": true,
+      "formal_d_squared_zero_on_s_cells": true,
+      "representatives_independent_mod_B_old": true,
+      "runtime_within_threshold": true
+    },
+    "dim_B_old": 3,
+    "dim_C0": 10,
+    "dim_C1": 21,
+    "dim_C2_old": 6,
+    "dim_H1_old": 8,
+    "dim_Z1": 11,
+    "matrix_stats": {
+      "chain_condition_seconds": 0.001,
+      "d1_build_seconds": 11.927,
+      "d1_cols": 10,
+      "d1_nnz": 27,
+      "d1_rank_seconds": 0.001,
+      "d1_rows": 21,
+      "d2_old_build_seconds": 8.906,
+      "d2_old_cols": 21,
+      "d2_old_nnz": 6,
+      "d2_old_rank_seconds": 0.001,
+      "d2_old_rows": 6,
+      "matrix_workers": 4
+    },
+    "memory_notes": "max_memory_gb was recorded as a requested threshold; this no-new-dependency runner controls memory indirectly by raw-term and matrix thresholds.",
+    "number_of_new_s_cells": 8,
+    "rank_certificates": {
+      "d1": {
+        "backend": "modular_sparse_v2",
+        "method": "modular_full_target_rank",
+        "prime": 1000003,
+        "rank": 10,
+        "target_rank": 10
+      },
+      "d2_old": {
+        "method": "rational_sparse_echelon"
+      }
+    },
+    "rank_d1": 10,
+    "rank_d2_old": 3,
+    "raw_term_counts": {
+      "C0_raw_terms": 18,
+      "C1_raw_terms": 21,
+      "C2_old_raw_terms": 6
+    },
+    "runtime_seconds": 20.84,
+    "status": "completed",
+    "weight": 4
+  },
+  "status": "completed",
+  "weight": 4
+}

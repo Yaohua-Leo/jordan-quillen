@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\begin{document}
+\section*{Experiment 014: Backend Ideal Audit}
+This is a bounded backend audit only. It checks whether the `low\_weight\_jordan' ordinary relation quotient is stable under the signed derivation differential and under multiplication in the tested range. It does not apply $Q$ and does not construct $V_3,V_4,\ldots$. It makes no unbounded or theorem-level claim.
+\paragraph{Boundary.}
+The output is bounded computational evidence about the current backend convention. A failure means later EXP011 or EXP013 diagnostics should remain backend-relative until the quotient convention is repaired or separately justified.
+\paragraph{Summary.}
+Relation rows checked: 176699\\ Relation reduction failures: 0\\ Differential failures: 28104\\ Multiplication failures: 39040\\ Passed: False
+\section*{First Failures}
+\begin{verbatim}
+{
+  "first_differential_failure": {
+    "first_differential_defect": {
+      "defect_nonzero": true,
+      "defect_normal_form": "2*(((x*x)*(x*x))*r_xx) - 2*(((x*x)*r_xx)*(x*x))",
+      "defect_sparse_coordinates": {
+        "78": 2,
+        "87": -2
+      },
+      "raw_vector": "2*((((x*x)*x)*r_xx)*x) - 2*(((r_xx*x)*(x*x))*x) + (((x*x)*(x*x))*r_xx) - (((x*x)*r_xx)*(x*x))",
+      "target_degree": 1,
+      "target_weight": 6
+    },
+    "first_multiplication_defect": {
+      "defect_nonzero": true,
+      "defect_normal_form": "-2*((((r_xx*x)*x)*x)*r_xx) - ((((x*x)*x)*r_xx)*r_xx) + 3*(((r_xx*x)*(x*x))*r_xx)",
+      "defect_sparse_coordinates": {
+        "108": -1,
+        "180": 3,
+        "6": -2
+      },
+      "multiplier": "x",
+      "multiplier_degree": 0,
+      "multiplier_weight": 1,
+      "raw_vector": "2*((((r_xx*x)*r_xx)*x)*x) + ((((x*x)*r_xx)*r_xx)*x) - (((r_xx*r_xx)*(x*x))*x) - 2*(((r_xx*x)*(r_xx*x))*x)",
+      "target_degree": 2,
+      "target_weight": 7
+    },
+    "relation_index": 0,
+    "relation_reduction_defect": null,
+    "source_degree": 2,
+    "source_weight": 6
+  },
+  "first_multiplication_failure": {
+    "first_differential_defect": null,
+    "first_multiplication_defect": {
+      "defect_nonzero": true,
+      "defect_normal_form": "-3*((((x*x)*y)*x)*x) + 3*(((x*y)*x)*(x*x))",
+      "defect_sparse_coordinates": {
+        "0": -3,
+        "12": 3
+      },
+      "multiplier": "y",
+      "multiplier_degree": 0,
+      "multiplier_weight": 1,
+      "raw_vector": "3*((((x*x)*x)*x)*y) - 3*(((x*x)*(x*x))*y)",
+      "target_degree": 0,
+      "target_weight": 5
+    },
+    "relation_index": 0,
+    "relation_reduction_defect": null,
+    "source_degree": 0,
+    "source_weight": 4
+  },
+  "first_relation_reduction_failure": null
+}
+\end{verbatim}
+\section*{Checks}
+\begin{verbatim}
+{
+  "applies_Q_is_false": true,
+  "backend_relation_ideal_differential_stable": false,
+  "backend_relation_ideal_multiplication_stable": false,
+  "bounded_backend_audit_only": true,
+  "constructs_V3_plus_is_false": true,
+  "exact_rational_arithmetic": true,
+  "relation_rows_self_reduce": true
+}
+\end{verbatim}
+\end{document}
