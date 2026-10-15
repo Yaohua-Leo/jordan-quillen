@@ -1,6 +1,6 @@
 # Local Paper Index
 
-Generated for the local files in this directory on 2026-05-24.
+Generated for the local files in this directory on 2026-10-15.
 
 This index records file-management and extraction metadata only. It is not a
 substitute for `literature/bib/references.bib`, and it does not certify any
@@ -19,9 +19,12 @@ mathematical claim.
 - Caveat: some filenames contain accents, apostrophes, or spaces because they
   mirror downloaded source names. Keep future new filenames English and stable;
   do not rename existing raw files unless references are updated together.
-- Extra local file: `on_homology_of_jordan_algebras(1).pdf` is not part of
-  `paper_menu.md`; treat it as `extra; provenance-check` and do not cite it as
-  literature until its source is verified.
+- Extra local files `on_homology_of_jordan_algebras(1).pdf`,
+  `extra_dubois_violette_exceptional_quantum_geometry_and_particle_physics.pdf`,
+  and
+  `extra_carotenuto_dabrowski_dubois_violette_differential_calculus_on_jordan_algebras_and_jordan_modules.pdf`
+  are not part of `paper_menu.md`; treat them as `extra; provenance-check` and
+  do not cite them as literature until their sources are verified.
 - Content check: all numbered PDFs parse with `pdfinfo`; sampled title-page
   text matches the represented menu item. The local file and BibTeX for item
   `51` use the PDF title `Operadic Cobar Constructions...`.
@@ -109,3 +112,5 @@ mathematical claim.
 | 56 | `56_Springer_Jordan_Algebras_and_Algebraic_Groups.pdf` | Jordan-algebras; algebraic-groups; structure-background | text-layer | search-ok; verify-math-before-claim |
 | 57 | `57_springer_veldkamp_octonions_jordan_algebras_exceptional_groups.pdf` | octonions; Jordan-algebras; exceptional-groups | text-layer | search-ok; verify-math-before-claim |
 | extra | `on_homology_of_jordan_algebras(1).pdf` | extra; provenance-check | text-layer | do-not-cite-until-verified |
+| extra | `extra_dubois_violette_exceptional_quantum_geometry_and_particle_physics.pdf` | exceptional-Jordan; quantum-geometry; particle-physics | text-layer | search-ok; verify-math-before-claim |
+| extra | `extra_carotenuto_dabrowski_dubois_violette_differential_calculus_on_jordan_algebras_and_jordan_modules.pdf` | Jordan-algebras; differential-calculus; Jordan-modules | text-layer | search-ok; verify-math-before-claim |
