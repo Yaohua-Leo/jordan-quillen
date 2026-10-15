@@ -26,8 +26,9 @@ durable summaries in `literature/notes/` and cite stable metadata in
   Operads`; the acquisition checklist has been corrected to match this title.
 - Item `57` is locally named with both authors:
   `57_springer_veldkamp_octonions_jordan_algebras_exceptional_groups.pdf`.
-- `on_homology_of_jordan_algebras(1).pdf` is an extra local source outside the
-  numbered menu and should not be cited until its provenance is checked.
+- `on_homology_of_jordan_algebras(1).pdf` and the two `extra_*.pdf` files are
+  extra local sources outside the numbered menu; check their provenance before
+  using them for claims.
 
 ## Extraction Tags
 
