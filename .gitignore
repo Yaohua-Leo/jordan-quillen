@@ -35,6 +35,9 @@ note/*.xdv
 
 # Local papers and notebook runtime files
 literature/papers-local/*.pdf
+# These two curated reference PDFs are intentionally tracked.
+!literature/papers-local/extra_dubois_violette_exceptional_quantum_geometry_and_particle_physics.pdf
+!literature/papers-local/extra_carotenuto_dabrowski_dubois_violette_differential_calculus_on_jordan_algebras_and_jordan_modules.pdf
 literature/papers-local/*.djvu
 .ipynb_checkpoints/
 

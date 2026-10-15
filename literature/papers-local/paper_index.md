@@ -12,19 +12,17 @@ mathematical claim.
   by local PDF files. Items with multiple source texts are split into suffixes
   such as `06a`, `06b`, `26a`-`26f`, and `29a`-`29d`.
 - Storage rule: all original PDF files are under `literature/papers-local/`.
-- Git rule: `.gitignore` ignores `literature/papers-local/*.pdf`, so the raw
-  PDF files stay out of git history.
+- Git rule: `.gitignore` ignores `literature/papers-local/*.pdf` by default;
+  the two `extra_*.pdf` reference files are explicit tracked exceptions.
 - Metadata rule: `paper_menu.md`, this index, and `README.md` are lightweight
   Markdown metadata files and are not covered by the PDF ignore rule.
 - Caveat: some filenames contain accents, apostrophes, or spaces because they
   mirror downloaded source names. Keep future new filenames English and stable;
   do not rename existing raw files unless references are updated together.
-- Extra local files `on_homology_of_jordan_algebras(1).pdf`,
-  `extra_dubois_violette_exceptional_quantum_geometry_and_particle_physics.pdf`,
-  and
-  `extra_carotenuto_dabrowski_dubois_violette_differential_calculus_on_jordan_algebras_and_jordan_modules.pdf`
-  are not part of `paper_menu.md`; treat them as `extra; provenance-check` and
-  do not cite them as literature until their sources are verified.
+- Extra local file `on_homology_of_jordan_algebras(1).pdf` remains outside
+  `paper_menu.md`; treat it as `extra; provenance-check` and do not cite it as
+  literature until its source is verified. The two tracked `extra_*.pdf` files
+  are also outside `paper_menu.md` and are cataloged below.
 - Content check: all numbered PDFs parse with `pdfinfo`; sampled title-page
   text matches the represented menu item. The local file and BibTeX for item
   `51` use the PDF title `Operadic Cobar Constructions...`.

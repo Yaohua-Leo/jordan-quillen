@@ -1,11 +1,12 @@
 # Local Papers
 
-Store original PDF or scan files here for local reading only.
+Store original PDF or scan files here for local reading. Most source files are
+local-only; the two explicitly named `extra_*.pdf` reference files are tracked.
 
-PDF-like source files in this directory are intentionally ignored by git. Keep
-copyrighted or locally obtained source PDFs out of repository history. Write
-durable summaries in `literature/notes/` and cite stable metadata in
-`literature/bib/references.bib`.
+Most PDF-like source files in this directory are intentionally ignored by git.
+Keep other copyrighted or locally obtained source PDFs out of repository
+history. Write durable summaries in `literature/notes/` and cite stable
+metadata in `literature/bib/references.bib`.
 
 ## Files In This Directory
 
@@ -14,7 +15,8 @@ durable summaries in `literature/notes/` and cite stable metadata in
   `57`.
 - `paper_index.md` is the current local file index, with topic and extraction
   tags for Codex-facing routing.
-- `*.pdf` files are raw local sources. They are not committed.
+- `*.pdf` files are raw local sources. They are not committed by default; the
+  two `extra_*.pdf` files are explicit tracked exceptions.
 
 ## Current Audit Notes
 
@@ -26,9 +28,11 @@ durable summaries in `literature/notes/` and cite stable metadata in
   Operads`; the acquisition checklist has been corrected to match this title.
 - Item `57` is locally named with both authors:
   `57_springer_veldkamp_octonions_jordan_algebras_exceptional_groups.pdf`.
-- `on_homology_of_jordan_algebras(1).pdf` and the two `extra_*.pdf` files are
-  extra local sources outside the numbered menu; check their provenance before
-  using them for claims.
+- `on_homology_of_jordan_algebras(1).pdf` remains an extra local source outside
+  the numbered menu and should not be cited until its provenance is checked.
+- The two `extra_*.pdf` files are tracked reference sources outside the numbered
+  menu; verify their contents against the rendered PDFs before using them for
+  mathematical claims.
 
 ## Extraction Tags
 
